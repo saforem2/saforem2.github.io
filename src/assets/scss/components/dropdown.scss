@@ -1,0 +1,19 @@
+
+ul.dropdown {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    background: #d1703c;
+    color: black;
+    line-height: 2rem;
+    max-height: 0;
+    opacity: 0;
+    transition: all .2s ease;
+  }
+  &.active li {
+    max-height: 2rem; 
+    opacity: 1; 
+  }
+
+}

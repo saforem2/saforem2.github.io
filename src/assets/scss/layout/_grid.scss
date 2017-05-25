@@ -1,0 +1,48 @@
+$max-breakpoints: (
+  xs: 640,
+  sm: 1200,
+  md: 1440,
+  lg: 1920,
+  xl: 2400
+);
+
+/* ABOVE GETS MOVED TO DIFF FILE */
+// $max-mobile-width: 37.4375em;
+// $max-tablet-width: 62.5em;
+// $media-query: "#{$screen} and (max-width: #{$max-mobile-width})";
+
+.container {
+  @include clearfix();
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 15px;
+  width: 100%;
+}
+$screen: 'only screen and';
+ // and (max-width: #{map-get($max-breakpoints, $screen-size)}#{px})  
+
+[class*='col'] {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  // padding: 0 15%;
+  padding: 0 15px;
+  // border: 1px solid black;
+  width: 100%
+}
+
+@each $size in xs, sm, md, lg, xl {
+  @include breakpoint( $size ) {
+
+    @for $width from 1 through $total-columns {
+      .#{$size}-#{$width} {
+        width: #{$col-width * $width}#{%};
+      }
+    } /* for */
+    
+  } /* include */
+
+}

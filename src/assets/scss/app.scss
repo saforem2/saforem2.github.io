@@ -1,0 +1,108 @@
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@import "_variables";
+@import "functions";
+@import "mixins";
+@import "layout/grid";
+@import "vendor/normalize";
+@import "util/index";
+
+@import "components/dropdown";
+@import "components/transformable";
+
+body, html {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  font-size: $base-font-size;
+  display: flex;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+body {
+  opacity: 0;
+  animation: fade-in .4s ease;
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
+  background: $background;
+}
+// h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0; }
+*, button, input { font-family: 'Lato', sans-serif; transition: all .2s ease; }
+*, *:before, *:after { box-sizing: border-box; }
+
+.invalid {
+  border: 1px solid red;
+}
+
+.valid {
+  border: 1px solid green;
+}
+
+.input-group {
+  display: inline-block;
+}
+
+.error { 
+  display: none;
+}
+$lt-blue: #1ff2f2;
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  input[type='text'], input[type='email'] {
+    width: 100%;
+    padding: .5rem .5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: 0;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    color: white;
+    border-bottom: 2px solid #1ff2f2 * .7;
+    &:focus {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: black;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: black;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: black;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: black;
+    }
+
+  input[type='submit'] {
+    width: 30%;
+    padding: .5rem .5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: 0;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    border: 2px solid #1ff2f2 * .7;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      background-color: #1ff2f2 * .7;
+    }
+  }
+}

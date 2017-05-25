@@ -1,0 +1,266 @@
+$green: #90EE90;
+$dk-blue: #039BE5;
+$lt-blue: #1ff2f2;
+
+.container.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-men {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  flex-wrap: wrap;
+  @include breakpoint( xs ) { flex-direction: column; }
+  @include breakpoint( md ) { flex-direction: row; }
+}
+
+.js-transformable {
+  position: relative;
+  display: block;
+  @include breakpoint( xs ) { margin: 1rem 0; }
+  @include breakpoint( md ) { margin: 0; }
+      
+  .close { 
+    // display: none;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: 1.5rem;
+    top: 1.5rem;
+    z-index: 6666;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+    // line-height: 1.25rem;
+    padding: .5rem;
+
+    line-height: 2rem;
+    width: 2rem;
+    text-align: center;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .transformable-content {
+    position: fixed;
+    z-index: -900;
+    border-radius: 100%;
+    transition: top .5s cubic-bezier(0.7,0,0.3,1), left .5s cubic-bezier(0.7,0,0.3,1), width .5s cubic-bezier(0.7,0,0.3,1), height .5s cubic-bezier(0.7,0,0.3,1), border-radius .5s cubic-bezier(0.7,0,0.3,1);
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    & > div {
+      opacity: 0;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      height: inherit;
+      transition: opacity .2s ease;
+      transition-delay: .3s;
+    }
+    
+  }
+
+  &.active .transformable-content {
+    z-index: 900;
+    border-radius: 0;
+    opacity: 1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    transition: top .5s cubic-bezier(0.7,0,0.3,1), left .5s cubic-bezier(0.7,0,0.3,1), width .5s cubic-bezier(0.7,0,0.3,1), height .5s cubic-bezier(0.7,0,0.3,1), border-radius .5s cubic-bezier(0.7,0,0.3,1), opacity 0.5s ease 0.5s;
+    & > div {
+      opacity: 1;
+    }
+  }
+
+  &.closing .transformable-content {
+    border-radius: 100%;
+    background: transparent;
+    opacity: 0;
+    // transition-delay: opacity .3s;
+    & > div { transition-delay: 0s; opacity: 0;}
+  }
+  
+
+  
+  
+  &#bio { 
+    &.active .transformable-content { background: $green; }
+    button { border: 5px solid $green; line-height: 4rem; font-size: 5rem; i { color: $green * .8; }}
+    button:hover { background: $green; }
+  }
+  &#work { 
+    &.active .transformable-content { background: $dk-blue; }
+    .transformable-content { overflow-y: scroll; }
+    .transformable-content > div { padding-top: 1rem; align-items: flex-start; }
+    button { border: 5px solid $dk-blue; i { color: $dk-blue * .8; }}
+    button:after { content: 'WORK'; }
+    button:hover { background: $dk-blue; }
+  }
+  &#contact { 
+    &.active .transformable-content { background: $lt-blue; }
+    button { 
+      border: 5px solid $lt-blue; 
+      i { color: $lt-blue * .8; }
+    }
+    
+    button:hover { background: $lt-blue; }
+    button:after { content: 'CONTACT'; }
+  }
+
+  &#work, &#contact {
+    button {
+      @include breakpoint( xs ) { line-height: 3rem; }
+      @include breakpoint( md ) { line-height: 4rem; }
+    }
+  }
+
+
+  button {
+    border-radius: 100%;
+    border: 0;
+    overflow: hidden;
+    background: none;
+    position: relative;
+    @include breakpoint( xs ) {
+      font-size: 3rem;
+      padding: 2rem;
+      line-height: 2rem;
+    }
+
+    @include breakpoint( md ) {
+      font-size: 4rem;
+      padding: 3rem;
+      line-height: 3rem;
+    }
+    &:after {
+      content: 'ABOUT';
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      position: absolute;
+      color: white;
+      top: 0;
+      display: flex;
+      left: 0;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 100;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-250%);
+      opacity: 0;
+      transition: all .3s ease;
+    }
+    i { line-height: 3rem; }
+  }
+
+  button:hover { 
+    cursor: pointer; 
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+      transform: translateY(0);
+    }
+    i { transform: translateY(250%); }
+  }
+  button:focus { outline: none; }
+}
+
+.t-bigger {
+  font-size: 1.25rem;
+  color: $green * .5;
+}
+
+.project-summary {
+  color: white;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.57);
+  margin-bottom: 1rem;
+  background: $dk-blue * 1.14;
+  .project-title-container {
+    text-align: left;
+    border-bottom: 1px solid $dk-blue * .6;
+    display: flex; 
+    align-items: center;
+
+    .links {
+      float: right;
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        text-decoration: none;
+        color: $dk-blue * .6; 
+        margin-left: .5rem;
+      }
+
+      a.disabled {
+        color: $dk-blue * .8;
+        pointer-events: none;
+      }
+
+
+    } /* links */
+
+    @include breakpoint(xs) {
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      h1 { text-align: center; }
+      padding-bottom: 1rem;
+      .links { justify-content: space-around; }
+    }
+
+    @include breakpoint(md) {
+      // justify-content: space-around;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0;
+      h1 { text-align: left; }
+      .links {
+        float: right;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    h1 { font-weight: 300; }
+
+
+
+  }
+
+  .project-description-container {
+    margin-top: 1rem;
+  }
+
+  .stack {
+    @include breakpoint(xs) { border-bottom: 1px solid $dk-blue * .6; }
+    @include breakpoint(md) { border-bottom: 0; border-right: 1px solid $dk-blue * .6; }
+    h4 {
+      margin: 0;
+    }
+    ul { margin-left: 1rem; padding: 0; list-style-type: disc;}
+  }
+
+  .summary {
+    p {
+      font-weight: 100;
+    }
+  }
+
+}

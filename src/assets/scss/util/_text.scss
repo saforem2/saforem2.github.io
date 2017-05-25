@@ -1,0 +1,3 @@
+@each $dir in left, right, center {
+  .text-#{$dir} { text-align: $dir; }
+}
