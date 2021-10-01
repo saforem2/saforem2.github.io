@@ -1,64 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Sam Foreman</title>
-    <link rel="stylesheet" href=""/>
-    <script src="https://use.fontawesome.com/c8412e94ca.js"></script>
-    <!-- uncomment me for development -->
-    <!-- <script type="text/javascript" src="./src/assets/js/app.js"></script> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
 
-    <!-- iPhone ICON -->
-    <link href="images/icons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon" />
-    <!-- iPad ICON-->
-    <link href="images/icons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon" />
-    <!-- iPhone (Retina) ICON-->
-    <link href="images/icons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon" />
-    <link href="images/icons/apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image" />
-    <!-- iPhone (Retina) SPLASHSCREEN-->
-    <link href="images/icons/apple-touch-startup-image-640x920.png" media="(device-width: 375px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-    <!-- iPad (portrait) SPLASHSCREEN-->
-    <link href="images/icons/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image" />
-    <!-- iPad (Retina, portrait) SPLASHSCREEN-->
-    <link href="images/icons/apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
-	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<html lang="en">
+<head>
+  <title>John Doe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
 
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="apple-touch-startup-image" href="splash.png" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
 
-  </head>
-  <body>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="#">Projects</a></li>
+				  <li><a href="#publications">Publications</a></li> 
+				  <li><a href="#">CV</a></li> 
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+  
+  <!-- Page Content -->
+    <div class="container">
 
-    <div class="container main">
-      <div class="xs-12 sm-10 md-8 center main-men">
+        <div class="row">
 
-        <div class="js-transformable button-container" id="bio">
-          <button data-trasform-trigger>
-            <!-- <i class="fa fa-user-o" aria-hidden="true"></i> -->
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </button>
+            <!-- Entries Column -->
+            <div class="col-md-8" style="height: 100vh;">
+                
+                <!-- Main Image -->
+                <img class="img-responsive" src="photo.gif" alt=""><br>
+                
+                <div style="margin-top:3%; text-align:justify;">                
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					
+					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div> 
 
-          <div class="transformable-content">
-            <div>
-              <a href="" class="close">&times;</a>
-
-              <div class="xs-12 md-6 col center">
-                <p class="t-bigger"> Nothing to see here...</p>
-              </div>
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-4">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>John Doe</b></div><br>
+                <p><b>john at doe.com</b><br>
+                <p>Random Department<br>
+                University of Randomness<br>
+                Street<br>
+                City <br>
+                Country<br>
+                </p>
             </div>
-          </div>
+            
+            
+            <!-- Links on the Sidebar -->
+            <div class="col-md-4" style="margin-top:2%">
+              <dd><a href="#">Google Scholar</a></dd> 
+              <dd><a href="#">Twitter</a></dd>
+              <dd><a href="#">LinkedIn</a></dd>
+            </div>
+            
+            
+            <!-- Publications -->
+            <div class="col-md-8" style="height: 100vh;">    
+                <h2 id="publications">Publications</h2>
+                
+                <strong>Peer-reviewed</strong><br/>
+                <ul>
+                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
+                </ul>
+            
+                <strong>Technical Reports</strong><br/>
+                <ul>
+                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
+                </ul>
+            </div>
 
+            
         </div>
-
-      </div>
 
 
     </div>
+    <!-- /.container -->
+    
+    <!-- Other people may like it too! -->
+    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+    
+</body>
 
-    <script type="text/javascript" src="dist/assets/js/app.js"></script>
-  </body>
 </html>
