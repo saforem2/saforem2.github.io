@@ -67,7 +67,7 @@ within the Center for Complex Systems Research at UIUC.
 <!-- {{< admonition type="abstract" title="Recent Talks" open=true >}} -->
 ::: {.callout-important title="Recent Talks" collapse="false" style="width: 100%;"}
 
-You can get a live view of some of my recent talks [here {{< fa solid chart-line >}}](./qmd/slides.qmd)
+You can get a live view of some of my recent talks [{{< fa solid chart-line >}} ]{.pink-text}  [here](./qmd/slides.qmd)
 <!-- [here :(fas fa-chart-line fa-fw):](slides). -->
 
 :::
@@ -110,6 +110,8 @@ You can get a live view of some of my recent talks [here {{< fa solid chart-line
 
 # Recent Work
 
+- **S. Foreman** [Exploratory Analysis of Climate Data with `ClimRR`](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, August 7, 2023.
+
 - M. Zvyagin, A. Brace, K. Hippe, et. al., [GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), Oct 2022
 
 - A.S. Kronfeld et al. [Lattice QCD and Particle Physics](https://arxiv.org/abs/2207.07641), 15 Jul 2022
@@ -131,7 +133,9 @@ You can get a live view of some of my recent talks [here {{< fa solid chart-line
 - **S. Foreman**, J. Liu, & L. Wortsmann [**Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade**](https://doi.org/10.1063/1.5009698) _J. Appl. Phys_, 2018
 
 
-# Invited Talks
+# Recent Talks
+
+- [**MLMC: Machine Learning for Monte Carlo**](https://saforem2.github.io/lattice23), at [Lattice 2023](https://mlmc2022.github.io/), July 2023
 
 - [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/), at [PASC23](https://pasc23.pasc-conference.org/), July 2023 
 

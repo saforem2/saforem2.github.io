@@ -1,17 +1,12 @@
 ---
-title: "Recent Talks"
+title: 'Recent Talks'
 callout-appearance: simple
 title-block-banner: false
-# https://www.anl.gov/sites/www/files/2021-09/CPA_RESIZE_Climate%20Resilience%20Images_01_1920x1080.jpg
 editor:
    render-on-save: true
 execute:
    freeze: true
 ---
-
-
-
-#
 
 ::: {.callout-caution title="Generative Modeling and Efficient Sampling @ PASC23 (06/2023)" collapse="false" style="width:100%;"}
 
