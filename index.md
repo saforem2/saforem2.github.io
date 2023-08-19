@@ -1,44 +1,69 @@
 ---
 callout-appearance: simple
+format:
+  html:
+    toc: true
+    grid:
+      body-width: 1150px
 title-block-banner: false
+sidebar: false
 editor:
-   render-on-save: true
+  render-on-save: true
 execute:
-   freeze: true
+  freeze: true
+title: About Me
 ---
 
 
 
-# About Me
 
-:::: {.columns}
 
-::: {.column width="55%"}
 
-<img src="https://komarev.com/ghpvc/?username=saforem2" /></a> <a href="https://github.com/saforem2/"><img align="center" alt="saforem2" src="https://img.shields.io/badge/-saforem2-252525?style=flat&logo=github&labelColor=gray" /></a>   <a href="https://arxiv.org/abs/2112.01582"><img align="center" alt="arxiv" src="http://img.shields.io/badge/arXiv-2112.01582-B31B1B.svg" /></a> <a href="https://arxiv.org/abs/2105.03418"><img align="center" alt="arxiv" src="http://img.shields.io/badge/arXiv-2105.03418-B31B1B.svg" /></a>
+:::: {.columns  style="margin-bottom:-0.5rem;"}
 
+::: {.column width="65%"}
+
+I make science happen on supercomputers.
 
 I'm currently an [Assistant Computational
 Scientist](https://www.alcf.anl.gov/about/people/sam-foreman) working in the
 data science group at the [Leadership Computing
 Facility](https://www.alcf.anl.gov) at [Argonne National
-Laboratory](https://www.anl.gov).
+Laboratory](https://www.anl.gov).  
+
+I'm generally interested in the application of machine learning to
+computational problems in science, particularly within the context of high
+performance computing.
 
 :::
 
-::: {.column width="45%"}
+::: {.column width="35%"}
 
-::: {style="text-align:left;"}
+::: {style="text-align:center;"}
 
-<!-- ::: {layout-ncol=4 style="text-align:left; font-size:2.24em;"} -->
+<!-- [[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa brands twitter >}}](https://www.twitter.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa regular paper-plane >}}](mailto:///foremans@anl.gov)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< ai google-scholar >}}](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< ai orcid >}}](https://orcid.org/0000-0002-9981-0876)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa brands lastfm >}}](https://www.last.fm/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa brands spotify >}}](https://open.spotify.com/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa brands instagram >}}](https://www.instagram.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [[{{< fa brands linkedin >}}](https://linkedin.com/in/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
+<!-- [![github](https://img.shields.io/badge/-saforem2-252525?style=flat&logo=github&labelColor=gray)](https://github.com/saforem2/) [![HitCount](http://hits.dwyl.com/saforem2/l2hmc-qcd.svg)](http://hits.dwyl.com/saforem2/l2hmc-qcd) [![arXiv1](http://img.shields.io/badge/arXiv-2112.01582-B31B1B.svg)](https://arxiv.org/abs/2112.01582) [![arXiv2](http://img.shields.io/badge/arXiv-2105.03418-B31B1B.svg)](https://arxiv.org/abs/2105.03418) -->
 
-[[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25em;padding-left:2.0em;padding-right:1em;"}
-[[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25em;padding-left:1em;padding-right:1em;"}
-[[{{< fa brands twitter >}}](https://www.twitter.com/saforem2)]{style="font-size:1.25em;padding-left:1em;padding-right:1em;"}
-[[{{< fa regular paper-plane >}}](mailto:///foremans@anl.gov)]{style="font-size:1.25em;padding-left:1em;"}  
-[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)  
-
-<!-- ::: -->
+[[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-right: 0.20rem;"}
+[[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< fa brands twitter >}}](https://www.twitter.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< fa regular paper-plane >}}](mailto:///foremans@anl.gov)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< ai google-scholar >}}](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< ai orcid >}}](https://orcid.org/0000-0002-9981-0876)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< fa brands linkedin >}}](https://linkedin.com/in/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< fa brands spotify >}}](https://open.spotify.com/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< fa brands instagram >}}](https://www.instagram.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[{{< fa brands lastfm >}}](https://www.last.fm/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
+[[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{style="text-align:right!important;"}  
 
 :::
 
@@ -46,13 +71,19 @@ Laboratory](https://www.anl.gov).
 
 ::::
 
-I'm generally interested in the application of machine learning to
-computational problems in physics, particularly within the context of high
-performance computing. My current research focuses on using deep generative
-modeling to help build better sampling algorithms in lattice gauge theory. In
-particular, I'm interested in building gauge equivariant neural network
-architectures and using inductive priors to incorporate physical symmetries
-into machine learning models.
+I'm currently working on [AI + Science](https://github.com/saforem2/), [scaling
+LLMs](https://github.com/saforem2/Megatron-DS-Benchmarking), generative
+modeling (esp. for physical systems), [building better sampling methods for
+Lattice QCD](https://github.com/saforem2/l2hmc-qcd), [Foundation models for
+long term climate forecasting](https://saforem2.github.io/climate-analysis),
+and [optimizing ML models / workflows / pipelines at
+scale](https://github.com/argonne-lcf/mlprof).
+
+My [current research](https://saforem2.github.io/l2hmc-qcd) focuses on using
+deep generative modeling to help build better sampling algorithms in lattice
+gauge theory. In particular, I'm interested in building gauge equivariant
+neural network architectures and using inductive priors to incorporate physical
+symmetries into machine learning models.
 
 I received my PhD in Physics from the University of Iowa in 2019 and my thesis
 was on [Learning Better Physics: A Machine Learning Approach to Lattice Gauge
@@ -64,35 +95,108 @@ Resonators](https://aip.scitation.org/doi/10.1063/1.5009698) and was supervised
 by Professor [Alfred Hübler](https://en.wikipedia.org/wiki/Alfred_H%C3%BCbler)
 within the Center for Complex Systems Research at UIUC.
 
-<!-- {{< admonition type="abstract" title="Recent Talks" open=true >}} -->
 ::: {.callout-important title="Recent Talks" collapse="false" style="width: 100%;"}
 
 You can get a live view of some of my recent talks [{{< fa solid chart-line >}} ]{.pink-text}  [here](./qmd/slides.qmd)
-<!-- [here :(fas fa-chart-line fa-fw):](slides). -->
 
 :::
-<!-- {{< /admonition >}} -->
 
+# Recent Work
+
+- **S. Foreman** [**Exploratory Analysis of Climate Data with `ClimRR`**](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, _August 7, 2023_.
+
+- M. Zvyagin, A. Brace, K. Hippe, et. al., [**GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics**](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), _Oct 2022_
+  - [{{< fa solid trophy >}}]{.yellow-text} [ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research](https://www.acm.org/media-center/2022/november/gordon-bell-special-prize-covid-research-2022)
+
+- A.S. Kronfeld et al. [**Lattice QCD and Particle Physics**](https://arxiv.org/abs/2207.07641), _July 15, 2022_
+
+- D. Boyda, Salvatore Calí, **S. Foreman**, et al., [**Applications of Machine Learning to Lattice Quantum Field Theory**](https://arxiv.org/abs/2202.05838) [_arXiv:2202.05838_](https://arxiv.org/abs/2202.05838), _Feb 2022_
+
+- **S. Foreman**, X.Y. Jin, J.C. Osborn, [**LeapFrogLayers: Trainable Framework for Effective Topological Sampling**](https://arxiv.org/abs/2112.01582), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302)
+
+- **S. Foreman** L. Jin, X.Y. Jin, A. Tomiya, J.C. Osborn, & T. Izubuchi, [**HMC with Normalizing Flows**](https://arxiv.org/abs/2112.01586), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302/)
+
+- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Deep Learning Hamiltonian Monte Carlo**](https://arxiv.org/abs/2105.03418) [(+ poster)](https://simdl.github.io/posters/57-supp_DLHMC_Foreman_SimDL-ICLR2021_poster1.pdf) at [_SimDL Workshop @ ICLR_](https://simdl.github.io/), 2021
+
+- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Machine Learning and Neural Networks for Field Theory**](https://bit.ly/snowmass_ml2020) [_SnowMass_](https://snowmass21.org/), 2020
+
+- **S. Foreman** et al.[**Examples of renormalization group transformations for image sets**](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.052129) _Physical Review E._, 2018
+
+- **S. Foreman**, J. Giedt, Y. Meurice, & J. Unmuth-Yockey [**RG inspired Machine Learning for lattice field theory**](https://arxiv.org/abs/1710.02079) [_arXiv:1710.02079_](https://www.arxiv.or/abs/1710.02079), 2017
+
+- **S. Foreman**, J. Liu, & L. Wortsmann [**Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade**](https://doi.org/10.1063/1.5009698) _J. Appl. Phys_, 2018
+
+
+# Recent Talks
+
+<!-- ::: {.card} -->
+<!---->
+<!-- Magic card -->
+<!---->
+<!-- ::: -->
+
+- [**MLMC: Machine Learning for Monte Carlo**](https://saforem2.github.io/lattice23), at [Lattice 2023](https://mlmc2022.github.io/), July 2023
+
+- [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/), at [PASC23](https://pasc23.pasc-conference.org/), July 2023 
+
+- [**Efficient Sampling for Lattice Gauge Theory**](https://saforem2.github.io/deep-fridays), at [Deep Fridays @ U. Bologna](https://www.cs.unibo.it/~asperti/deep_fridays.html), April 2023
+
+- [**Large Scale Training**](https://saforem2.github.io/ai4sci-large-scale-training), at [Introduction to AI-driven Science on Supercomputers: A Student Training Series](https://github.com/argonne-lcf/ai-science-training-series), November 2022 
+
+- [**Hyperparameter Management**](https://saforem2.github.io/hparam-management-sdl2022), at [2022 ALCF Simulation, Data, and Learning Workshop](https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop), October 2022 
+
+- [**Statistical Learning**](https://saforem2.github.io/ATPESC-StatisticalLearning), at [ATPESC 2022](https://extremecomputingtraining.anl.gov/), August 2022 [📕 accompanying notebook](https://github.com/argonne-lcf/ATPESC_MachineLearning/blob/master/00_statisticalLearning/src/atpesc/notebooks/statistical_learning.ipynb)
+
+- [**Scientific Data Science: An Emerging Symbiosis**](https://saforem2.github.io/anl-job-talk/), at Argonne National Laboratory, May 2022
+
+- [**Machine Learning in HEP**](https://saforem2.github.io/physicsSeminar), at UNC Greensboro, March 2022
+
+- [**Accelerated Sampling Methods for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc-dwq25/), at [_BNL-HET  & RBRC Joint Workshop "DWQ @ 25"_](https://indico.bnl.gov/event/13576/), Dec 2021
+
+- [**Training Topological Samplers for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc_talk_ect2021/), [_ML4HEP, on and off the Lattice_](https://indico.ectstar.eu/event/77/contributions/2349/) @ ECT\* Trento, Sep 2021
+
+- [**l2hmc-qcd**](https://github.com/saforem2/l2hmc-qcd) at the _MIT Lattice Group Seminar_, 2021
+
+- [**Deep Learning HMC for Improved Gauge Generation**](https://bit.ly/mainz21) to the [_Machine Learning Techniques in Lattice QCD Workshop_](https://bit.ly/mainz21_overview), 2021
+
+- [**Machine Learning for Lattice QCD**](https://slides.com/samforeman/l2hmc-qcd-93bc0c) at the University of Iowa, 2020
+
+- [**Machine learning inspired analysis of the Ising model transition**](https://bit.ly/latt2018) to [_Lattice, 2018_](https://indico.fnal.gov/event/15949/overview)
+
+- **Machine Learning Analysis of Ising Worms** at _Brookhaven National Laboratory_, 2017
 
 # Active Projects
 
-<a href="https://github.com/saforem2/l2hmc-qcd"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/saforem2/lattice23"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/nftqcd/fthmc"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/saforem2/climate-analysis"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=climate-analysis&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/argonne-lcf/ai-science-training-series"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=ai-science-training-series&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/argonne-lcf/mlprof"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=mlprof&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/argonne-lcf/user-guides"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=user-guides&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
-<a href="https://github.com/saforem2/personal_site"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a>
+::: {.img-container style="text-align:left; display: flex;"}
+
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/l2hmc-qcd)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/lattice23)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lqcd-pasc23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/lqcd-pasc23)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/nftqcd/fthmc)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=CompPerfWorkshop&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/CompPerfWorkshop)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=ai-science-training-series&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/ai-science-training-series)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=mlprof&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/mlprof)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=user-guides&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/user-guides)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/personal_site)
+<!-- [![github](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/l2hmc-qcd) -->
+<!-- <a href="https://github.com/saforem2/lattice23"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- <a href="https://github.com/nftqcd/fthmc"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- <a href="https://github.com/saforem2/climate-analysis"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=climate-analysis&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- <a href="https://github.com/argonne-lcf/ai-science-training-series"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=ai-science-training-series&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- <a href="https://github.com/argonne-lcf/mlprof"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=mlprof&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- <a href="https://github.com/argonne-lcf/user-guides"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=user-guides&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- <a href="https://github.com/saforem2/personal_site"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+
+:::
 
 ::: {.callout-tip title="[`l2hmc-qcd`](https://saforem2.github.io/l2hmc-qcd)" collapse="true" style="width: 100%;"}
 
 ::: {style="text-align:center;"}
 
-- [{{< fa brands github >}} GitHub repo](https://github.com/saforem2/l2hmc-qcd)
+[![](https://raw.githubusercontent.com/saforem2/l2hmc-qcd/main/assets/logo-small.svg)](https://saforem2.github.io/l2hmc-qcd)  
+[{{< fa brands github >}} GitHub repo](https://github.com/saforem2/l2hmc-qcd)
 
-[![](https://raw.githubusercontent.com/saforem2/l2hmc-qcd/main/assets/logo-small.svg)](https://saforem2.github.io/l2hmc-qcd)
-
+<!-- <a href="https://github.com/saforem2/l2hmc-qcd"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
 <!-- ![l2hmc-qcd](https://github.com/saforem2/saforem2/blob/main/assets/l2hmc-qcd-small.svg) -->
 
 <a href="https://hits.seeyoufarm.com"><img alt="hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsaforem2%2Fl2hmc-qcd&count_bg=%2300CCFF&title_bg=%23555555&icon=&icon_color=%23111111&title=👋&edge_flat=false"></a>    
@@ -108,83 +212,34 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 
 :::
 
-# Recent Work
+## Wait, there's more!
 
-- **S. Foreman** [Exploratory Analysis of Climate Data with `ClimRR`](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, August 7, 2023.
+- Organizer for [Machine Learning and Quantum Computing for Earth
+Sciences](https://17.usnccm.org/702) at 17th U. S. National Congress on
+Computational Mechanics, July 2023
 
-- M. Zvyagin, A. Brace, K. Hippe, et. al., [GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), Oct 2022
-
-- A.S. Kronfeld et al. [Lattice QCD and Particle Physics](https://arxiv.org/abs/2207.07641), 15 Jul 2022
-
-- D. Boyda, Salvatore Calí, **S. Foreman**, et al., [Applications of Machine Learning to Lattice Quantum Field Theory](https://arxiv.org/abs/2202.05838) [_arXiv:2202.05838_](https://arxiv.org/abs/2202.05838), Feb 2022
-
-- **S. Foreman**, X.Y. Jin, J.C. Osborn, [**LeapFrogLayers: Trainable Framework for Effective Topological Sampling**](https://arxiv.org/abs/2112.01582), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302)
-
-- **S. Foreman** L. Jin, X.Y. Jin, A. Tomiya, J.C. Osborn, & T. Izubuchi, [**HMC with Normalizing Flows**](https://arxiv.org/abs/2112.01586), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302/)
-
-- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Deep Learning Hamiltonian Monte Carlo**](https://arxiv.org/abs/2105.03418) [(+ poster)](https://simdl.github.io/posters/57-supp_DLHMC_Foreman_SimDL-ICLR2021_poster1.pdf) at [_SimDL Workshop @ ICLR_](https://simdl.github.io/), 2021
-
-- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Machine Learning and Neural Networks for Field Theory**](https://bit.ly/snowmass_ml2020) [_SnowMass_](https://snowmass21.org/), 2020
-
-- **S. Foreman** Y. Meurice, J. Giedt & J. Unmuth-Yockey [**Examples of renormalization group transformations for image sets**](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.052129) _Physical Review E._, 2018
-
-- **S. Foreman**, J. Giedt, Y. Meurice, & J. Unmuth-Yockey [**RG inspired Machine Learning for lattice field theory**](https://arxiv.org/abs/1710.02079) [_arXiv:1710.02079_](https://www.arxiv.or/abs/1710.02079), 2017
-
-- **S. Foreman**, J. Liu, & L. Wortsmann [**Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade**](https://doi.org/10.1063/1.5009698) _J. Appl. Phys_, 2018
+- Organizer for [SC23 Workshop: High Performance Python for Science at Scale
+(HPPSS)](https://hppss.github.io/SC23/), November 2023
 
 
-# Recent Talks
+# Appendix
 
-- [**MLMC: Machine Learning for Monte Carlo**](https://saforem2.github.io/lattice23), at [Lattice 2023](https://mlmc2022.github.io/), July 2023
 
-- [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/), at [PASC23](https://pasc23.pasc-conference.org/), July 2023 
+::: {.cell execution_count=1}
+``` {.python .cell-code}
+from datetime import date
+print(f"Last updated: {date.today().strftime('%d %B %y')}")
+```
 
-- [**Efficient Sampling for Lattice Gauge Theory**](https://saforem2.github.io/deep-fridays), at [Deep Fridays @ U. Bologna](https://www.cs.unibo.it/~asperti/deep_fridays.html), April 2023
+::: {.cell-output .cell-output-stdout}
+```
+Last updated: 19 August 23
+```
+:::
+:::
 
-- [**Large Scale Training**](https://saforem2.github.io/ai4sci-large-scale-training), at [Introduction to AI-driven Science on Supercomputers: A Student Training Series](https://github.com/argonne-lcf/ai-science-training-series), November 2022 
-
-- [**Hyperparameter Management**](https://saforem2.github.io/hparam-management-sdl2022), at [2022 ALCF Simulation, Data, and Learning Workshop](https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop), October 2022 
-<!-- <span style="font-size:1.25em;"> -->
-- [**Statistical Learning**](https://saforem2.github.io/ATPESC-StatisticalLearning), at [ATPESC 2022](https://extremecomputingtraining.anl.gov/), August 2022 [📕 accompanying notebook](https://github.com/argonne-lcf/ATPESC_MachineLearning/blob/master/00_statisticalLearning/src/atpesc/notebooks/statistical_learning.ipynb)
-
-- [**Scientific Data Science: An Emerging Symbiosis**](https://saforem2.github.io/anl-job-talk/), at Argonne National Laboratory, May 2022
-  <!-- <iframe src="https://saforem2.github.io/anl-job-talk/#/" title="ANL Job Talk" width="66%" align="center" height="300" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:1em;margin-bottom:1em;border:none;align:center;"> -->
-  <!--   <p>Your browser does not support iframes.</p> -->
-  <!-- </iframe> -->
-
-- [**Machine Learning in HEP**](https://saforem2.github.io/physicsSeminar), at UNC Greensboro, March 2022
-  <!-- <iframe src="https://saforem2.github.io/physicsSeminar" title="Machine Learning in HEP" width="66%" align="center" height="300" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="border:none;margin-top:1em;margin-bottom:1em;"> -->
-  <!--   <p>Your browser does not support iframes.</p> -->
-  <!-- </iframe> -->
-
-- [**Accelerated Sampling Methods for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc-dwq25/), at [_BNL-HET  & RBRC Joint Workshop "DWQ @ 25"_](https://indico.bnl.gov/event/13576/), Dec 2021
-  <!-- <iframe src="https://saforem2.github.io/l2hmc-dwq25" title="Accelerated Sampling Methods for Lattice Gauge Theory" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="66%" align="center" height="300" style="border:none;margin-top:1em;margin-bottom:1em;"> -->
-  <!--   <p>Your browser does not support iframes.</p> -->
-  <!-- </iframe> -->
-
-- [**Training Topological Samplers for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc_talk_ect2021/), [_ML4HEP, on and off the Lattice_](https://indico.ectstar.eu/event/77/contributions/2349/) @ ECT\* Trento, Sep 2021
-  <!-- <iframe src="https://saforem2.github.io/l2hmc_talk_ect2021" title="Training Topological Samplers for Lattice Gauge Theory" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="66%" align="center" height="300" style="border:none;margin-top:1em;margin-bottom:1em;"> -->
-  <!--   <p>Your browser does not support iframes.</p> -->
-  <!-- </iframe> -->
-    
-- [**l2hmc-qcd**](https://github.com/saforem2/l2hmc-qcd) at the _MIT Lattice Group Seminar_, 2021
-    
-- [**Deep Learning HMC for Improved Gauge Generation**](https://bit.ly/mainz21) to the [_Machine Learning Techniques in Lattice QCD Workshop_](https://bit.ly/mainz21_overview), 2021
-    
-- [**Machine Learning for Lattice QCD**](https://slides.com/samforeman/l2hmc-qcd-93bc0c) at the University of Iowa, 2020
-  <!-- <iframe src="https://slides.com/samforeman/l2hmc-qcd/embed" title="Machine Learning for Lattice QCD" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="66%" align="center" height="300" style="border:none;margin-top:1em;margin-bottom:1em;"> -->
-  <!--   <p>Your browser does not support iframes.</p> -->
-  <!-- </iframe> -->
-
-<!-- <iframe src="https://slides.com/samforeman/l2hmc-qcd/embed" width="576" height="300" title="l2hmc-qcd" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-    
-- [**Machine learning inspired analysis of the Ising model transition**](https://bit.ly/latt2018) to [_Lattice, 2018_](https://indico.fnal.gov/event/15949/overview)
-    
-- **Machine Learning Analysis of Ising Worms** at _Brookhaven National Laboratory_, 2017
-
-<!-- </span> -->
-    
 
 <p align="center">
 <a href="https://hits.seeyoufarm.com"><img align="center" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwww.samforeman.me&count_bg=%2300CCFF&title_bg=%23303030&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </p>
+
