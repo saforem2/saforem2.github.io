@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://saforem2.github.io/index.html</loc>
-    <lastmod>2023-08-14T16:18:05.549Z</lastmod>
+    <loc>https://saforem2.github.io/qmd/slides.html</loc>
+    <lastmod>2023-08-19T20:46:35.258Z</lastmod>
   </url>
   <url>
-    <loc>https://saforem2.github.io/qmd/slides.html</loc>
-    <lastmod>2023-08-14T14:45:40.276Z</lastmod>
+    <loc>https://saforem2.github.io/index.html</loc>
+    <lastmod>2023-08-19T20:46:56.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/qmd/blog/2023-08-19.html</loc>
+    <lastmod>2023-08-19T16:39:43.783Z</lastmod>
   </url>
 </urlset>

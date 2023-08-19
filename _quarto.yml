@@ -1,6 +1,6 @@
 title: "Sam Foreman"
-# date: today
 date: last-modified
+# date: today
 author-title: ""
 affiliation-title: ""
 published-title: ""
@@ -14,64 +14,60 @@ twitter-card: true
 site-url: https://saforem2.github.io
 google-scholar: true
 citeproc: true
+project:
+  render:
+    - index.qmd
+    - qmd/*.qmd
+    - qmd/blog/*.qmd
+  type: website
+  output-dir: "docs"
+  preview:
+    port: 4200
 author:
   name: Sam Foreman
   url: https://samforeman.me
   orcid: 0000-0002-9981-0876
   email: foremans@anl.gov
-  affiliation: Argonne National Laboratory
-  affiliation-url: https://alcf.anl.gov/about/people/sam-foreman
+  # affiliation: Argonne National Laboratory
+  # affiliation-url: https://alcf.anl.gov/about/people/sam-foreman
 citation:
    author: Sam Foreman
    type: webpage
    title: "Personal Website"
-   # container-title: "Intro to HPC: Climate Analysis with ClimRR"
    url: https://saforem2.github.io
-   # genre: "Intro to HPC Bootcamp @ NERSC: ClimRR"
-
 # filters:
 #   - lua/callouts.lua
 # highlight-style:
 #   dark: dracula
 #   light: dracula-light
-
 execute:
   keep-ipynb: true
   keep-md: true
   freeze: auto
-project:
-  render:
-    - index.qmd
-    - qmd/*.qmd
-    # - qmd/ClimRR/definitions.qmd
-    # - qmd/setup.qmd
-    # - qmd/intro.qmd
-    # - qmd/ClimRR.qmd
-    # - qmd/chicago.qmd
-    # - qmd/iris.qmd
-    # - qmd/illinois.qmd
-  type: website
-  output-dir: "docs"
-  preview:
-    port: 4200
 website:
+  twitter-card:
+    site: "@saforem2"
+    creator: "@saforem2"
   page-navigation: true
   title: "Sam Foreman"
   site-url: "https://saforem2.github.io"
-  favicon: "./assets/favicon.svg"
-  # back-to-top-navigation: true
-  reader-mode: true
+  favicon: "./favicon.svg"
+  back-to-top-navigation: true
+  # reader-mode: true
   navbar:
-    logo: "https://raw.githubusercontent.com/saforem2/anl-job-talk/main/docs/assets/anl.svg"
+    logo: "./favicon.svg"
     background: "#222222"
-    foregound: "#f8f8f8"
-    # - light:
-    #   background: "#1A8FFF"
-    #   foreground: "#FDFDFD"
+    foregound: "#777777"
     right:
       - icon: github
         href: https://github.com/saforem2/saforem2.github.io
         aria-label: GitHub
+
+    left:
+      - href: "./qmd/slides.qmd"
+        text: "Recent Talks"
+      - href: "https://saforem2.github.io/l2hmc-qcd"
+        text: "{{< fa brands github >}} `l2hmc-qcd`"
     # left: auto
       # - href: index.qmd
       #   text: Analysis
@@ -81,117 +77,65 @@ website:
       #   text: Iris
   open-graph: true
   repo-url: https://github.com/saforem2/saforem2.github.io
-  repo-actions: [edit, issue]
+  repo-actions: [source, edit, issue]
   google-analytics: G-XVM2Y822Y1
-  sidebar:
-    style: "floating"
-    search: true
-    collapse-level: 2
-    contents:
-      - href: index.qmd
-        text: Home
-      - href: qmd/slides.qmd
-        text: Recent Talks
-      # - href: qmd/overview.qmd
-      #   text: Project Overview
-      # - section: "Getting Started"
-      #   contents:
-      #     # - href: qmd/00-GettingStarted/0-python.qmd
-      #     #   text: Working with Python
-      #     - href: qmd/00-GettingStarted/1-setup.qmd
-      #       text: Setup and Installation
-      #     - href: qmd/00-GettingStarted/2-intro.qmd
-      #       text: "Intro: Working with GeoSpatial Data"
-      #     - href: qmd/00-GettingStarted/3-example-groceries.qmd
-      #       text: "Example: Groceries in Chicago"
-      # - section: "ClimRR"
-      #   contents:
-      #     - href: qmd/01-ClimRR/0-ClimRR.qmd
-      #       text: Overview of ClimRR
-      #     - href: qmd/01-ClimRR/1-definitions.qmd
-      #       text: Variable Definitions
-      #     - href: qmd/01-ClimRR/1p5-DataDictionary.qmd
-      #       text: "ClimRR: Data Dictionary"
-      #     - href: qmd/00-GettingStarted/4-chicago.qmd
-      #       text: "Example: ClimRR in Chicago"
-      #     - href: qmd/01-ClimRR/2-chicago-temp.qmd
-      #       text: "Example: ClimRR Temperature Analysis"
-      #     - href: qmd/01-ClimRR/3-analysis.qmd
-      #       text: Data Analysis with ClimRR
-      #     - href: ./qmd/extras/0-illinois.qmd
-      #       text: "Example: Looking Deeper at Climate Variables"
-      # - section: "Extras"
-      #   contents:
-      #     - href: qmd/extras/0-illinois.qmd
-      #       text: Illinois
-      # ----------------------------------------
-      # - section: "ClimRR"
-      #   contents:
-      #     - href: qmd/ClimRR.qmd
-      #       text: Overview of ClimRR
-      #     - href: qmd/chicago.qmd
-      #       text: Analyzing Geospatial Data
-      #   contents:
-      #     - href: qmd/ClimRR.qmd
-      #       text: Overview of ClimRR
-      #     - href: qmd/ClimRR.qmd
-      #       text: Intro to Geospatial Data
-      #     - href: qmd/chicago.qmd
-      #       text: Analysis
-      #     # - href: qmd/illinois.md
-      #     #   text: Illinois
-      #     - href: qmd/iris.qmd
-      #       text: Extras
+  sidebar: false
+  # sidebar:
+  #   style: "floating"
+  #   search: true
+  #   collapse-level: 2
+  #   contents:
+  #     - href: index.qmd
+  #       text: Home
+  #     - href: qmd/slides.qmd
+  #       text: Recent Talks
   page-footer:
     left: "Copyright 2023, Sam Foreman" 
-    right: 
+    center:
+      - href: https://saforem2.github.io
+        text: saforem2.github.io
+    right:
+      - href: https://samforeman.me
+        text: "{{< fa solid home >}}"
       - icon: github
         href: https://github.com/saforem2
       - icon: twitter
         href: https://twitter.com/saforem2
+      - href: "mailto:///foremans@anl.gov"
+        text: "{{< fa regular paper-plane >}}"
+      - href: https://www.twitter.com/saforem2
+        text: "{{< fa brands twitter >}}"
+      - href: https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en
+        text: "{{< ai google-scholar >}}"
+      - href: https://orcid.org/0000-0002-9981-0876
+        text: "{{< ai orcid >}}"
+      - href: https://www.last.fm/user/saforem2
+        text: "{{< fa brands lastfm >}}"
+      - href: https://open.spotify.com/user/saforem2
+        text: "{{< fa brands spotify >}}"
+      - href: https://www.instagram.com/saforem2
+        text: "{{< fa brands instagram >}}"
+      - href: https://linkedin.com/in/saforem2
+        text: "{{< fa brands linkedin >}}"
 format:
   html:
     toc: true
     self-contained: false
-    # line-numbers: true
-    # code-link: true
-    # embed-resources: false
-    # self-contained-math: false
     toc-location: right
     grid:
-      sidebar-width: 200px
-      body-width: 950px
-      margin-width: 150px
-      gutter-width: 1em
-    # embed-resources: true
-    page-layout: article
+      body-width: 1150px
     fig-responsive: true
     anchor-sections: true
     highlight-style: atom-one
-      # dark: atom-one
-      # light: a11y
-    # highlight-style:
-    #     dark: "atom-one"
-    #     light: "github"
-    # highlight-style: atom-one
     code-overflow: scroll
     code-fold: false
     code-copy: hover
     code-summary: " "
-    # code-line-numbers: true
-    # code-tools:
-    #   source: repo
-    #   toggle: true
-    #   caption: none
-    # code-tools:
-    #   source: repo
-    #   toggle: true
-    #   caption: none
     html-math-method: katex
     css:
       - css/default.css
-      # - css/code.css
       - css/callouts.css
+      # - css/code.css
       # - css/code-callout.css
       # - css/quarto-syntax-highlighting-dark.css
       # - css/quarto-syntax-highlighting.css
@@ -202,13 +146,44 @@ format:
         - css/common.scss
         - css/dark.scss 
         - css/syntax-dark.scss
+        # - css/checklist-icons.scss
       light:
         - css/common.scss
         - css/light.scss
-        # [css/common.scss, css/quarto-syntax-highlighting-dark.scss, css/custom.scss]
-      # light: [css/common.scss, css/light.scss]
+        - css/syntax-light.scss
+        # - css/checklist-icons.scss
     # smooth-scroll: true
     citations-hover: true
     footnotes-hover: true
     header-includes: |
       <link href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css" rel="stylesheet" />
+    code-tools:
+      # source: repo
+      toggle: true
+      # caption: none
+    # grid:
+    #   sidebar-width: 200px
+    #   body-width: 950px
+    #   margin-width: 150px
+    #   gutter-width: 1em
+    # embed-resources: true
+    # page-layout: article
+    # line-numbers: true
+    # code-link: true
+    # embed-resources: false
+    # self-contained-math: false
+      # dark: atom-one
+      # light: a11y
+    # highlight-style:
+    #     dark: "atom-one"
+    #     light: "github"
+    # highlight-style: atom-one
+    # code-line-numbers: true
+    # code-tools:
+    #   source: repo
+    #   toggle: true
+    #   caption: none
+    # code-tools:
+    #   source: repo
+    #   toggle: true
+    #   caption: none
