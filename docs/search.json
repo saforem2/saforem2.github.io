@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "About Me",
+    "title": " Sam Foreman",
     "section": "",
-    "text": "I make science happen on supercomputers.\nI’m currently an Assistant Computational Scientist working in the data science group at the Leadership Computing Facility at Argonne National Laboratory.\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nI’m currently working on AI + Science, scaling LLMs, generative modeling (esp. for physical systems), building better sampling methods for Lattice QCD, Foundation models for long term climate forecasting, and optimizing ML models / workflows / pipelines at scale.\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC."
+    "text": "PhD. Physics\nB.S. Engineering Physics\nB.S. Applied Mathematics\n\n2019\n2015\n2015\n\nUniversity of Iowa\nUniversity of Illinois at Urbana-Champaign\nUniversity of Illinois at Urbana-Champaign\n\n\n\n\n\n\n\nComputational Scientist\nPostdoc\n\n2022—*\n2019\n\nArgonne National Laboratory\nArgonne Leadership Computing Facility (ALCF)\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nI’m currently working on AI + Science, scaling LLMs, generative modeling (esp. for physical systems), building better sampling methods for Lattice QCD, Foundation models for long term climate forecasting, and optimizing ML models / workflows / pipelines at scale.\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC."
   },
   {
     "objectID": "index.html#wait-theres-more",
@@ -40,5 +40,117 @@
     "title": "About Me",
     "section": "Wait, there’s more!",
     "text": "Wait, there’s more!\n\nOrganizer for Machine Learning and Quantum Computing for Earth Sciences at 17th U. S. National Congress on Computational Mechanics, July 2023\nOrganizer for SC23 Workshop: High Performance Python for Science at Scale (HPPSS), November 2023"
+  },
+  {
+    "objectID": "index.html#recent-work",
+    "href": "index.html#recent-work",
+    "title": "About Me",
+    "section": "Recent Work",
+    "text": "Recent Work\n\nS. Foreman Exploratory Analysis of Climate Data with ClimRR, Intro to HPC Bootcamp @ NERSC, August 7, 2023\n\nM. Zvyagin et. al., GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics, Oct 2022\n\n ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research\n\n\nA.S. Kronfeld et al. Lattice QCD and Particle Physics, July 15, 2022\n\nD. Boyda, S. Calí, S. Foreman, et al., Applications of ML to Lattice QFT arXiv:2202.05838, Feb 2022\n\nS. Foreman, X.Y. Jin, J.C. Osborn, LeapFrogLayers: Trainable Framework for Effective Sampling, Lattice, 2021\n\nS. Foreman et al.HMC with Normalizing Flows, slides, Lattice, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Deep Learning Hamiltonian Monte Carlo (+ poster) at SimDL Workshop @ ICLR, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Machine Learning and Neural Networks for Field Theory SnowMass, 2020\n\nS. Foreman et al. Examples of renormalization group transformations for image sets Physical Review E., 2018\n\nS. Foreman et al. RG inspired Machine Learning for lattice field theory arXiv:1710.02079, 2017\n\nS. Foreman et al. Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade J. Appl. Phys, 2018"
+  },
+  {
+    "objectID": "index.html#recent-talks",
+    "href": "index.html#recent-talks",
+    "title": "About Me",
+    "section": "Recent Talks",
+    "text": "Recent Talks\n\n\n\n\n\n\nMLMC: Machine Learning for Monte Carlo, at Lattice 2023, July 2023\nGenerative Modeling and Efficient Sampling, at PASC23, July 2023\nEfficient Sampling for Lattice Gauge Theory, at Deep Fridays @ U. Bologna, April 2023\nLarge Scale Training, at Introduction to AI-driven Science on Supercomputers: A Student Training Series, November 2022\nHyperparameter Management, at 2022 ALCF Simulation, Data, and Learning Workshop, October 2022\nStatistical Learning, at ATPESC 2022, August 2022 📕 accompanying notebook\nScientific Data Science: An Emerging Symbiosis, at Argonne National Laboratory, May 2022\nMachine Learning in HEP, at UNC Greensboro, March 2022\nAccelerated Sampling Methods for Lattice Gauge Theory, at BNL-HET& RBRC Joint Workshop “DWQ @ 25”, Dec 2021\nTraining Topological Samplers for Lattice Gauge Theory, ML4HEP, on and off the Lattice @ ECT* Trento, Sep 2021\nl2hmc-qcd at the MIT Lattice Group Seminar, 2021\nDeep Learning HMC for Improved Gauge Generation to the Machine Learning Techniques in Lattice QCD Workshop, 2021\nMachine Learning for Lattice QCD at the University of Iowa, 2020\nMachine learning inspired analysis of the Ising model transition to Lattice, 2018\nMachine Learning Analysis of Ising Worms at Brookhaven National Laboratory, 2017"
+  },
+  {
+    "objectID": "index.html#active-projects",
+    "href": "index.html#active-projects",
+    "title": "About Me",
+    "section": "Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-solid-person-chalkboard-recent-talks",
+    "href": "index.html#fa-solid-person-chalkboard-recent-talks",
+    "title": " Sam Foreman",
+    "section": " Recent Talks",
+    "text": "Recent Talks\n\n\n\n\n\n\nMLMC: Machine Learning for Monte Carlo, at Lattice 2023, July 2023\nGenerative Modeling and Efficient Sampling, at PASC23, July 2023\nEfficient Sampling for Lattice Gauge Theory, at Deep Fridays @ U. Bologna, April 2023\nLarge Scale Training, at Introduction to AI-driven Science on Supercomputers: A Student Training Series, November 2022\nHyperparameter Management, at 2022 ALCF Simulation, Data, and Learning Workshop, October 2022\nStatistical Learning, at ATPESC 2022, August 2022 📕 accompanying notebook\nScientific Data Science: An Emerging Symbiosis, at Argonne National Laboratory, May 2022\nMachine Learning in HEP, at UNC Greensboro, March 2022\nAccelerated Sampling Methods for Lattice Gauge Theory, at BNL-HET& RBRC Joint Workshop “DWQ @ 25”, Dec 2021\nTraining Topological Samplers for Lattice Gauge Theory, ML4HEP, on and off the Lattice @ ECT* Trento, Sep 2021\nl2hmc-qcd at the MIT Lattice Group Seminar, 2021\nDeep Learning HMC for Improved Gauge Generation to the Machine Learning Techniques in Lattice QCD Workshop, 2021\nMachine Learning for Lattice QCD at the University of Iowa, 2020\nMachine learning inspired analysis of the Ising model transition to Lattice, 2018\nMachine Learning Analysis of Ising Worms at Brookhaven National Laboratory, 2017"
+  },
+  {
+    "objectID": "index.html#fa-solid-newspaper-recent-work",
+    "href": "index.html#fa-solid-newspaper-recent-work",
+    "title": " Sam Foreman",
+    "section": " Recent Work",
+    "text": "Recent Work\n\nS. Foreman Exploratory Analysis of Climate Data with ClimRR, Intro to HPC Bootcamp @ NERSC, August 7, 2023\n\nM. Zvyagin et. al., GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics, Oct 2022\n\n ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research\n\n\nA.S. Kronfeld et al. Lattice QCD and Particle Physics, July 15, 2022\n\nD. Boyda, S. Calí, S. Foreman, et al., Applications of ML to Lattice QFT arXiv:2202.05838, Feb 2022\n\nS. Foreman, X.Y. Jin, J.C. Osborn, LeapFrogLayers: Trainable Framework for Effective Sampling, Lattice, 2021\n\nS. Foreman et al.HMC with Normalizing Flows, slides, Lattice, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Deep Learning Hamiltonian Monte Carlo (+ poster) at SimDL Workshop @ ICLR, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Machine Learning and Neural Networks for Field Theory SnowMass, 2020\n\nS. Foreman et al. Examples of renormalization group transformations for image sets Physical Review E., 2018\n\nS. Foreman et al. RG inspired Machine Learning for lattice field theory arXiv:1710.02079, 2017\n\nS. Foreman et al. Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade J. Appl. Phys, 2018"
+  },
+  {
+    "objectID": "index.html#fa-brand-square-github-active-projects",
+    "href": "index.html#fa-brand-square-github-active-projects",
+    "title": "About Me",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-solid-square-github-active-projects",
+    "href": "index.html#fa-solid-square-github-active-projects",
+    "title": "About Me",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-brand-github-alt-active-projects",
+    "href": "index.html#fa-brand-github-alt-active-projects",
+    "title": "About Me",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-brand-github-active-projects",
+    "href": "index.html#fa-brand-github-active-projects",
+    "title": "About Me",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-brands-square-github-active-projects",
+    "href": "index.html#fa-brands-square-github-active-projects",
+    "title": "About Me",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-brands-github-alt-active-projects",
+    "href": "index.html#fa-brands-github-alt-active-projects",
+    "title": " Sam Foreman",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "index.html#fa-solid-bullhorn-wait-theres-more",
+    "href": "index.html#fa-solid-bullhorn-wait-theres-more",
+    "title": " Sam Foreman",
+    "section": " Wait, there’s more!",
+    "text": "Wait, there’s more!\n\nOrganizer for Machine Learning and Quantum Computing for Earth Sciences at 17th U. S. National Congress on Computational Mechanics, July 2023\nOrganizer for SC23 Workshop: High Performance Python for Science at Scale (HPPSS), November 2023"
+  },
+  {
+    "objectID": "index.html#fa-solid-hourglass-end-appendix",
+    "href": "index.html#fa-solid-hourglass-end-appendix",
+    "title": " Sam Foreman",
+    "section": " Appendix",
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 19 August 23"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "👋 I’m Sam",
+    "section": "",
+    "text": "University of Iowa | Iowa City, IA Phd. Physics | Sept 2015 - May 2019\nUniversity of Illinois at Urbana-Champaign | Urbana, IL B.S. Engineering Physics | Sept 2010 - May 2015\nUniversity of Illinois at Urbana-Champaign | Urbana, IL B.S. Applied Mathematics | Sept 2010 - May 2015"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "👋 I’m Sam",
+    "section": "",
+    "text": "Argonne National Laboratory / ALCF | Computational Scientist | June 2022 - present\nArgonne Leadership Computing Facility (ALCF) | Postdoc | June 2019 - June 2022"
+  },
+  {
+    "objectID": "index.html#fa-solid-server-about-me",
+    "href": "index.html#fa-solid-server-about-me",
+    "title": " Sam Foreman",
+    "section": " About Me",
+    "text": "About Me\nI make science happen on supercomputers.\nI’m currently an Assistant Computational Scientist working in the data science group at the Leadership Computing Facility at Argonne National Laboratory."
   }
 ]
