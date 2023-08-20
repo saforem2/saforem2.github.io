@@ -16,13 +16,116 @@ editor:
    render-on-save: true
 execute:
    freeze: true
+about:
+   id: hero-heading
+   template: trestles
+   image-width: 10em
+   image-shape: round
+   image: "./assets/avatar.png"
+   links:
+     - href: https://samforeman.me
+       text: "{{< fa solid home >}}"
+     - icon: github
+       href: https://github.com/saforem2
+     - icon: twitter
+       href: https://twitter.com/saforem2
+     - href: "mailto:///foremans@anl.gov"
+       text: "{{< fa regular paper-plane >}}"
+   #   - href: https://www.twitter.com/saforem2
+   #     text: "{{< fa brands twitter >}}"
+   #   - href: https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en
+   #     text: "{{< ai google-scholar >}}"
+   #   - href: https://orcid.org/0000-0002-9981-0876
+   #     text: "{{< ai orcid >}}"
+   #   - href: https://www.last.fm/user/saforem2
+   #     text: "{{< fa brands lastfm >}}"
+   #   - href: https://open.spotify.com/user/saforem2
+   #     text: "{{< fa brands spotify >}}"
+   #   - href: https://www.instagram.com/saforem2
+   #     text: "{{< fa brands instagram >}}"
+   #   - href: https://linkedin.com/in/saforem2
+   #     text: "{{< fa brands linkedin >}}"
 ---
 
-# About Me
+
+:::{#hero-heading style="margin-bottom: 0em;"}
+
+<!-- # []{} -->
+# [{{< fa solid address-card >}}]{.dim-text} Sam Foreman
+
+<!-- [{{< fa solid server >}}]{.green-text} I make science happen on supercomputers. -->
+
+::: {style="font-size: 0.8em;"}
+
+### [{{< fa solid graduation-cap >}}]{.blue-text} Education
+
+:::: {.columns style="margin-bottom: 0em;"}
+
+::: {.column width="30%"}
+
+**[PhD. Physics](https://www.proquest.com/openview/95d7f7c12da8da8aa5ead3ac0f6ca0e8/1?pq-origsite=gscholar&cbl=18750&diss=y)**  
+**B.S. Engineering Physics**  
+**B.S. Applied Mathematics**
+
+:::
+
+::: {.column width="10%"}
+
+2019  
+2015  
+2015
+
+:::
+
+::: {.column width="60%"}
+
+University of Iowa  
+University of Illinois at Urbana-Champaign  
+University of Illinois at Urbana-Champaign
+
+:::
+
+::::
+
+### [{{< fa solid building >}}]{.red-text} Experience
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+[Computational Scientist](https://www.alcf.anl.gov/about/people/sam-foreman)  
+Postdoc
+
+:::
+
+
+::: {.column width="10%"}
+
+2022—*  
+2019
+
+:::
+
+::: {.column width="60%"}
+
+[Argonne National Laboratory](https://www.anl.gov)  
+[Argonne Leadership Computing Facility (ALCF)](https://www.alcf.anl.gov)
+
+:::
+
+::::
+
+:::
+
+:::
+
+<!-- # {{< fa solid address-card >}} About Me -->
 
 :::: {.columns  style="margin-bottom:-0.5rem;"}
 
 ::: {.column width="65%"}
+
+# [{{< fa solid server >}}]{.green-text} About Me
 
 I make science happen on supercomputers.
 
@@ -31,10 +134,6 @@ Scientist](https://www.alcf.anl.gov/about/people/sam-foreman) working in the
 data science group at the [Leadership Computing
 Facility](https://www.alcf.anl.gov) at [Argonne National
 Laboratory](https://www.anl.gov).  
-
-I'm generally interested in the application of machine learning to
-computational problems in science, particularly within the context of high
-performance computing.
 
 :::
 
@@ -72,6 +171,10 @@ performance computing.
 
 ::::
 
+I'm generally interested in the application of machine learning to
+computational problems in science, particularly within the context of high
+performance computing.
+
 I'm currently working on [AI + Science](https://github.com/saforem2/), [scaling
 LLMs](https://github.com/saforem2/Megatron-DS-Benchmarking), generative
 modeling (esp. for physical systems), [building better sampling methods for
@@ -102,33 +205,22 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 
 :::
 
-# Recent Work
+## {{< fa solid newspaper >}} Recent Work
 
-- **S. Foreman** [**Exploratory Analysis of Climate Data with `ClimRR`**](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, _August 7, 2023_.
+- **S. Foreman** [**Exploratory Analysis of Climate Data with `ClimRR`**](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, _August 7, 2023_  
+- M. Zvyagin et. al., [**GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics**](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), _Oct 2022_  
+  - [{{< fa solid trophy >}}]{.yellow-text} [ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research](https://www.acm.org/media-center/2022/november/gordon-bell-special-prize-covid-research-2022)  
+- A.S. Kronfeld et al. [**Lattice QCD and Particle Physics**](https://arxiv.org/abs/2207.07641), _July 15, 2022_  
+- D. Boyda, S. Calí, **S. Foreman**, et al., [**Applications of ML to Lattice QFT**](https://arxiv.org/abs/2202.05838) [_arXiv:2202.05838_](https://arxiv.org/abs/2202.05838), _Feb 2022_  
+- **S. Foreman**, X.Y. Jin, J.C. Osborn, [**LeapFrogLayers: Trainable Framework for Effective Sampling**](https://arxiv.org/abs/2112.01582), [_Lattice, 2021_](https://indico.cern.ch/event/1006302)  
+- **S. Foreman** et al.[**HMC with Normalizing Flows**](https://arxiv.org/abs/2112.01586), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302/)  
+- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Deep Learning Hamiltonian Monte Carlo**](https://arxiv.org/abs/2105.03418) [(+ poster)](https://simdl.github.io/posters/57-supp_DLHMC_Foreman_SimDL-ICLR2021_poster1.pdf) at [_SimDL Workshop @ ICLR_](https://simdl.github.io/), 2021  
+- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Machine Learning and Neural Networks for Field Theory**](https://bit.ly/snowmass_ml2020) [_SnowMass_](https://snowmass21.org/), 2020  
+- **S. Foreman** et al. [**Examples of renormalization group transformations for image sets**](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.052129) _Physical Review E._, 2018  
+- **S. Foreman** et al. [**RG inspired Machine Learning for lattice field theory**](https://arxiv.org/abs/1710.02079) [_arXiv:1710.02079_](https://www.arxiv.or/abs/1710.02079), 2017  
+- **S. Foreman** et al. [**Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade**](https://doi.org/10.1063/1.5009698) _J. Appl. Phys_, 2018  
 
-- M. Zvyagin, A. Brace, K. Hippe, et. al., [**GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics**](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), _Oct 2022_
-  - [{{< fa solid trophy >}}]{.yellow-text} [ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research](https://www.acm.org/media-center/2022/november/gordon-bell-special-prize-covid-research-2022)
-
-- A.S. Kronfeld et al. [**Lattice QCD and Particle Physics**](https://arxiv.org/abs/2207.07641), _July 15, 2022_
-
-- D. Boyda, Salvatore Calí, **S. Foreman**, et al., [**Applications of Machine Learning to Lattice Quantum Field Theory**](https://arxiv.org/abs/2202.05838) [_arXiv:2202.05838_](https://arxiv.org/abs/2202.05838), _Feb 2022_
-
-- **S. Foreman**, X.Y. Jin, J.C. Osborn, [**LeapFrogLayers: Trainable Framework for Effective Topological Sampling**](https://arxiv.org/abs/2112.01582), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302)
-
-- **S. Foreman** L. Jin, X.Y. Jin, A. Tomiya, J.C. Osborn, & T. Izubuchi, [**HMC with Normalizing Flows**](https://arxiv.org/abs/2112.01586), [slides](https://indico.cern.ch/event/1006302/contributions/4380743/), [_Lattice, 2021_](https://indico.cern.ch/event/1006302/)
-
-- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Deep Learning Hamiltonian Monte Carlo**](https://arxiv.org/abs/2105.03418) [(+ poster)](https://simdl.github.io/posters/57-supp_DLHMC_Foreman_SimDL-ICLR2021_poster1.pdf) at [_SimDL Workshop @ ICLR_](https://simdl.github.io/), 2021
-
-- **S. Foreman**, X.Y. Jin, & J.C. Osborn, [**Machine Learning and Neural Networks for Field Theory**](https://bit.ly/snowmass_ml2020) [_SnowMass_](https://snowmass21.org/), 2020
-
-- **S. Foreman** et al.[**Examples of renormalization group transformations for image sets**](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.052129) _Physical Review E._, 2018
-
-- **S. Foreman**, J. Giedt, Y. Meurice, & J. Unmuth-Yockey [**RG inspired Machine Learning for lattice field theory**](https://arxiv.org/abs/1710.02079) [_arXiv:1710.02079_](https://www.arxiv.or/abs/1710.02079), 2017
-
-- **S. Foreman**, J. Liu, & L. Wortsmann [**Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade**](https://doi.org/10.1063/1.5009698) _J. Appl. Phys_, 2018
-
-
-# Recent Talks
+## {{< fa solid person-chalkboard >}} Recent Talks
 
 <!-- ::: {.card} -->
 <!---->
@@ -137,36 +229,22 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 <!-- ::: -->
 
 - [**MLMC: Machine Learning for Monte Carlo**](https://saforem2.github.io/lattice23), at [Lattice 2023](https://mlmc2022.github.io/), July 2023
-
-- [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/), at [PASC23](https://pasc23.pasc-conference.org/), July 2023 
-
+- [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/), at [PASC23](https://pasc23.pasc-conference.org/), July 2023
 - [**Efficient Sampling for Lattice Gauge Theory**](https://saforem2.github.io/deep-fridays), at [Deep Fridays @ U. Bologna](https://www.cs.unibo.it/~asperti/deep_fridays.html), April 2023
-
-- [**Large Scale Training**](https://saforem2.github.io/ai4sci-large-scale-training), at [Introduction to AI-driven Science on Supercomputers: A Student Training Series](https://github.com/argonne-lcf/ai-science-training-series), November 2022 
-
-- [**Hyperparameter Management**](https://saforem2.github.io/hparam-management-sdl2022), at [2022 ALCF Simulation, Data, and Learning Workshop](https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop), October 2022 
-
+- [**Large Scale Training**](https://saforem2.github.io/ai4sci-large-scale-training), at [Introduction to AI-driven Science on Supercomputers: A Student Training Series](https://github.com/argonne-lcf/ai-science-training-series), November 2022
+- [**Hyperparameter Management**](https://saforem2.github.io/hparam-management-sdl2022), at [2022 ALCF Simulation, Data, and Learning Workshop](https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop), October 2022
 - [**Statistical Learning**](https://saforem2.github.io/ATPESC-StatisticalLearning), at [ATPESC 2022](https://extremecomputingtraining.anl.gov/), August 2022 [📕 accompanying notebook](https://github.com/argonne-lcf/ATPESC_MachineLearning/blob/master/00_statisticalLearning/src/atpesc/notebooks/statistical_learning.ipynb)
-
 - [**Scientific Data Science: An Emerging Symbiosis**](https://saforem2.github.io/anl-job-talk/), at Argonne National Laboratory, May 2022
-
 - [**Machine Learning in HEP**](https://saforem2.github.io/physicsSeminar), at UNC Greensboro, March 2022
-
-- [**Accelerated Sampling Methods for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc-dwq25/), at [_BNL-HET  & RBRC Joint Workshop "DWQ @ 25"_](https://indico.bnl.gov/event/13576/), Dec 2021
-
+- [**Accelerated Sampling Methods for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc-dwq25/), at [_BNL-HET& RBRC Joint Workshop "DWQ @ 25"_](https://indico.bnl.gov/event/13576/), Dec 2021
 - [**Training Topological Samplers for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc_talk_ect2021/), [_ML4HEP, on and off the Lattice_](https://indico.ectstar.eu/event/77/contributions/2349/) @ ECT\* Trento, Sep 2021
-
 - [**l2hmc-qcd**](https://github.com/saforem2/l2hmc-qcd) at the _MIT Lattice Group Seminar_, 2021
-
 - [**Deep Learning HMC for Improved Gauge Generation**](https://bit.ly/mainz21) to the [_Machine Learning Techniques in Lattice QCD Workshop_](https://bit.ly/mainz21_overview), 2021
-
 - [**Machine Learning for Lattice QCD**](https://slides.com/samforeman/l2hmc-qcd-93bc0c) at the University of Iowa, 2020
-
 - [**Machine learning inspired analysis of the Ising model transition**](https://bit.ly/latt2018) to [_Lattice, 2018_](https://indico.fnal.gov/event/15949/overview)
-
 - **Machine Learning Analysis of Ising Worms** at _Brookhaven National Laboratory_, 2017
 
-# Active Projects
+## {{< fa brands github-alt >}} Active Projects
 
 ::: {.img-container style="text-align:left; display: flex;"}
 
@@ -213,7 +291,7 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 
 :::
 
-## Wait, there's more!
+## {{< fa solid bullhorn >}} Wait, there's more!
 
 - Organizer for [Machine Learning and Quantum Computing for Earth
 Sciences](https://17.usnccm.org/702) at 17th U. S. National Congress on
@@ -223,7 +301,7 @@ Computational Mechanics, July 2023
 (HPPSS)](https://hppss.github.io/SC23/), November 2023
 
 
-# Appendix
+## {{< fa solid hourglass-end >}} Appendix
 
 ```{python}
 from datetime import date
