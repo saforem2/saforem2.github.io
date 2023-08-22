@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://saforem2.github.io/qmd/slides.html</loc>
-    <lastmod>2023-08-19T23:10:32.546Z</lastmod>
+    <lastmod>2023-08-22T02:45:12.982Z</lastmod>
   </url>
   <url>
     <loc>https://saforem2.github.io/index.html</loc>
-    <lastmod>2023-08-20T01:33:29.960Z</lastmod>
+    <lastmod>2023-08-22T02:50:03.528Z</lastmod>
   </url>
   <url>
     <loc>https://saforem2.github.io/qmd/blog/2023-08-19.html</loc>
-    <lastmod>2023-08-19T16:39:43.783Z</lastmod>
+    <lastmod>2023-08-22T02:46:48.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/qmd/blog/quarto-reveal.html</loc>
+    <lastmod>2023-08-22T02:49:14.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/qmd/posts.html</loc>
+    <lastmod>2023-08-22T02:49:11.922Z</lastmod>
   </url>
 </urlset>
