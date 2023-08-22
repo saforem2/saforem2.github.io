@@ -189,7 +189,7 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 
 :::
 
-## {{< fa solid newspaper >}} Recent Work
+## [{{< fa solid newspaper >}}]{.red-text} Recent Work
 
 - **S. Foreman** [**Exploratory Analysis of Climate Data with `ClimRR`**](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, _August 7, 2023_  
 - M. Zvyagin et. al., [**GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics**](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), _Oct 2022_  
@@ -204,7 +204,7 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 - **S. Foreman** et al. [**RG inspired Machine Learning for lattice field theory**](https://arxiv.org/abs/1710.02079) [_arXiv:1710.02079_](https://www.arxiv.or/abs/1710.02079), 2017  
 - **S. Foreman** et al. [**Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade**](https://doi.org/10.1063/1.5009698) _J. Appl. Phys_, 2018  
 
-## {{< fa solid person-chalkboard >}} Recent Talks
+## [{{< fa solid person-chalkboard >}}]{.orange-text} Recent Talks
 
 <!-- ::: {.card} -->
 <!---->
@@ -228,7 +228,7 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 - [**Machine learning inspired analysis of the Ising model transition**](https://bit.ly/latt2018) to [_Lattice, 2018_](https://indico.fnal.gov/event/15949/overview)
 - **Machine Learning Analysis of Ising Worms** at _Brookhaven National Laboratory_, 2017
 
-## {{< fa brands github-alt >}} Active Projects
+## [{{< fa brands github-alt >}}]{.yellow-text} Active Projects
 
 ::: {.img-container style="text-align:left; display: flex;"}
 
@@ -275,7 +275,7 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 
 :::
 
-## {{< fa solid bullhorn >}} Wait, there's more!
+## [{{< fa solid bullhorn >}}]{.green-text} Wait, there's more!
 
 - Organizer for [Machine Learning and Quantum Computing for Earth
 Sciences](https://17.usnccm.org/702) at 17th U. S. National Congress on
@@ -285,7 +285,7 @@ Computational Mechanics, July 2023
 (HPPSS)](https://hppss.github.io/SC23/), November 2023
 
 
-## {{< fa solid hourglass-end >}} Appendix
+## [{{< fa solid hourglass-end >}}]{.blue-text} Appendix
 
 
 ::: {.cell execution_count=1}
@@ -296,7 +296,7 @@ print(f"Last updated: {date.today().strftime('%d %B %y')}")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-Last updated: 19 August 23
+Last updated: 21 August 23
 ```
 :::
 :::

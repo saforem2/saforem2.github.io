@@ -60,7 +60,9 @@ website:
 
     left:
       - href: "./qmd/slides.qmd"
-        text: "Recent Talks"
+        text: "Talks"
+      - href: "./qmd/posts.qmd"
+        text: "Posts"
       - href: "https://saforem2.github.io/l2hmc-qcd"
         text: "{{< fa brands github >}} `l2hmc-qcd`"
     # left: auto
