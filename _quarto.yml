@@ -59,10 +59,10 @@ website:
         aria-label: GitHub
 
     left:
-      - href: "./qmd/slides.qmd"
-        text: "Talks"
       - href: "./qmd/posts.qmd"
-        text: "Posts"
+        text: "[{{< fa solid newspaper >}}]{.red-text} Posts"
+      - href: "./qmd/slides.qmd"
+        text: "[{{< fa solid person-chalkboard >}}]{.orange-text} Talks"
       - href: "https://saforem2.github.io/l2hmc-qcd"
         text: "{{< fa brands github >}} `l2hmc-qcd`"
     # left: auto

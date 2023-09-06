@@ -180,5 +180,12 @@
     "title": "Listing Example",
     "section": "",
     "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman\n\n\n\n\nAug 19, 2023\n\n\nAbout Me (alt)\n\n\nSam Foreman\n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
+  },
+  {
+    "objectID": "qmd/dsblog.html#results",
+    "href": "qmd/dsblog.html#results",
+    "title": "Long Sequence Lengths",
+    "section": "Results",
+    "text": "Results\n\n\n\nMODEL_SIZE\nGPUs\nImplementation\nSEQ_LEN (k)\nImprovement\n\n\n\n\n25B\n32\nOLD\n28\n4.5714285714\n\n\n\n\nNVIDIA\n14\n9.1428571429\n\n\n\n\nNEW\n128\n1\n\n\n25B\n64\nOLD\n32\n12\n\n\n\n\nNVIDIA\n46\n8.347826087\n\n\n\n\nNEW\n384\n1\n\n\n25B\n128\nOLD\n32\n14\n\n\n\n\nNVIDIA\n52\n8.6153846154\n\n\n\n\nNEW\n448\n1\n\n\n33B\n32\nOLD\n36\n5.3333333333\n\n\n\n\nNVIDIA\n26\n7.3846153846\n\n\n\n\nNEW\n192\n1\n\n\n33B\n64\nOLD\n42\n10.66666666\n\n\n\n\nNVIDIA\n48\n9.333333333\n\n\n\n\nNEW\n448\n1\n\n\n33B\n128\nOLD\n42\n12.1904761905\n\n\n\n\nNVIDIA\n52\n9.8461538462\n\n\n\n\nNEW\n512\n1"
   }
 ]

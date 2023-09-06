@@ -1,0 +1,44 @@
+---
+title: "Long Sequence Lengths"
+callout-appearance: simple
+title-block-banner: false
+# https://www.anl.gov/sites/www/files/2021-09/CPA_RESIZE_Climate%20Resilience%20Images_01_1920x1080.jpg
+editor:
+   render-on-save: true
+execute:
+   freeze: true
+---
+
+<img align="left" width="48%"  src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/25B.svg"> <img align="right" width="48%" src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/33B.svg">
+
+
+
+
+
+
+
+
+
+
+## Results
+
+| MODEL_SIZE | GPUs | Implementation | SEQ_LEN (k) |   Improvement |
+|:----------:|:----:|:--------------:|:-----------:| -------------:|
+|    25B     |  32  |      OLD       |     28      |  4.5714285714 |
+|            |      |     NVIDIA     |     14      |  9.1428571429 |
+|            |      |      NEW       |   **128**   |             1 |
+|    25B     |  64  |      OLD       |     32      |            12 |
+|            |      |     NVIDIA     |     46      |   8.347826087 |
+|            |      |      NEW       |   **384**   |             1 |
+|    25B     | 128  |      OLD       |     32      |            14 |
+|            |      |     NVIDIA     |     52      |  8.6153846154 |
+|            |      |      NEW       |   **448**   |             1 |
+|    33B     |  32  |      OLD       |     36      |  5.3333333333 |
+|            |      |     NVIDIA     |     26      |  7.3846153846 |
+|            |      |      NEW       |   **192**   |             1 |
+|    33B     |  64  |      OLD       |     42      |   10.66666666 |
+|            |      |     NVIDIA     |     48      |   9.333333333 |
+|            |      |      NEW       |   **448**   |             1 |
+|    33B     | 128  |      OLD       |     42      | 12.1904761905 |
+|            |      |     NVIDIA     |     52      |  9.8461538462 |
+|            |      |      NEW       |   **512**   |             1 |
