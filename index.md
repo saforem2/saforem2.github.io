@@ -296,7 +296,48 @@ print(f"Last updated: {date.today().strftime('%d %B %y')}")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-Last updated: 21 August 23
+Last updated: 23 August 23
+```
+:::
+:::
+
+
+::: {.cell execution_count=2}
+``` {.python .cell-code}
+import numpy as np
+NORM = np.sqrt(2 * np.pi ** 2)
+
+def loglikelihood(x: float) -> float:
+    return np.exp(-0.5 * (x ** 2)) / NORM
+
+def metropolis_hastings(nsteps: int = 1000) -> list[float]:
+    x = 0.  # initial state
+    samples = []
+    for n in range(nsteps):
+        # generate RANDOM proposal
+        xp = x + np.random.randn()
+        llhratio = loglikelihood(xp) / loglikelihood(x)
+        # always accept if llhratio > 1
+        # otherwise, accept with p ~ U[0, 1]
+        if np.random.uniform() < llhratio:
+            x = xp
+        samples.append(x)
+    return samples
+
+# samples = metropolis_hastings(int(1e6))
+```
+:::
+
+
+::: {.cell execution_count=3}
+``` {.python .cell-code}
+%timeit metropolis_hastings(int(1e6))  # 2023 MBP M2 Max
+# 1.92 s ± 9.06 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+2.25 s ± 53.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 ```
 :::
 :::
