@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -78,17 +112,18 @@ gtag('js', new Date());
 gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 <link href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="../css/callouts.css">
 <meta property="og:title" content="Sam Foreman - Long Sequence Lengths">
-<meta property="og:description" content="">
 <meta property="og:image" content="https://saforem2.github.io/qmd/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site-name" content="Sam Foreman">
 <meta name="twitter:title" content="Sam Foreman - Long Sequence Lengths">
-<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://saforem2.github.io/qmd/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Personal Website">
@@ -164,13 +199,7 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#results" id="toc-results" class="nav-link active" data-scroll-target="#results">Results</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/dsblog.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -204,151 +233,324 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 
 </header>
 
-<p><img align="left" width="48%" src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/25B.svg"> <img align="right" width="48%" src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/33B.svg"></p>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<table class="table">
+<!-- <img align="left" width="48%"  src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/25B.svg"> <img align="right" width="48%" src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/33B.svg"> -->
+<!-- | MODEL_SIZE | GPUs | Implementation | SEQ_LEN (k) |   Improvement | -->
+<!-- |:----------:|:----:|:--------------:|:-----------:| -------------:| -->
+<!-- |    25B     |  32  |      OLD       |     28      |  4.5714285714 | -->
+<!-- |            |      |     NVIDIA     |     14      |  9.1428571429 | -->
+<!-- |            |      |      NEW       |   [128]{.red-text}   |             1 | -->
+<!-- |    25B     |  64  |      OLD       |     32      |            12 | -->
+<!-- |            |      |     NVIDIA     |     46      |   8.347826087 | -->
+<!-- |            |      |      NEW       |   [384]{.red-text}   |             1 | -->
+<!-- |    25B     | 128  |      OLD       |     32      |            14 | -->
+<!-- |            |      |     NVIDIA     |     52      |  8.6153846154 | -->
+<!-- |            |      |      NEW       |  [448]{.red-text}   |             1 | -->
+<!-- |    33B     |  32  |      OLD       |     36      |  5.3333333333 | -->
+<!-- |            |      |     NVIDIA     |     26      |  7.3846153846 | -->
+<!-- |            |      |      NEW       |   [192]{.red-text}   |             1 | -->
+<!-- |    33B     |  64  |      OLD       |     42      |   10.66666666 | -->
+<!-- |            |      |     NVIDIA     |     48      |   9.333333333 | -->
+<!-- |            |      |      NEW       |   [448]{.red-text}   |             1 | -->
+<!-- |    33B     | 128  |      OLD       |     42      | 12.1904761905 | -->
+<!-- |            |      |     NVIDIA     |     52      |  9.8461538462 | -->
+<!-- |            |      |      NEW       |   [512]{.red-text}   |             1 | -->
+<!---->
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">%</span>load_ext autoreload</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> os</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> datetime</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="im">from</span> typing <span class="im">import</span> Tuple</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="im">from</span> toolbox <span class="im">import</span> set_plot_style</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># from toolbox import get_console</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a>set_plot_style()</span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># console = get_console()</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a>sns.set_context(<span class="st">'talk'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14"></a>set_plot_style()</span>
+<span id="cb3-15"><a href="#cb3-15"></a></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="kw">def</span> save_figure(</span>
+<span id="cb3-17"><a href="#cb3-17"></a>        fname: <span class="bu">str</span>,</span>
+<span id="cb3-18"><a href="#cb3-18"></a>        outdir: os.PathLike,</span>
+<span id="cb3-19"><a href="#cb3-19"></a>):</span>
+<span id="cb3-20"><a href="#cb3-20"></a>    pngdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'pngs'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21"></a>    svgdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'svgs'</span>)</span>
+<span id="cb3-22"><a href="#cb3-22"></a>    pngdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-23"><a href="#cb3-23"></a>    svgdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-24"><a href="#cb3-24"></a>    pngfile <span class="op">=</span> pngdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.png'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25"></a>    svgfile <span class="op">=</span> svgdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.svg'</span>)</span>
+<span id="cb3-26"><a href="#cb3-26"></a>    <span class="co"># console.print(f'Saving figures to: {outdir}' + '/{pngs,svgs}/' + f'{fname}*')</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a>    _ <span class="op">=</span> plt.savefig(pngfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb3-28"><a href="#cb3-28"></a>    _ <span class="op">=</span> plt.savefig(svgfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>labels <span class="op">=</span> (<span class="st">'32'</span>, <span class="st">'64'</span>, <span class="st">'128'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>data <span class="op">=</span> {</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="st">'25B'</span>: {</span>
+<span id="cb4-5"><a href="#cb4-5"></a>        <span class="st">'Old'</span>: (<span class="dv">28</span>, <span class="dv">32</span>, <span class="dv">32</span>),</span>
+<span id="cb4-6"><a href="#cb4-6"></a>        <span class="st">'Nvidia'</span>: (<span class="dv">14</span>, <span class="dv">46</span>, <span class="dv">52</span>),</span>
+<span id="cb4-7"><a href="#cb4-7"></a>        <span class="st">'New'</span>: (<span class="dv">128</span>, <span class="dv">384</span>, <span class="dv">448</span>),</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    },</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="st">'33B'</span>: {</span>
+<span id="cb4-10"><a href="#cb4-10"></a>        <span class="st">'Old'</span>: (<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">42</span>),</span>
+<span id="cb4-11"><a href="#cb4-11"></a>        <span class="st">'Nvidia'</span>: (<span class="dv">26</span>, <span class="dv">48</span>, <span class="dv">52</span>),</span>
+<span id="cb4-12"><a href="#cb4-12"></a>        <span class="st">'New'</span>: (<span class="dv">192</span>, <span class="dv">448</span>, <span class="dv">512</span>),</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    }</span>
+<span id="cb4-14"><a href="#cb4-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="fig-seq-len" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(labels))</span>
+<span id="cb5-2"><a href="#cb5-2"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>outdir <span class="op">=</span> Path(os.getcwd()).joinpath(<span class="st">'assets'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a>outdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># console.log(f'Saving figures to: {outdir}')</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="im">from</span> toolbox <span class="im">import</span> COLORS</span>
+<span id="cb5-10"><a href="#cb5-10"></a>colors <span class="op">=</span> {</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="st">'Old'</span>: COLORS[<span class="st">'red'</span>],</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="st">'Nvidia'</span>: COLORS[<span class="st">'green'</span>],</span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="st">'New'</span>: COLORS[<span class="st">'blue'</span>]</span>
+<span id="cb5-14"><a href="#cb5-14"></a>}</span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co"># plt.tight_layout()</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="cf">for</span> model_size, d <span class="kw">in</span> data.items():</span>
+<span id="cb5-17"><a href="#cb5-17"></a>    multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a>    figure, axes <span class="op">=</span> plt.subplots(layout<span class="op">=</span><span class="st">'constrained'</span>)</span>
+<span id="cb5-19"><a href="#cb5-19"></a>    fig <span class="op">=</span> plt.gcf()</span>
+<span id="cb5-20"><a href="#cb5-20"></a>    ax <span class="op">=</span> plt.gca()</span>
+<span id="cb5-21"><a href="#cb5-21"></a>    <span class="cf">for</span> label, value <span class="kw">in</span> d.items():</span>
+<span id="cb5-22"><a href="#cb5-22"></a>        offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
+<span id="cb5-23"><a href="#cb5-23"></a>        rects <span class="op">=</span> ax.bar(x <span class="op">+</span> offset, value, width, label<span class="op">=</span>label, color<span class="op">=</span>colors[label])</span>
+<span id="cb5-24"><a href="#cb5-24"></a>        ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb5-25"><a href="#cb5-25"></a>        multiplier <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-26"><a href="#cb5-26"></a>    ax.set_ylabel(<span class="st">'Sequence Length (k)'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb5-27"><a href="#cb5-27"></a>    ax.set_xlabel(<span class="st">'GPUs'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb5-28"><a href="#cb5-28"></a>    ax.set_title(<span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss"> Model'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb5-29"><a href="#cb5-29"></a>    ax.set_xticks(x <span class="op">+</span> width, labels)</span>
+<span id="cb5-30"><a href="#cb5-30"></a>    ax.legend(loc<span class="op">=</span><span class="st">'best'</span>, ncols<span class="op">=</span><span class="dv">1</span>, frameon<span class="op">=</span><span class="va">True</span>)  <span class="co"># , bbox_to_anchor=(1.05, 1.0))</span></span>
+<span id="cb5-31"><a href="#cb5-31"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
+<span id="cb5-32"><a href="#cb5-32"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-execution_count="4">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dsblog_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img" width="683"></p>
+<figcaption class="figure-caption">Line Plot 1</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dsblog_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img" width="683"></p>
+<figcaption class="figure-caption">Line Plot 2</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;1: Maximum Sequence Lengths Achievable across different implementations, model sizes and GPUs. In each case, the <code>new</code> (current) implementation <strong>significantly</strong> outperforms both NVIDIA/Megatron-LM as well as our previous implementation.</figcaption>
+</figure>
+</div>
+<div id="fig-table" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="im">from</span> toolbox <span class="im">import</span> get_console</span>
+<span id="cb6-3"><a href="#cb6-3"></a>console <span class="op">=</span> get_console()</span>
+<span id="cb6-4"><a href="#cb6-4"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'./data.csv'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>df</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># pd.DataFrame(data)</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co"># console.print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="99">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
-<th style="text-align: center;">MODEL_SIZE</th>
-<th style="text-align: center;">GPUs</th>
-<th style="text-align: center;">Implementation</th>
-<th style="text-align: center;">SEQ_LEN (k)</th>
-<th style="text-align: right;">Improvement</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">MODEL_SIZE</th>
+<th data-quarto-table-cell-role="th">GPUs</th>
+<th data-quarto-table-cell-role="th">Implementation</th>
+<th data-quarto-table-cell-role="th">SEQ_LEN (k)</th>
+<th data-quarto-table-cell-role="th">Improvement</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">25B</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">OLD</td>
-<td style="text-align: center;">28</td>
-<td style="text-align: right;">4.5714285714</td>
+<td data-quarto-table-cell-role="th">0</td>
+<td>25B</td>
+<td>32</td>
+<td>OLD</td>
+<td>28</td>
+<td>4.571429</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NVIDIA</td>
-<td style="text-align: center;">14</td>
-<td style="text-align: right;">9.1428571429</td>
+<td data-quarto-table-cell-role="th">1</td>
+<td>25B</td>
+<td>32</td>
+<td>NVIDIA</td>
+<td>14</td>
+<td>9.142857</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NEW</td>
-<td style="text-align: center;"><strong>128</strong></td>
-<td style="text-align: right;">1</td>
+<td data-quarto-table-cell-role="th">2</td>
+<td>25B</td>
+<td>32</td>
+<td>NEW</td>
+<td>128</td>
+<td>1.000000</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">25B</td>
-<td style="text-align: center;">64</td>
-<td style="text-align: center;">OLD</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: right;">12</td>
+<td data-quarto-table-cell-role="th">3</td>
+<td>25B</td>
+<td>64</td>
+<td>OLD</td>
+<td>32</td>
+<td>12.000000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NVIDIA</td>
-<td style="text-align: center;">46</td>
-<td style="text-align: right;">8.347826087</td>
+<td data-quarto-table-cell-role="th">4</td>
+<td>25B</td>
+<td>64</td>
+<td>NVIDIA</td>
+<td>46</td>
+<td>8.347826</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NEW</td>
-<td style="text-align: center;"><strong>384</strong></td>
-<td style="text-align: right;">1</td>
+<td data-quarto-table-cell-role="th">5</td>
+<td>25B</td>
+<td>64</td>
+<td>NEW</td>
+<td>384</td>
+<td>1.000000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">25B</td>
-<td style="text-align: center;">128</td>
-<td style="text-align: center;">OLD</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: right;">14</td>
+<td data-quarto-table-cell-role="th">6</td>
+<td>25B</td>
+<td>128</td>
+<td>OLD</td>
+<td>32</td>
+<td>14.000000</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NVIDIA</td>
-<td style="text-align: center;">52</td>
-<td style="text-align: right;">8.6153846154</td>
+<td data-quarto-table-cell-role="th">7</td>
+<td>25B</td>
+<td>128</td>
+<td>NVIDIA</td>
+<td>52</td>
+<td>8.615385</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NEW</td>
-<td style="text-align: center;"><strong>448</strong></td>
-<td style="text-align: right;">1</td>
+<td data-quarto-table-cell-role="th">8</td>
+<td>25B</td>
+<td>128</td>
+<td>NEW</td>
+<td>448</td>
+<td>1.000000</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">33B</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">OLD</td>
-<td style="text-align: center;">36</td>
-<td style="text-align: right;">5.3333333333</td>
+<td data-quarto-table-cell-role="th">9</td>
+<td>33B</td>
+<td>32</td>
+<td>OLD</td>
+<td>36</td>
+<td>5.333333</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NVIDIA</td>
-<td style="text-align: center;">26</td>
-<td style="text-align: right;">7.3846153846</td>
+<td data-quarto-table-cell-role="th">10</td>
+<td>33B</td>
+<td>32</td>
+<td>NVIDIA</td>
+<td>26</td>
+<td>7.384615</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NEW</td>
-<td style="text-align: center;"><strong>192</strong></td>
-<td style="text-align: right;">1</td>
+<td data-quarto-table-cell-role="th">11</td>
+<td>33B</td>
+<td>32</td>
+<td>NEW</td>
+<td>192</td>
+<td>1.000000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">33B</td>
-<td style="text-align: center;">64</td>
-<td style="text-align: center;">OLD</td>
-<td style="text-align: center;">42</td>
-<td style="text-align: right;">10.66666666</td>
+<td data-quarto-table-cell-role="th">12</td>
+<td>33B</td>
+<td>64</td>
+<td>OLD</td>
+<td>42</td>
+<td>10.666667</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NVIDIA</td>
-<td style="text-align: center;">48</td>
-<td style="text-align: right;">9.333333333</td>
+<td data-quarto-table-cell-role="th">13</td>
+<td>33B</td>
+<td>64</td>
+<td>NVIDIA</td>
+<td>48</td>
+<td>9.333333</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NEW</td>
-<td style="text-align: center;"><strong>448</strong></td>
-<td style="text-align: right;">1</td>
+<td data-quarto-table-cell-role="th">14</td>
+<td>33B</td>
+<td>64</td>
+<td>NEW</td>
+<td>448</td>
+<td>1.000000</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">33B</td>
-<td style="text-align: center;">128</td>
-<td style="text-align: center;">OLD</td>
-<td style="text-align: center;">42</td>
-<td style="text-align: right;">12.1904761905</td>
+<td data-quarto-table-cell-role="th">15</td>
+<td>33B</td>
+<td>128</td>
+<td>OLD</td>
+<td>42</td>
+<td>12.190476</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NVIDIA</td>
-<td style="text-align: center;">52</td>
-<td style="text-align: right;">9.8461538462</td>
+<td data-quarto-table-cell-role="th">16</td>
+<td>33B</td>
+<td>128</td>
+<td>NVIDIA</td>
+<td>52</td>
+<td>9.846154</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">NEW</td>
-<td style="text-align: center;"><strong>512</strong></td>
-<td style="text-align: right;">1</td>
+<td data-quarto-table-cell-role="th">17</td>
+<td>33B</td>
+<td>128</td>
+<td>NEW</td>
+<td>512</td>
+<td>1.000000</td>
 </tr>
 </tbody>
 </table>
 
+</div>
+</div>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;2: Maximum Sequence Length Results</figcaption>
+</figure>
+</div>
 
-</section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman2023,
   author = {Foreman, Sam},
@@ -719,7 +921,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
 </ul>
     </div>   
-    <div class="nav-footer-center">Copyright 2023, Sam Foreman</div>
+    <div class="nav-footer-center">Copyright 2023, Sam Foreman<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/dsblog.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
