@@ -47,29 +47,25 @@ about:
    #     text: "{{< fa brands linkedin >}}"
 ---
 
+:::{#hero-heading style="margin: auto;"}
 
-:::{#hero-heading style="margin-bottom: 0em;"}
-
-<!-- # []{} -->
 # [{{< fa solid address-card >}}]{.dim-text} Sam Foreman
-
-<!-- [{{< fa solid server >}}]{.green-text} I make science happen on supercomputers. -->
 
 ::: {style="font-size: 0.8em;"}
 
 ### [{{< fa solid graduation-cap >}}]{.blue-text} Education
 
-:::: {.columns style="margin-bottom: 0em; display: flow-root!important;"}
+:::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
-::: {.column width="30%"}
+::: {.column width="25%"}
 
 **[PhD. Physics](https://www.proquest.com/openview/95d7f7c12da8da8aa5ead3ac0f6ca0e8/1?pq-origsite=gscholar&cbl=18750&diss=y)**  
-**B.S. Engineering Physics**  
-**B.S. Applied Mathematics**
+Engineering Physics  
+Applied Mathematics
 
 :::
 
-::: {.column width="10%"}
+::: {.column width="13%"}
 
 2019  
 2015  
@@ -77,7 +73,7 @@ about:
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" style="text-align: left;"}
 
 University of Iowa  
 University of Illinois at Urbana-Champaign  
@@ -89,24 +85,23 @@ University of Illinois at Urbana-Champaign
 
 ### [{{< fa solid building >}}]{.red-text} Experience
 
-:::: {.columns}
+:::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
-::: {.column width="30%"}
+::: {.column width="25%"}
 
 [Computational Scientist](https://www.alcf.anl.gov/about/people/sam-foreman)  
 Postdoc
 
 :::
 
-
-::: {.column width="10%"}
+::: {.column width="13%"}
 
 2022—*  
 2019
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" style="text-align: left;"}
 
 [Argonne National Laboratory](https://www.anl.gov)  
 [Argonne Leadership Computing Facility (ALCF)](https://www.alcf.anl.gov)

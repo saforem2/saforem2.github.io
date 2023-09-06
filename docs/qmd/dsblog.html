@@ -173,11 +173,11 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../qmd/slides.html" rel="" target="">
- <span class="menu-text"><span class="orange-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i></span> Talks</span></a>
+ <span class="menu-text"><span style="color:#87C4F9"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i></span> Slides</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://saforem2.github.io/l2hmc-qcd" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-github" aria-label="github"></i> <code>l2hmc-qcd</code></span></a>
+ <span class="menu-text"><span class="green-text"><i class="fa-brands fa-github" aria-label="github"></i></span> l2hmc-qcd</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -199,7 +199,14 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#initial-results" id="toc-initial-results" class="nav-link active" data-scroll-target="#initial-results">Initial Results</a></li>
+  <li><a href="#new-results" id="toc-new-results" class="nav-link" data-scroll-target="#new-results">New Results</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/dsblog.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -234,153 +241,137 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 </header>
 
 <!-- <img align="left" width="48%"  src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/25B.svg"> <img align="right" width="48%" src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/33B.svg"> -->
-<!-- | MODEL_SIZE | GPUs | Implementation | SEQ_LEN (k) |   Improvement | -->
-<!-- |:----------:|:----:|:--------------:|:-----------:| -------------:| -->
-<!-- |    25B     |  32  |      OLD       |     28      |  4.5714285714 | -->
-<!-- |            |      |     NVIDIA     |     14      |  9.1428571429 | -->
-<!-- |            |      |      NEW       |   [128]{.red-text}   |             1 | -->
-<!-- |    25B     |  64  |      OLD       |     32      |            12 | -->
-<!-- |            |      |     NVIDIA     |     46      |   8.347826087 | -->
-<!-- |            |      |      NEW       |   [384]{.red-text}   |             1 | -->
-<!-- |    25B     | 128  |      OLD       |     32      |            14 | -->
-<!-- |            |      |     NVIDIA     |     52      |  8.6153846154 | -->
-<!-- |            |      |      NEW       |  [448]{.red-text}   |             1 | -->
-<!-- |    33B     |  32  |      OLD       |     36      |  5.3333333333 | -->
-<!-- |            |      |     NVIDIA     |     26      |  7.3846153846 | -->
-<!-- |            |      |      NEW       |   [192]{.red-text}   |             1 | -->
-<!-- |    33B     |  64  |      OLD       |     42      |   10.66666666 | -->
-<!-- |            |      |     NVIDIA     |     48      |   9.333333333 | -->
-<!-- |            |      |      NEW       |   [448]{.red-text}   |             1 | -->
-<!-- |    33B     | 128  |      OLD       |     42      | 12.1904761905 | -->
-<!-- |            |      |     NVIDIA     |     52      |  9.8461538462 | -->
-<!-- |            |      |      NEW       |   [512]{.red-text}   |             1 | -->
-<!---->
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">%</span>load_ext autoreload</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The autoreload extension is already loaded. To reload it, use:
-  %reload_ext autoreload</code></pre>
+<section id="initial-results" class="level2">
+<h2 class="anchored" data-anchor-id="initial-results">Initial Results</h2>
+<div class="callout callout-style-simple callout-important callout-titled" title="PRE-RELEASE" style="width: 100%;">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+PRE-RELEASE
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>I’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in <a href="#fig-seq-len">Figure&nbsp;1</a>) but these can be ommitted in the actual README</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> datetime</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> typing <span class="im">import</span> Tuple</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># toolbox comes from</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># https://github.com/saforem2/toolbox</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="im">from</span> toolbox <span class="im">import</span> set_plot_style</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>sns.set_context(<span class="st">'talk'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>set_plot_style()</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="kw">def</span> save_figure(</span>
+<span id="cb1-16"><a href="#cb1-16"></a>        fname: <span class="bu">str</span>,</span>
+<span id="cb1-17"><a href="#cb1-17"></a>        outdir: os.PathLike,</span>
+<span id="cb1-18"><a href="#cb1-18"></a>):</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    pngdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'pngs'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    svgdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'svgs'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    pngdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a>    svgdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-23"><a href="#cb1-23"></a>    pngfile <span class="op">=</span> pngdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.png'</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a>    svgfile <span class="op">=</span> svgdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.svg'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    _ <span class="op">=</span> plt.savefig(pngfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26"></a>    _ <span class="op">=</span> plt.savefig(svgfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> os</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> datetime</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="im">from</span> typing <span class="im">import</span> Tuple</span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="im">from</span> toolbox <span class="im">import</span> set_plot_style</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># from toolbox import get_console</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb3-8"><a href="#cb3-8"></a></span>
-<span id="cb3-9"><a href="#cb3-9"></a>set_plot_style()</span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># console = get_console()</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a>sns.set_context(<span class="st">'talk'</span>)</span>
-<span id="cb3-14"><a href="#cb3-14"></a>set_plot_style()</span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="kw">def</span> save_figure(</span>
-<span id="cb3-17"><a href="#cb3-17"></a>        fname: <span class="bu">str</span>,</span>
-<span id="cb3-18"><a href="#cb3-18"></a>        outdir: os.PathLike,</span>
-<span id="cb3-19"><a href="#cb3-19"></a>):</span>
-<span id="cb3-20"><a href="#cb3-20"></a>    pngdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'pngs'</span>)</span>
-<span id="cb3-21"><a href="#cb3-21"></a>    svgdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'svgs'</span>)</span>
-<span id="cb3-22"><a href="#cb3-22"></a>    pngdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-23"><a href="#cb3-23"></a>    svgdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-24"><a href="#cb3-24"></a>    pngfile <span class="op">=</span> pngdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.png'</span>)</span>
-<span id="cb3-25"><a href="#cb3-25"></a>    svgfile <span class="op">=</span> svgdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.svg'</span>)</span>
-<span id="cb3-26"><a href="#cb3-26"></a>    <span class="co"># console.print(f'Saving figures to: {outdir}' + '/{pngs,svgs}/' + f'{fname}*')</span></span>
-<span id="cb3-27"><a href="#cb3-27"></a>    _ <span class="op">=</span> plt.savefig(pngfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb3-28"><a href="#cb3-28"></a>    _ <span class="op">=</span> plt.savefig(svgfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>labels <span class="op">=</span> (<span class="st">'32'</span>, <span class="st">'64'</span>, <span class="st">'128'</span>)</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a>data <span class="op">=</span> {</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="st">'25B'</span>: {</span>
-<span id="cb4-5"><a href="#cb4-5"></a>        <span class="st">'Old'</span>: (<span class="dv">28</span>, <span class="dv">32</span>, <span class="dv">32</span>),</span>
-<span id="cb4-6"><a href="#cb4-6"></a>        <span class="st">'Nvidia'</span>: (<span class="dv">14</span>, <span class="dv">46</span>, <span class="dv">52</span>),</span>
-<span id="cb4-7"><a href="#cb4-7"></a>        <span class="st">'New'</span>: (<span class="dv">128</span>, <span class="dv">384</span>, <span class="dv">448</span>),</span>
-<span id="cb4-8"><a href="#cb4-8"></a>    },</span>
-<span id="cb4-9"><a href="#cb4-9"></a>    <span class="st">'33B'</span>: {</span>
-<span id="cb4-10"><a href="#cb4-10"></a>        <span class="st">'Old'</span>: (<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">42</span>),</span>
-<span id="cb4-11"><a href="#cb4-11"></a>        <span class="st">'Nvidia'</span>: (<span class="dv">26</span>, <span class="dv">48</span>, <span class="dv">52</span>),</span>
-<span id="cb4-12"><a href="#cb4-12"></a>        <span class="st">'New'</span>: (<span class="dv">192</span>, <span class="dv">448</span>, <span class="dv">512</span>),</span>
-<span id="cb4-13"><a href="#cb4-13"></a>    }</span>
-<span id="cb4-14"><a href="#cb4-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>gpus <span class="op">=</span> (<span class="st">'32'</span>, <span class="st">'64'</span>, <span class="st">'128'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>data <span class="op">=</span> {</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="st">'25B'</span>: {</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        <span class="st">'Old'</span>: (<span class="dv">28</span>, <span class="dv">32</span>, <span class="dv">32</span>),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>        <span class="st">'Nvidia'</span>: (<span class="dv">14</span>, <span class="dv">46</span>, <span class="dv">52</span>),</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        <span class="st">'New'</span>: (<span class="dv">128</span>, <span class="dv">384</span>, <span class="dv">448</span>),</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    },</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="st">'33B'</span>: {</span>
+<span id="cb2-10"><a href="#cb2-10"></a>        <span class="st">'Old'</span>: (<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">42</span>),</span>
+<span id="cb2-11"><a href="#cb2-11"></a>        <span class="st">'Nvidia'</span>: (<span class="dv">26</span>, <span class="dv">48</span>, <span class="dv">52</span>),</span>
+<span id="cb2-12"><a href="#cb2-12"></a>        <span class="st">'New'</span>: (<span class="dv">192</span>, <span class="dv">448</span>, <span class="dv">512</span>),</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    }</span>
+<span id="cb2-14"><a href="#cb2-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="fig-seq-len" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(labels))</span>
-<span id="cb5-2"><a href="#cb5-2"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5"></a>outdir <span class="op">=</span> Path(os.getcwd()).joinpath(<span class="st">'assets'</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>outdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># console.log(f'Saving figures to: {outdir}')</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="im">from</span> toolbox <span class="im">import</span> COLORS</span>
-<span id="cb5-10"><a href="#cb5-10"></a>colors <span class="op">=</span> {</span>
-<span id="cb5-11"><a href="#cb5-11"></a>    <span class="st">'Old'</span>: COLORS[<span class="st">'red'</span>],</span>
-<span id="cb5-12"><a href="#cb5-12"></a>    <span class="st">'Nvidia'</span>: COLORS[<span class="st">'green'</span>],</span>
-<span id="cb5-13"><a href="#cb5-13"></a>    <span class="st">'New'</span>: COLORS[<span class="st">'blue'</span>]</span>
-<span id="cb5-14"><a href="#cb5-14"></a>}</span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="co"># plt.tight_layout()</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="cf">for</span> model_size, d <span class="kw">in</span> data.items():</span>
-<span id="cb5-17"><a href="#cb5-17"></a>    multiplier <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a>    figure, axes <span class="op">=</span> plt.subplots(layout<span class="op">=</span><span class="st">'constrained'</span>)</span>
-<span id="cb5-19"><a href="#cb5-19"></a>    fig <span class="op">=</span> plt.gcf()</span>
-<span id="cb5-20"><a href="#cb5-20"></a>    ax <span class="op">=</span> plt.gca()</span>
-<span id="cb5-21"><a href="#cb5-21"></a>    <span class="cf">for</span> label, value <span class="kw">in</span> d.items():</span>
-<span id="cb5-22"><a href="#cb5-22"></a>        offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
-<span id="cb5-23"><a href="#cb5-23"></a>        rects <span class="op">=</span> ax.bar(x <span class="op">+</span> offset, value, width, label<span class="op">=</span>label, color<span class="op">=</span>colors[label])</span>
-<span id="cb5-24"><a href="#cb5-24"></a>        ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb5-25"><a href="#cb5-25"></a>        multiplier <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb5-26"><a href="#cb5-26"></a>    ax.set_ylabel(<span class="st">'Sequence Length (k)'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
-<span id="cb5-27"><a href="#cb5-27"></a>    ax.set_xlabel(<span class="st">'GPUs'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
-<span id="cb5-28"><a href="#cb5-28"></a>    ax.set_title(<span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss"> Model'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
-<span id="cb5-29"><a href="#cb5-29"></a>    ax.set_xticks(x <span class="op">+</span> width, labels)</span>
-<span id="cb5-30"><a href="#cb5-30"></a>    ax.legend(loc<span class="op">=</span><span class="st">'best'</span>, ncols<span class="op">=</span><span class="dv">1</span>, frameon<span class="op">=</span><span class="va">True</span>)  <span class="co"># , bbox_to_anchor=(1.05, 1.0))</span></span>
-<span id="cb5-31"><a href="#cb5-31"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
-<span id="cb5-32"><a href="#cb5-32"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell quarto-layout-panel" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(gpus))</span>
+<span id="cb3-2"><a href="#cb3-2"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>outdir <span class="op">=</span> Path(os.getcwd()).joinpath(<span class="st">'assets'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>outdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="im">from</span> toolbox <span class="im">import</span> COLORS</span>
+<span id="cb3-9"><a href="#cb3-9"></a>colors <span class="op">=</span> {</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="st">'Old'</span>: COLORS[<span class="st">'red'</span>],</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="st">'Nvidia'</span>: COLORS[<span class="st">'green'</span>],</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="st">'New'</span>: COLORS[<span class="st">'blue'</span>]</span>
+<span id="cb3-13"><a href="#cb3-13"></a>}</span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="cf">for</span> model_size, d <span class="kw">in</span> data.items():</span>
+<span id="cb3-15"><a href="#cb3-15"></a>    multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>    figure, axes <span class="op">=</span> plt.subplots(layout<span class="op">=</span><span class="st">'constrained'</span>)</span>
+<span id="cb3-17"><a href="#cb3-17"></a>    fig <span class="op">=</span> plt.gcf()</span>
+<span id="cb3-18"><a href="#cb3-18"></a>    ax <span class="op">=</span> plt.gca()</span>
+<span id="cb3-19"><a href="#cb3-19"></a>    <span class="cf">for</span> label, value <span class="kw">in</span> d.items():</span>
+<span id="cb3-20"><a href="#cb3-20"></a>        offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
+<span id="cb3-21"><a href="#cb3-21"></a>        rects <span class="op">=</span> ax.bar(x <span class="op">+</span> offset, value, width, label<span class="op">=</span>label, color<span class="op">=</span>colors[label])</span>
+<span id="cb3-22"><a href="#cb3-22"></a>        ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-23"><a href="#cb3-23"></a>        multiplier <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>    ax.set_ylabel(<span class="st">'Sequence Length (k)'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25"></a>    ax.set_xlabel(<span class="st">'GPUs'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb3-26"><a href="#cb3-26"></a>    ax.set_title(<span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss"> Model'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb3-27"><a href="#cb3-27"></a>    ax.set_xticks(x <span class="op">+</span> width, gpus)</span>
+<span id="cb3-28"><a href="#cb3-28"></a>    ax.legend(loc<span class="op">=</span><span class="st">'best'</span>, ncols<span class="op">=</span><span class="dv">1</span>, frameon<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-29"><a href="#cb3-29"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
+<span id="cb3-30"><a href="#cb3-30"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-execution_count="3">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="dsblog_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img" width="683"></p>
-<figcaption class="figure-caption">Line Plot 1</figcaption>
+<p><img src="dsblog_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img" width="683"></p>
+<figcaption class="figure-caption"><code>25B</code> Model</figcaption>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="dsblog_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img" width="683"></p>
-<figcaption class="figure-caption">Line Plot 2</figcaption>
+<p><img src="dsblog_files/figure-html/cell-4-output-2.png" class="img-fluid figure-img" width="683"></p>
+<figcaption class="figure-caption"><code>33B</code> Model</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;1: Maximum Sequence Lengths Achievable across different implementations, model sizes and GPUs. In each case, the <code>new</code> (current) implementation <strong>significantly</strong> outperforms both NVIDIA/Megatron-LM as well as our previous implementation.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;1: Maximum Sequence Lengths Achievable across different implementations, model sizes and GPUs.<br>
+In each case, the <code>new</code> (current) implementation <strong>significantly</strong> outperforms both NVIDIA/Megatron-LM as well as our previous implementation.</figcaption>
 </figure>
 </div>
 <div id="fig-table" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="im">from</span> toolbox <span class="im">import</span> get_console</span>
-<span id="cb6-3"><a href="#cb6-3"></a>console <span class="op">=</span> get_console()</span>
-<span id="cb6-4"><a href="#cb6-4"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'./data.csv'</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>df</span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># pd.DataFrame(data)</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="co"># console.print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="99">
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">from</span> toolbox <span class="im">import</span> get_console</span>
+<span id="cb4-3"><a href="#cb4-3"></a>console <span class="op">=</span> get_console()</span>
+<span id="cb4-4"><a href="#cb4-4"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'./data.csv'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a>df</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># pd.DataFrame(data)</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># console.print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -549,8 +540,14 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <figcaption class="figure-caption">Figure&nbsp;2: Maximum Sequence Length Results</figcaption>
 </figure>
 </div>
+</section>
+<section id="new-results" class="level2">
+<h2 class="anchored" data-anchor-id="new-results">New Results</h2>
+<iframe src="https://wandb.ai/l2hmc-qcd/Megatron-DS-Benchmarking/reports/Looooooong-Sequences--Vmlldzo1MzI2NjA1" style="border:none;height:1024px;width:100%">
+</iframe>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman2023,
   author = {Foreman, Sam},
@@ -921,7 +918,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
 </ul>
     </div>   
-    <div class="nav-footer-center">Copyright 2023, Sam Foreman<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/dsblog.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="nav-footer-center">Copyright 2023, Sam Foreman</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

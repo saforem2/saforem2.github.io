@@ -33,27 +33,24 @@ title: '[{{< fa solid address-card >}}]{.dim-text} Sam Foreman'
 
 
 
-:::{#hero-heading style="margin-bottom: 0em;"}
+:::{#hero-heading style="margin: auto;"}
 
-<!-- # []{} -->
-
-<!-- [{{< fa solid server >}}]{.green-text} I make science happen on supercomputers. -->
 
 ::: {style="font-size: 0.8em;"}
 
 ### [{{< fa solid graduation-cap >}}]{.blue-text} Education
 
-:::: {.columns style="margin-bottom: 0em;"}
+:::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
-::: {.column width="30%"}
+::: {.column width="25%"}
 
 **[PhD. Physics](https://www.proquest.com/openview/95d7f7c12da8da8aa5ead3ac0f6ca0e8/1?pq-origsite=gscholar&cbl=18750&diss=y)**  
-**B.S. Engineering Physics**  
-**B.S. Applied Mathematics**
+Engineering Physics  
+Applied Mathematics
 
 :::
 
-::: {.column width="10%"}
+::: {.column width="13%"}
 
 2019  
 2015  
@@ -61,7 +58,7 @@ title: '[{{< fa solid address-card >}}]{.dim-text} Sam Foreman'
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" style="text-align: left;"}
 
 University of Iowa  
 University of Illinois at Urbana-Champaign  
@@ -73,24 +70,23 @@ University of Illinois at Urbana-Champaign
 
 ### [{{< fa solid building >}}]{.red-text} Experience
 
-:::: {.columns}
+:::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
-::: {.column width="30%"}
+::: {.column width="25%"}
 
 [Computational Scientist](https://www.alcf.anl.gov/about/people/sam-foreman)  
 Postdoc
 
 :::
 
-
-::: {.column width="10%"}
+::: {.column width="13%"}
 
 2022—*  
 2019
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" style="text-align: left;"}
 
 [Argonne National Laboratory](https://www.anl.gov)  
 [Argonne Leadership Computing Facility (ALCF)](https://www.alcf.anl.gov)
@@ -296,7 +292,7 @@ print(f"Last updated: {date.today().strftime('%d %B %y')}")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-Last updated: 23 August 23
+Last updated: 06 September 23
 ```
 :::
 :::
@@ -337,7 +333,7 @@ def metropolis_hastings(nsteps: int = 1000) -> list[float]:
 
 ::: {.cell-output .cell-output-stdout}
 ```
-2.25 s ± 53.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+2.06 s ± 16.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 ```
 :::
 :::

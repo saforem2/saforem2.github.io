@@ -1,5 +1,6 @@
 ---
 jupyter: brew-py311
+sidebar: false
 title: "Long Sequence Lengths"
 callout-appearance: simple
 title-block-banner: false
@@ -12,48 +13,29 @@ execute:
 
 <!-- <img align="left" width="48%"  src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/25B.svg"> <img align="right" width="48%" src="https://raw.githubusercontent.com/saforem2/scaling4science/main/assets/33B.svg"> -->
 
+## Initial Results
 
-<!-- | MODEL_SIZE | GPUs | Implementation | SEQ_LEN (k) |   Improvement | -->
-<!-- |:----------:|:----:|:--------------:|:-----------:| -------------:| -->
-<!-- |    25B     |  32  |      OLD       |     28      |  4.5714285714 | -->
-<!-- |            |      |     NVIDIA     |     14      |  9.1428571429 | -->
-<!-- |            |      |      NEW       |   [128]{.red-text}   |             1 | -->
-<!-- |    25B     |  64  |      OLD       |     32      |            12 | -->
-<!-- |            |      |     NVIDIA     |     46      |   8.347826087 | -->
-<!-- |            |      |      NEW       |   [384]{.red-text}   |             1 | -->
-<!-- |    25B     | 128  |      OLD       |     32      |            14 | -->
-<!-- |            |      |     NVIDIA     |     52      |  8.6153846154 | -->
-<!-- |            |      |      NEW       |  [448]{.red-text}   |             1 | -->
-<!-- |    33B     |  32  |      OLD       |     36      |  5.3333333333 | -->
-<!-- |            |      |     NVIDIA     |     26      |  7.3846153846 | -->
-<!-- |            |      |      NEW       |   [192]{.red-text}   |             1 | -->
-<!-- |    33B     |  64  |      OLD       |     42      |   10.66666666 | -->
-<!-- |            |      |     NVIDIA     |     48      |   9.333333333 | -->
-<!-- |            |      |      NEW       |   [448]{.red-text}   |             1 | -->
-<!-- |    33B     | 128  |      OLD       |     42      | 12.1904761905 | -->
-<!-- |            |      |     NVIDIA     |     52      |  9.8461538462 | -->
-<!-- |            |      |      NEW       |   [512]{.red-text}   |             1 | -->
-<!---->
+::: {.callout-important title="PRE-RELEASE" collapse="false" style="width: 100%;"}
 
-```{python}
-%load_ext autoreload
-%autoreload 2
-import numpy as np
-import matplotlib.pyplot as plt
-```
+I've kept in the (executable) code blocks for the time being (just to show how
+I'm generating the bar plots in [@fig-seq-len]) but these can be ommitted in
+the actual README
+
+:::
+
+
 
 ```{python}
 import os
+import numpy as np
 import datetime
 from typing import Tuple
+import matplotlib.pyplot as plt
 from pathlib import Path
+# toolbox comes from
+# https://github.com/saforem2/toolbox
 from toolbox import set_plot_style
-# from toolbox import get_console
 import seaborn as sns
-
-set_plot_style()
-# console = get_console()
-
 
 sns.set_context('talk')
 set_plot_style()
@@ -68,13 +50,12 @@ def save_figure(
     svgdir.mkdir(exist_ok=True, parents=True)
     pngfile = pngdir.joinpath(f'{fname}.png')
     svgfile = svgdir.joinpath(f'{fname}.svg')
-    # console.print(f'Saving figures to: {outdir}' + '/{pngs,svgs}/' + f'{fname}*')
     _ = plt.savefig(pngfile, dpi=400, bbox_inches='tight')
     _ = plt.savefig(svgfile, dpi=400, bbox_inches='tight')
 ```
 
 ```{python}
-labels = ('32', '64', '128')
+gpus = ('32', '64', '128')
 
 data = {
     '25B': {
@@ -95,15 +76,14 @@ data = {
 ```{python}
 #| layout-ncol: 2
 #| fig-cap:
-#|   - "Line Plot 1"
-#|   - "Line Plot 2"
-x = np.arange(len(labels))
+#|   - "`25B` Model"
+#|   - "`33B` Model"
+x = np.arange(len(gpus))
 width = 0.25
 multiplier = 0
 
 outdir = Path(os.getcwd()).joinpath('assets')
 outdir.mkdir(exist_ok=True, parents=True)
-# console.log(f'Saving figures to: {outdir}')
 
 from toolbox import COLORS
 colors = {
@@ -111,7 +91,6 @@ colors = {
     'Nvidia': COLORS['green'],
     'New': COLORS['blue']
 }
-# plt.tight_layout()
 for model_size, d in data.items():
     multiplier = 0
     figure, axes = plt.subplots(layout='constrained')
@@ -125,16 +104,16 @@ for model_size, d in data.items():
     ax.set_ylabel('Sequence Length (k)', fontsize='large')
     ax.set_xlabel('GPUs', fontsize='large')
     ax.set_title(f'{model_size} Model', fontsize='large')
-    ax.set_xticks(x + width, labels)
-    ax.legend(loc='best', ncols=1, frameon=True)  # , bbox_to_anchor=(1.05, 1.0))
+    ax.set_xticks(x + width, gpus)
+    ax.legend(loc='best', ncols=1, frameon=True)
     save_figure(fname=f'{model_size}', outdir=outdir)
     _ = plt.show()
 ```
 
 Maximum Sequence Lengths Achievable across different implementations, model
-sizes and GPUs. In each case, the `new` (current) implementation
-**significantly** outperforms both NVIDIA/Megatron-LM as well as our previous
-implementation.
+sizes and GPUs.  
+In each case, the `new` (current) implementation **significantly** outperforms
+both NVIDIA/Megatron-LM as well as our previous implementation.
 :::
 
 ::: {#fig-table}
@@ -151,3 +130,10 @@ df
 
 Maximum Sequence Length Results
 :::
+
+
+## New Results
+
+<iframe src="https://wandb.ai/l2hmc-qcd/Megatron-DS-Benchmarking/reports/Looooooong-Sequences--Vmlldzo1MzI2NjA1" style="border:none;height:1024px;width:100%">
+
+</iframe>
