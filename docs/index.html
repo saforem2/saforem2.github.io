@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sam Foreman">
-<meta name="dcterms.date" content="2023-08-21">
+<meta name="dcterms.date" content="2023-09-06">
 
 <title>Sam Foreman</title>
 <style>
@@ -126,10 +126,10 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Personal Website">
 <meta name="citation_author" content="Sam Foreman">
-<meta name="citation_publication_date" content="2023-08-21">
-<meta name="citation_cover_date" content="2023-08-21">
+<meta name="citation_publication_date" content="2023-09-06">
+<meta name="citation_cover_date" content="2023-09-06">
 <meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-08-21">
+<meta name="citation_online_date" content="2023-09-06">
 <meta name="citation_fulltext_html_url" content="https://saforem2.github.io">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=The climate risk &amp;amp;amp; resilience portal (ClimRR) metadata and data dictionary;,citation_author=C. Burdi;,citation_author=Wall. T Branham;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://dub.sh/ClimRR-Metadata;">
@@ -140,6 +140,9 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <meta name="citation_reference" content="citation_title=HMC with Normalizing Flows;,citation_author=Sam Foreman;,citation_author=Taku Izubuchi;,citation_author=Luchang Jin;,citation_author=Xiao-Yong Jin;,citation_author=James C. Osborn;,citation_author=Akio Tomiya;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://arxiv.org/abs/2112.01586;,citation_doi=10.22323/1.396.0073;,citation_volume=LATTICE2021;,citation_journal_title=PoS;">
 <meta name="citation_reference" content="citation_title=LeapfrogLayers: A Trainable Framework for Effective Topological Sampling;,citation_author=Sam Foreman;,citation_author=Xiao-Yong Jin;,citation_author=James C. Osborn;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://arxiv.org/abs/2112.01582;,citation_doi=10.22323/1.396.0508;,citation_volume=LATTICE2021;,citation_journal_title=PoS;">
 <meta name="citation_reference" content="citation_title=Deep Learning Hamiltonian Monte Carlo;,citation_author=Sam Foreman;,citation_author=Xiao-Yong Jin;,citation_author=James C. Osborn;,citation_publication_date=2021-05;,citation_cover_date=2021-05;,citation_year=2021;,citation_fulltext_html_url=https://arxiv.org/abs/2105.03418;,citation_conference_title=9th International Conference on Learning Representations;">
+<meta name="citation_reference" content="citation_title=Energy Justice Analysis of Climate Data with ClimRR;,citation_author=Sam Foreman;,citation_publication_date=2023-08-07;,citation_cover_date=2023-08-07;,citation_year=2023;,citation_fulltext_html_url=https://saforem2.github.io/climate-analysis;,citation_language=en;">
+<meta name="citation_reference" content="citation_author=Sam Foreman;,citation_publication_date=2023-08-19;,citation_cover_date=2023-08-19;,citation_year=2023;,citation_fulltext_html_url=https://saforem2.github.io/l2hmc-qcd;,citation_language=en;">
+<meta name="citation_reference" content="citation_title=Deep learning hamiltonian monte carlo;,citation_author=Sam Foreman;,citation_author=Xiao-Yong Jin;,citation_author=James C. Osborn;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=https://arxiv.org/abs/2105.03418;">
 </head>
 
 <body class="nav-fixed">
@@ -229,7 +232,7 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading"></div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 21, 2023</p>
+      <p class="date">September 6, 2023</p>
     </div>
   </div>
   </div>
@@ -433,7 +436,37 @@ Recent Talks
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> datetime <span class="im">import</span> date</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(<span class="ss">f"Last updated: </span><span class="sc">{</span>date<span class="sc">.</span>today()<span class="sc">.</span>strftime(<span class="st">'</span><span class="sc">%d</span><span class="st"> %B %y'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Last updated: 21 August 23</code></pre>
+<pre><code>Last updated: 23 August 23</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2"></a>NORM <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="kw">def</span> loglikelihood(x: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="cf">return</span> np.exp(<span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>)) <span class="op">/</span> NORM</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="kw">def</span> metropolis_hastings(nsteps: <span class="bu">int</span> <span class="op">=</span> <span class="dv">1000</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">float</span>]:</span>
+<span id="cb3-8"><a href="#cb3-8"></a>    x <span class="op">=</span> <span class="fl">0.</span>  <span class="co"># initial state</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>    samples <span class="op">=</span> []</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(nsteps):</span>
+<span id="cb3-11"><a href="#cb3-11"></a>        <span class="co"># generate RANDOM proposal</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>        xp <span class="op">=</span> x <span class="op">+</span> np.random.randn()</span>
+<span id="cb3-13"><a href="#cb3-13"></a>        llhratio <span class="op">=</span> loglikelihood(xp) <span class="op">/</span> loglikelihood(x)</span>
+<span id="cb3-14"><a href="#cb3-14"></a>        <span class="co"># always accept if llhratio &gt; 1</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>        <span class="co"># otherwise, accept with p ~ U[0, 1]</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>        <span class="cf">if</span> np.random.uniform() <span class="op">&lt;</span> llhratio:</span>
+<span id="cb3-17"><a href="#cb3-17"></a>            x <span class="op">=</span> xp</span>
+<span id="cb3-18"><a href="#cb3-18"></a>        samples.append(x)</span>
+<span id="cb3-19"><a href="#cb3-19"></a>    <span class="cf">return</span> samples</span>
+<span id="cb3-20"><a href="#cb3-20"></a></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="co"># samples = metropolis_hastings(int(1e6))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">%</span>timeit metropolis_hastings(<span class="bu">int</span>(<span class="fl">1e6</span>))  <span class="co"># 2023 MBP M2 Max</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># 1.92 s ± 9.06 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.25 s ± 53.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
 <p align="center">
@@ -447,12 +480,13 @@ Recent Talks
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman2023,
   author = {Foreman, Sam},
   title = {Personal {Website}},
-  date = {2023-08-21},
+  date = {2023-09-06},
   url = {https://saforem2.github.io},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-foreman2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Foreman, Sam. 2023. <span>“Personal Website.”</span> August 21, 2023. <a href="https://saforem2.github.io">https://saforem2.github.io</a>.
+Foreman, Sam. 2023. <span>“Personal Website.”</span> September 6, 2023.
+<a href="https://saforem2.github.io">https://saforem2.github.io</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

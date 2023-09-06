@@ -130,7 +130,7 @@
     "href": "index.html#fa-solid-hourglass-end-appendix",
     "title": " Sam Foreman",
     "section": " Appendix",
-    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 21 August 23"
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 23 August 23\n\n\n\nimport numpy as np\nNORM = np.sqrt(2 * np.pi ** 2)\n\ndef loglikelihood(x: float) -&gt; float:\n    return np.exp(-0.5 * (x ** 2)) / NORM\n\ndef metropolis_hastings(nsteps: int = 1000) -&gt; list[float]:\n    x = 0.  # initial state\n    samples = []\n    for n in range(nsteps):\n        # generate RANDOM proposal\n        xp = x + np.random.randn()\n        llhratio = loglikelihood(xp) / loglikelihood(x)\n        # always accept if llhratio &gt; 1\n        # otherwise, accept with p ~ U[0, 1]\n        if np.random.uniform() &lt; llhratio:\n            x = xp\n        samples.append(x)\n    return samples\n\n# samples = metropolis_hastings(int(1e6))\n\n\n%timeit metropolis_hastings(int(1e6))  # 2023 MBP M2 Max\n# 1.92 s ± 9.06 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n\n2.25 s ± 53.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)"
   },
   {
     "objectID": "index.html#education",
@@ -165,7 +165,7 @@
     "href": "qmd/posts.html",
     "title": "Listing Example",
     "section": "",
-    "text": "You can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman\n\n\n\n\nAug 19, 2023\n\n\nAbout Me (alt)\n\n\nSam Foreman\n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here.\n\n\n\n\n Back to topCitationBibTeX citation:@online{foreman2023,\n  author = {Foreman, Sam},\n  title = {Personal {Website}},\n  date = {2023-08-19},\n  url = {https://saforem2.github.io},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nForeman, Sam. 2023. “Personal Website.” August 19, 2023. https://saforem2.github.io."
+    "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman\n\n\n\n\nAug 19, 2023\n\n\nAbout Me (alt)\n\n\nSam Foreman\n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
   },
   {
     "objectID": "qmd/blog/quarto-reveal.html#references",
@@ -173,5 +173,12 @@
     "title": "How to make dope slides",
     "section": "",
     "text": "Reveal Themes\nUsing Pandoc fenced divs\nSlidecraft 101: Colors and Fonts\nBeautiful Reports and Presentations with Quarto\n Quarto Clean Theme"
+  },
+  {
+    "objectID": "qmd/posts.html#external-links",
+    "href": "qmd/posts.html#external-links",
+    "title": "Listing Example",
+    "section": "",
+    "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman\n\n\n\n\nAug 19, 2023\n\n\nAbout Me (alt)\n\n\nSam Foreman\n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
   }
 ]
