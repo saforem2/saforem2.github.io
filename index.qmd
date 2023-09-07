@@ -53,7 +53,7 @@ about:
 
 ::: {style="font-size: 0.8em;"}
 
-### [{{< fa solid graduation-cap >}}]{.blue-text} Education
+### [{{< fa solid graduation-cap >}}]{.blue-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
 
 :::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
@@ -83,7 +83,7 @@ University of Illinois at Urbana-Champaign
 
 ::::
 
-### [{{< fa solid building >}}]{.red-text} Experience
+### [{{< fa solid building >}}]{.red-text} [Experience](https://samforeman.me/files/resume.pdf)
 
 :::: {.columns style="display: flow-root!important; min-width: max-content;"}
 

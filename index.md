@@ -38,7 +38,7 @@ title: '[{{< fa solid address-card >}}]{.dim-text} Sam Foreman'
 
 ::: {style="font-size: 0.8em;"}
 
-### [{{< fa solid graduation-cap >}}]{.blue-text} Education
+### [{{< fa solid graduation-cap >}}]{.blue-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
 
 :::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
@@ -68,7 +68,7 @@ University of Illinois at Urbana-Champaign
 
 ::::
 
-### [{{< fa solid building >}}]{.red-text} Experience
+### [{{< fa solid building >}}]{.red-text} [Experience](https://samforeman.me/files/resume.pdf)
 
 :::: {.columns style="display: flow-root!important; min-width: max-content;"}
 
@@ -292,7 +292,7 @@ print(f"Last updated: {date.today().strftime('%d %B %y')}")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-Last updated: 06 September 23
+Last updated: 07 September 23
 ```
 :::
 :::
@@ -333,7 +333,7 @@ def metropolis_hastings(nsteps: int = 1000) -> list[float]:
 
 ::: {.cell-output .cell-output-stdout}
 ```
-2.06 s ± 16.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+2.11 s ± 24.9 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 ```
 :::
 :::

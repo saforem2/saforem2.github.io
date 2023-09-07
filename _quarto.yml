@@ -60,13 +60,15 @@ website:
     left:
       # - icon: newspaper
       - href: "./qmd/posts.qmd"
-        text: "[{{< fa solid newspaper >}}]{.red-text} Posts"
+        text: "[{{< bi newspaper >}}]{.red-text} Posts"
       # - icon: person-chalkboard
       - href: "./qmd/slides.qmd"
-        text: "[{{< fa solid person-chalkboard >}}]{style='color:#87C4F9'} Slides"
+        text: "[{{< bi easel >}}]{.green-text} Talks"
       # - icon: github
-      - href: "https://saforem2.github.io/l2hmc-qcd"
-        text: "[{{< fa brands github >}}]{.green-text} l2hmc-qcd"
+      # - href: "https://saforem2.github.io/l2hmc-qcd"
+      - href: "./qmd/projects.qmd"
+        # text: "[{{< fa brands github >}}]{.blue-text} Projects"
+        text: "[{{< bi braces-asterisk >}}]{.blue-text} Projects"
     # left: auto
       # - href: index.qmd
       #   text: Analysis
