@@ -54,10 +54,7 @@ website:
     background: "#222222"
     foregound: "#777777"
     right:
-      - icon: github
-        href: https://github.com/saforem2/saforem2.github.io
-        aria-label: GitHub
-    left:
+    # left:
       # - icon: newspaper
       - href: "./qmd/posts.qmd"
         text: "[{{< bi newspaper >}}]{.red-text} Posts"
@@ -69,6 +66,9 @@ website:
       - href: "./qmd/projects.qmd"
         # text: "[{{< fa brands github >}}]{.blue-text} Projects"
         text: "[{{< bi braces-asterisk >}}]{.blue-text} Projects"
+      - icon: github
+        href: https://github.com/saforem2/saforem2.github.io
+        aria-label: GitHub
     # left: auto
       # - href: index.qmd
       #   text: Analysis
@@ -82,11 +82,11 @@ website:
   google-analytics: G-XVM2Y822Y1
   sidebar: false
   page-footer:
-    center: "Copyright 2023, Sam Foreman" 
-    left:
-      - href: https://saforem2.github.io
-        text: saforem2.github.io
-    right:
+    right: "Copyright 2023, Sam Foreman" 
+    # left:
+    #   - href: https://saforem2.github.io
+    #     text: saforem2.github.io
+    center:
       - href: https://samforeman.me
         text: "{{< fa solid home >}}"
       - icon: github

@@ -2,3 +2,9 @@
 node_modules/
 npm-debug.log
 /.quarto/
+_extensions/*
+_freeze/*
+assets/*
+css/*
+old/*
+site_libs/*

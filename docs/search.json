@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": " Sam Foreman",
+    "title": "Sam Foreman ",
     "section": "",
-    "text": "PhD. Physics\nEngineering Physics\nApplied Mathematics\n\n2019\n2015\n2015\n\nUniversity of Iowa\nUniversity of Illinois at Urbana-Champaign\nUniversity of Illinois at Urbana-Champaign\n\n\n\n\n\n\n\nComputational Scientist\nPostdoc\n\n2022—*\n2019\n\nArgonne National Laboratory\nArgonne Leadership Computing Facility (ALCF)\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nI’m currently working on AI + Science, scaling LLMs, generative modeling (esp. for physical systems), building better sampling methods for Lattice QCD, Foundation models for long term climate forecasting, and optimizing ML models / workflows / pipelines at scale.\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC."
+    "text": "PhD\nPhysics\nUniversity of Iowa\n2019\n\n\nB.Sc\nPhysics\nUIUC\n2015\n\n\nB.Sc\nMath\nUIUC\n2015\n\n\n\n\n\n\n\n\n\n\nAssistant Computational Scientist\nALCF\n2022\n*\n\n\n\nPostdoc\nALCF\n2019\n2022\n\n\n\nGraduate Researcher\nANL\n2018\n2019\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nAs a member of the Data Science Group at ALCF, I work on:\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC."
   },
   {
     "objectID": "index.html#wait-theres-more",
@@ -65,14 +65,14 @@
   {
     "objectID": "index.html#fa-solid-person-chalkboard-recent-talks",
     "href": "index.html#fa-solid-person-chalkboard-recent-talks",
-    "title": " Sam Foreman",
+    "title": "Sam Foreman ",
     "section": " Recent Talks",
     "text": "Recent Talks\n\n\n\n\n\n\nMLMC: Machine Learning for Monte Carlo, at Lattice 2023, July 2023\nGenerative Modeling and Efficient Sampling, at PASC23, July 2023\nEfficient Sampling for Lattice Gauge Theory, at Deep Fridays @ U. Bologna, April 2023\nLarge Scale Training, at Introduction to AI-driven Science on Supercomputers: A Student Training Series, November 2022\nHyperparameter Management, at 2022 ALCF Simulation, Data, and Learning Workshop, October 2022\nStatistical Learning, at ATPESC 2022, August 2022 📕 accompanying notebook\nScientific Data Science: An Emerging Symbiosis, at Argonne National Laboratory, May 2022\nMachine Learning in HEP, at UNC Greensboro, March 2022\nAccelerated Sampling Methods for Lattice Gauge Theory, at BNL-HET& RBRC Joint Workshop “DWQ @ 25”, Dec 2021\nTraining Topological Samplers for Lattice Gauge Theory, ML4HEP, on and off the Lattice @ ECT* Trento, Sep 2021\nl2hmc-qcd at the MIT Lattice Group Seminar, 2021\nDeep Learning HMC for Improved Gauge Generation to the Machine Learning Techniques in Lattice QCD Workshop, 2021\nMachine Learning for Lattice QCD at the University of Iowa, 2020\nMachine learning inspired analysis of the Ising model transition to Lattice, 2018\nMachine Learning Analysis of Ising Worms at Brookhaven National Laboratory, 2017"
   },
   {
     "objectID": "index.html#fa-solid-newspaper-recent-work",
     "href": "index.html#fa-solid-newspaper-recent-work",
-    "title": " Sam Foreman",
+    "title": "Sam Foreman ",
     "section": " Recent Work",
     "text": "Recent Work\n\nS. Foreman Exploratory Analysis of Climate Data with ClimRR, Intro to HPC Bootcamp @ NERSC, August 7, 2023\n\nM. Zvyagin et. al., GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics, Oct 2022\n\n ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research\n\n\nA.S. Kronfeld et al. Lattice QCD and Particle Physics, July 15, 2022\n\nD. Boyda, S. Calí, S. Foreman, et al., Applications of ML to Lattice QFT arXiv:2202.05838, Feb 2022\n\nS. Foreman, X.Y. Jin, J.C. Osborn, LeapFrogLayers: Trainable Framework for Effective Sampling, Lattice, 2021\n\nS. Foreman et al.HMC with Normalizing Flows, slides, Lattice, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Deep Learning Hamiltonian Monte Carlo (+ poster) at SimDL Workshop @ ICLR, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Machine Learning and Neural Networks for Field Theory SnowMass, 2020\n\nS. Foreman et al. Examples of renormalization group transformations for image sets Physical Review E., 2018\n\nS. Foreman et al. RG inspired Machine Learning for lattice field theory arXiv:1710.02079, 2017\n\nS. Foreman et al. Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade J. Appl. Phys, 2018"
   },
@@ -114,23 +114,23 @@
   {
     "objectID": "index.html#fa-brands-github-alt-active-projects",
     "href": "index.html#fa-brands-github-alt-active-projects",
-    "title": " Sam Foreman",
+    "title": "Sam Foreman ",
     "section": " Active Projects",
     "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
   },
   {
     "objectID": "index.html#fa-solid-bullhorn-wait-theres-more",
     "href": "index.html#fa-solid-bullhorn-wait-theres-more",
-    "title": " Sam Foreman",
+    "title": "Sam Foreman ",
     "section": " Wait, there’s more!",
     "text": "Wait, there’s more!\n\nOrganizer for Machine Learning and Quantum Computing for Earth Sciences at 17th U. S. National Congress on Computational Mechanics, July 2023\nOrganizer for SC23 Workshop: High Performance Python for Science at Scale (HPPSS), November 2023"
   },
   {
     "objectID": "index.html#fa-solid-hourglass-end-appendix",
     "href": "index.html#fa-solid-hourglass-end-appendix",
-    "title": " Sam Foreman",
+    "title": "Sam Foreman ",
     "section": " Appendix",
-    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 07 September 23\n\n\n\nimport numpy as np\nNORM = np.sqrt(2 * np.pi ** 2)\n\ndef loglikelihood(x: float) -&gt; float:\n    return np.exp(-0.5 * (x ** 2)) / NORM\n\ndef metropolis_hastings(nsteps: int = 1000) -&gt; list[float]:\n    x = 0.  # initial state\n    samples = []\n    for n in range(nsteps):\n        # generate RANDOM proposal\n        xp = x + np.random.randn()\n        llhratio = loglikelihood(xp) / loglikelihood(x)\n        # always accept if llhratio &gt; 1\n        # otherwise, accept with p ~ U[0, 1]\n        if np.random.uniform() &lt; llhratio:\n            x = xp\n        samples.append(x)\n    return samples\n\n# samples = metropolis_hastings(int(1e6))\n\n\n%timeit metropolis_hastings(int(1e6))  # 2023 MBP M2 Max\n# 1.92 s ± 9.06 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n\n2.11 s ± 24.9 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)"
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 08 September 23"
   },
   {
     "objectID": "index.html#education",
@@ -191,7 +191,7 @@
   {
     "objectID": "qmd/dsblog.html",
     "href": "qmd/dsblog.html",
-    "title": "Long Sequence Lengths",
+    "title": "Loooooooong Sequence Lengths",
     "section": "",
     "text": "PRE-RELEASE\n\n\n\n\n\nI’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in Figure 1) but these can be ommitted in the actual README\n\n\n\n\nimport os\nimport numpy as np\nimport datetime\nfrom typing import Tuple\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n# toolbox comes from\n# https://github.com/saforem2/toolbox\nfrom toolbox import set_plot_style\nimport seaborn as sns\n\nsns.set_context('talk')\nset_plot_style()\n\ndef save_figure(\n        fname: str,\n        outdir: os.PathLike,\n):\n    pngdir = Path(outdir).joinpath('pngs')\n    svgdir = Path(outdir).joinpath('svgs')\n    pngdir.mkdir(exist_ok=True, parents=True)\n    svgdir.mkdir(exist_ok=True, parents=True)\n    pngfile = pngdir.joinpath(f'{fname}.png')\n    svgfile = svgdir.joinpath(f'{fname}.svg')\n    _ = plt.savefig(pngfile, dpi=400, bbox_inches='tight')\n    _ = plt.savefig(svgfile, dpi=400, bbox_inches='tight')\n\n\ngpus = ('32', '64', '128')\n\ndata = {\n    '25B': {\n        'Old': (28, 32, 32),\n        'Nvidia': (14, 46, 52),\n        'New': (128, 384, 448),\n    },\n    '33B': {\n        'Old': (36, 42, 42),\n        'Nvidia': (26, 48, 52),\n        'New': (192, 448, 512),\n    }\n}\n\n\n\n\nx = np.arange(len(gpus))\nwidth = 0.25\nmultiplier = 0\n\noutdir = Path(os.getcwd()).joinpath('assets')\noutdir.mkdir(exist_ok=True, parents=True)\n\nfrom toolbox import COLORS\ncolors = {\n    'Old': COLORS['red'],\n    'Nvidia': COLORS['green'],\n    'New': COLORS['blue']\n}\nfor model_size, d in data.items():\n    multiplier = 0\n    figure, axes = plt.subplots(layout='constrained')\n    fig = plt.gcf()\n    ax = plt.gca()\n    for label, value in d.items():\n        offset = width * multiplier\n        rects = ax.bar(x + offset, value, width, label=label, color=colors[label])\n        ax.bar_label(rects, padding=3)\n        multiplier += 1\n    ax.set_ylabel('Sequence Length (k)', fontsize='large')\n    ax.set_xlabel('GPUs', fontsize='large')\n    ax.set_title(f'{model_size} Model', fontsize='large')\n    ax.set_xticks(x + width, gpus)\n    ax.legend(loc='best', ncols=1, frameon=True)\n    save_figure(fname=f'{model_size}', outdir=outdir)\n    _ = plt.show()\n\n\n\n\n\n\n25B Model\n\n\n\n\n\n\n\n33B Model\n\n\n\n\n\n\nFigure 1: Maximum Sequence Lengths Achievable across different implementations, model sizes and GPUs.\nIn each case, the new (current) implementation significantly outperforms both NVIDIA/Megatron-LM as well as our previous implementation.\n\n\n\n\n\nimport pandas as pd\nfrom toolbox import get_console\nconsole = get_console()\ndf = pd.read_csv('./data.csv')\ndf\n# pd.DataFrame(data)\n# console.print(df)\n\n\n\n\n\n\n\n\nMODEL_SIZE\nGPUs\nImplementation\nSEQ_LEN (k)\nImprovement\n\n\n\n\n0\n25B\n32\nOLD\n28\n4.571429\n\n\n1\n25B\n32\nNVIDIA\n14\n9.142857\n\n\n2\n25B\n32\nNEW\n128\n1.000000\n\n\n3\n25B\n64\nOLD\n32\n12.000000\n\n\n4\n25B\n64\nNVIDIA\n46\n8.347826\n\n\n5\n25B\n64\nNEW\n384\n1.000000\n\n\n6\n25B\n128\nOLD\n32\n14.000000\n\n\n7\n25B\n128\nNVIDIA\n52\n8.615385\n\n\n8\n25B\n128\nNEW\n448\n1.000000\n\n\n9\n33B\n32\nOLD\n36\n5.333333\n\n\n10\n33B\n32\nNVIDIA\n26\n7.384615\n\n\n11\n33B\n32\nNEW\n192\n1.000000\n\n\n12\n33B\n64\nOLD\n42\n10.666667\n\n\n13\n33B\n64\nNVIDIA\n48\n9.333333\n\n\n14\n33B\n64\nNEW\n448\n1.000000\n\n\n15\n33B\n128\nOLD\n42\n12.190476\n\n\n16\n33B\n128\nNVIDIA\n52\n9.846154\n\n\n17\n33B\n128\nNEW\n512\n1.000000\n\n\n\n\n\n\n\nFigure 2: Maximum Sequence Length Results"
   },
@@ -205,14 +205,14 @@
   {
     "objectID": "qmd/dsblog.html#new-results",
     "href": "qmd/dsblog.html#new-results",
-    "title": "Long Sequence Lengths",
+    "title": "Loooooooong Sequence Lengths",
     "section": "New Results",
     "text": "New Results"
   },
   {
     "objectID": "qmd/dsblog.html#initial-results",
     "href": "qmd/dsblog.html#initial-results",
-    "title": "Long Sequence Lengths",
+    "title": "Loooooooong Sequence Lengths",
     "section": "",
     "text": "PRE-RELEASE\n\n\n\n\n\nI’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in Figure 1) but these can be ommitted in the actual README\n\n\n\n\nimport os\nimport numpy as np\nimport datetime\nfrom typing import Tuple\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n# toolbox comes from\n# https://github.com/saforem2/toolbox\nfrom toolbox import set_plot_style\nimport seaborn as sns\n\nsns.set_context('talk')\nset_plot_style()\n\ndef save_figure(\n        fname: str,\n        outdir: os.PathLike,\n):\n    pngdir = Path(outdir).joinpath('pngs')\n    svgdir = Path(outdir).joinpath('svgs')\n    pngdir.mkdir(exist_ok=True, parents=True)\n    svgdir.mkdir(exist_ok=True, parents=True)\n    pngfile = pngdir.joinpath(f'{fname}.png')\n    svgfile = svgdir.joinpath(f'{fname}.svg')\n    _ = plt.savefig(pngfile, dpi=400, bbox_inches='tight')\n    _ = plt.savefig(svgfile, dpi=400, bbox_inches='tight')\n\n\ngpus = ('32', '64', '128')\n\ndata = {\n    '25B': {\n        'Old': (28, 32, 32),\n        'Nvidia': (14, 46, 52),\n        'New': (128, 384, 448),\n    },\n    '33B': {\n        'Old': (36, 42, 42),\n        'Nvidia': (26, 48, 52),\n        'New': (192, 448, 512),\n    }\n}\n\n\n\n\nx = np.arange(len(gpus))\nwidth = 0.25\nmultiplier = 0\n\noutdir = Path(os.getcwd()).joinpath('assets')\noutdir.mkdir(exist_ok=True, parents=True)\n\nfrom toolbox import COLORS\ncolors = {\n    'Old': COLORS['red'],\n    'Nvidia': COLORS['green'],\n    'New': COLORS['blue']\n}\nfor model_size, d in data.items():\n    multiplier = 0\n    figure, axes = plt.subplots(layout='constrained')\n    fig = plt.gcf()\n    ax = plt.gca()\n    for label, value in d.items():\n        offset = width * multiplier\n        rects = ax.bar(x + offset, value, width, label=label, color=colors[label])\n        ax.bar_label(rects, padding=3)\n        multiplier += 1\n    ax.set_ylabel('Sequence Length (k)', fontsize='large')\n    ax.set_xlabel('GPUs', fontsize='large')\n    ax.set_title(f'{model_size} Model', fontsize='large')\n    ax.set_xticks(x + width, gpus)\n    ax.legend(loc='best', ncols=1, frameon=True)\n    save_figure(fname=f'{model_size}', outdir=outdir)\n    _ = plt.show()\n\n\n\n\n\n\n25B Model\n\n\n\n\n\n\n\n33B Model\n\n\n\n\n\n\nFigure 1: Maximum Sequence Lengths Achievable across different implementations, model sizes and GPUs.\nIn each case, the new (current) implementation significantly outperforms both NVIDIA/Megatron-LM as well as our previous implementation.\n\n\n\n\n\nimport pandas as pd\nfrom toolbox import get_console\nconsole = get_console()\ndf = pd.read_csv('./data.csv')\ndf\n# pd.DataFrame(data)\n# console.print(df)\n\n\n\n\n\n\n\n\nMODEL_SIZE\nGPUs\nImplementation\nSEQ_LEN (k)\nImprovement\n\n\n\n\n0\n25B\n32\nOLD\n28\n4.571429\n\n\n1\n25B\n32\nNVIDIA\n14\n9.142857\n\n\n2\n25B\n32\nNEW\n128\n1.000000\n\n\n3\n25B\n64\nOLD\n32\n12.000000\n\n\n4\n25B\n64\nNVIDIA\n46\n8.347826\n\n\n5\n25B\n64\nNEW\n384\n1.000000\n\n\n6\n25B\n128\nOLD\n32\n14.000000\n\n\n7\n25B\n128\nNVIDIA\n52\n8.615385\n\n\n8\n25B\n128\nNEW\n448\n1.000000\n\n\n9\n33B\n32\nOLD\n36\n5.333333\n\n\n10\n33B\n32\nNVIDIA\n26\n7.384615\n\n\n11\n33B\n32\nNEW\n192\n1.000000\n\n\n12\n33B\n64\nOLD\n42\n10.666667\n\n\n13\n33B\n64\nNVIDIA\n48\n9.333333\n\n\n14\n33B\n64\nNEW\n448\n1.000000\n\n\n15\n33B\n128\nOLD\n42\n12.190476\n\n\n16\n33B\n128\nNVIDIA\n52\n9.846154\n\n\n17\n33B\n128\nNEW\n512\n1.000000\n\n\n\n\n\n\n\nFigure 2: Maximum Sequence Length Results"
   },

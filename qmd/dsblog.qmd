@@ -1,7 +1,7 @@
 ---
 jupyter: brew-py311
 sidebar: false
-title: "Long Sequence Lengths"
+title: "Loooooooong Sequence Lengths"
 callout-appearance: simple
 title-block-banner: false
 # https://www.anl.gov/sites/www/files/2021-09/CPA_RESIZE_Climate%20Resilience%20Images_01_1920x1080.jpg
