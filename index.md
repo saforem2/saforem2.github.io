@@ -25,7 +25,7 @@ about:
       href: 'https://twitter.com/saforem2'
     - href: 'mailto:///foremans@anl.gov'
       text: '{{< fa regular paper-plane >}}'
-title: 'Sam Foreman [[{{< ai orcid >}}](https://orcid.org/0000-0002-9981-0876)]{.orcid-green}'
+title: 'Sam Foreman [[{{< ai orcid >}}]{.orcid-green}](https://orcid.org/0000-0002-9981-0876)'
 ---
 
 
@@ -97,7 +97,7 @@ title: 'Sam Foreman [[{{< ai orcid >}}](https://orcid.org/0000-0002-9981-0876)]{
 
 [I use machine learning to accelerate scientific discovery.]{style="font-size:1.25em;margin-bottom: 0.5rem;"}
 
-[(mostly getting supercomputers to talk to each other {{< fa solid network-wired >}})]{.dim-text style="font-size: 1.1em; margin-bottom: -1rem;"}
+[(Which is mostly getting supercomputers to talk to each other {{< fa solid network-wired >}})]{.dim-text style="font-size: 1.1em; margin-bottom: -1rem;"}
 
 :::
 

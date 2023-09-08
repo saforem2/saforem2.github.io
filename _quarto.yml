@@ -24,9 +24,10 @@ project:
   preview:
     port: 4200
 author:
-  name: Sam Foreman
+  # name: Sam Foreman
+  name: "Sam Foreman [[{{< ai orcid >}}]{.orcid-green}](https://orcid.org/0000-0002-9981-0876)"
   url: https://samforeman.me
-  orcid: 0000-0002-9981-0876
+  # orcid: 0000-0002-9981-0876
   email: foremans@anl.gov
   # affiliation: Argonne National Laboratory
   # affiliation-url: https://alcf.anl.gov/about/people/sam-foreman
@@ -49,43 +50,28 @@ website:
   favicon: "./favicon.svg"
   back-to-top-navigation: true
   # reader-mode: true
+  open-graph: true
+  repo-url: https://github.com/saforem2/saforem2.github.io
+  repo-actions: [source, edit, issue]
+  google-analytics: G-XVM2Y822Y1
+  sidebar: false
   navbar:
     logo: "./favicon.svg"
     background: "#222222"
     foregound: "#777777"
     right:
     # left:
-      # - icon: newspaper
       - href: "./qmd/posts.qmd"
         text: "[{{< bi newspaper >}}]{.red-text} Posts"
-      # - icon: person-chalkboard
       - href: "./qmd/slides.qmd"
         text: "[{{< bi easel >}}]{.green-text} Talks"
-      # - icon: github
-      # - href: "https://saforem2.github.io/l2hmc-qcd"
       - href: "./qmd/projects.qmd"
-        # text: "[{{< fa brands github >}}]{.blue-text} Projects"
         text: "[{{< bi braces-asterisk >}}]{.blue-text} Projects"
       - icon: github
         href: https://github.com/saforem2/saforem2.github.io
         aria-label: GitHub
-    # left: auto
-      # - href: index.qmd
-      #   text: Analysis
-      # - href: ./qmd/Climrr.qmd
-      #   text: ClimRR
-      # - href: ./qmd/iris.qmd
-      #   text: Iris
-  open-graph: true
-  repo-url: https://github.com/saforem2/saforem2.github.io
-  repo-actions: [source, edit, issue]
-  google-analytics: G-XVM2Y822Y1
-  sidebar: false
   page-footer:
     right: "Copyright 2023, Sam Foreman" 
-    # left:
-    #   - href: https://saforem2.github.io
-    #     text: saforem2.github.io
     center:
       - href: https://samforeman.me
         text: "{{< fa solid home >}}"
@@ -124,6 +110,10 @@ format:
     code-fold: false
     code-copy: hover
     code-summary: " "
+    code-tools:
+      source: repo
+      toggle: true
+      caption: none
     html-math-method: katex
     css:
       - css/default.css
@@ -142,52 +132,3 @@ format:
     footnotes-hover: true
     header-includes: |
       <link href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css" rel="stylesheet" />
-    # <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
-    # <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-    # <!-- and it's easy to individually load additional languages -->
-    # <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
-    # <script>hljs.highlightAll();</script>
-
-    # code-tools:
-      # source: repo
-      # toggle: true
-      # caption: none
-  # sidebar:
-  #   style: "floating"
-  #   search: true
-  #   collapse-level: 2
-  #   contents:
-  #     - href: index.qmd
-  #       text: Home
-  #     - href: qmd/slides.qmd
-  #       text: Recent Talks
-# filters:
-#   - lua/callouts.lua
-# highlight-style:
-#   dark: dracula
-#   light: dracula-light
-    # grid:
-    #   sidebar-width: 200px
-    #   body-width: 950px
-    #   margin-width: 150px
-    #   gutter-width: 1em
-    # embed-resources: true
-    # page-layout: article
-    # line-numbers: true
-    # code-link: true
-    # embed-resources: false
-    # self-contained-math: false
-      # dark: atom-one
-      # light: a11y
-    # highlight-style:
-    #     dark: "atom-one"
-    #     light: "github"
-    # highlight-style: atom-one
-    # code-tools:
-    #   source: repo
-    #   toggle: true
-    #   caption: none
-    # code-tools:
-    #   source: repo
-    #   toggle: true
-    #   caption: none

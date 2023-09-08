@@ -214,7 +214,7 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
   round " style="height: 9em; width: 9em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sam Foreman <span class="orcid-green"><a href="https://orcid.org/0000-0002-9981-0876"><i class="ai  ai-orcid"></i></a></span></h1>
+<div class="quarto-title-block"><div><h1 class="title">Sam Foreman <a href="https://orcid.org/0000-0002-9981-0876"><span class="orcid-green"><i class="ai  ai-orcid"></i></span></a></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/saforem2/saforem2.github.io/blob/main/index.qmd"><i class="bi"></i></button></div></div>
 </div>
 <div class="quarto-title-meta">
   </div>
@@ -324,7 +324,7 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <section id="fa-solid-person-drowning-about-me" class="level1">
 <h1><span class="green-text"><i class="fa-solid fa-person-drowning" aria-label="person-drowning"></i></span> About Me</h1>
 <p><span style="font-size:1.25em;margin-bottom: 0.5rem;">I use machine learning to accelerate scientific discovery.</span></p>
-<p><span class="dim-text" style="font-size: 1.1em; margin-bottom: -1rem;">(mostly getting supercomputers to talk to each other <i class="fa-solid fa-network-wired" aria-label="network-wired"></i>)</span></p>
+<p><span class="dim-text" style="font-size: 1.1em; margin-bottom: -1rem;">(Which is mostly getting supercomputers to talk to each other <i class="fa-solid fa-network-wired" aria-label="network-wired"></i>)</span></p>
 </section>
 </div><div class="column" style="margin-top: 1.5em;">
 <div style="text-align: center;">
@@ -685,6 +685,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
