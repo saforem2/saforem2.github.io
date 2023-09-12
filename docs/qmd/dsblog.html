@@ -247,6 +247,23 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 
 </header>
 
+<!-- ::: {layout-ncol=2 style="text-align:left;"} -->
+<!---->
+<!-- ::: {#first-column} -->
+<!---->
+<!-- ![](https://saforem2.github.io/qmd/dsblog_files/figure-html/cell-4-output-1.svg) -->
+<!---->
+<!-- `GPT-25B` Model -->
+<!-- ::: -->
+<!---->
+<!-- ::: {#second-column} -->
+<!---->
+<!-- ![](https://saforem2.github.io/qmd/dsblog_files/figure-html/cell-4-output-2.svg) -->
+<!---->
+<!-- `GPT-33B` Model -->
+<!-- ::: -->
+<!---->
+<!-- ::: -->
 <section id="updates" class="level2">
 <h2 class="anchored" data-anchor-id="updates">Updates</h2>
 <p>The new <a href="https://github.com/microsoft/Megatron-DeepSpeed">Megatron-DeepSpeed</a> release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.</p>
@@ -381,9 +398,11 @@ PRE-RELEASE
 <span id="cb12-13"><a href="#cb12-13"></a>    }</span>
 <span id="cb12-14"><a href="#cb12-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fig-seq-len" class="quarto-figure quarto-figure-center anchored" style="background-color:#1c1c1c;">
+<div id="fig-seq-len" class="quarto-figure quarto-figure-center anchored" style="background-color:none;">
 <figure class="figure">
 <div>
+<details open="">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(gpus))</span>
 <span id="cb13-2"><a href="#cb13-2"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
@@ -391,9 +410,9 @@ PRE-RELEASE
 <span id="cb13-5"><a href="#cb13-5"></a>outdir <span class="op">=</span> Path(os.getcwd()).joinpath(<span class="st">'assets'</span>)</span>
 <span id="cb13-6"><a href="#cb13-6"></a>outdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb13-7"><a href="#cb13-7"></a>colors <span class="op">=</span> {</span>
-<span id="cb13-8"><a href="#cb13-8"></a>    <span class="st">'Old'</span>: <span class="st">'#09A7F0'</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="st">'Old'</span>: <span class="st">'#007DFF'</span>,</span>
 <span id="cb13-9"><a href="#cb13-9"></a>    <span class="st">'Megatron-LM'</span>: <span class="st">'#76b900'</span>,</span>
-<span id="cb13-10"><a href="#cb13-10"></a>    <span class="st">'Megatron-DS'</span>:  <span class="st">'#B90076'</span>,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="st">'Megatron-DS'</span>:  <span class="st">'#FF5252'</span>,</span>
 <span id="cb13-11"><a href="#cb13-11"></a>}</span>
 <span id="cb13-12"><a href="#cb13-12"></a></span>
 <span id="cb13-13"><a href="#cb13-13"></a>improvement <span class="op">=</span> {}</span>
@@ -404,8 +423,8 @@ PRE-RELEASE
 <span id="cb13-18"><a href="#cb13-18"></a>    ax <span class="op">=</span> plt.gca()</span>
 <span id="cb13-19"><a href="#cb13-19"></a>    <span class="cf">for</span> label, value <span class="kw">in</span> d.items():</span>
 <span id="cb13-20"><a href="#cb13-20"></a>        offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
-<span id="cb13-21"><a href="#cb13-21"></a>        rects <span class="op">=</span> ax.barh(x <span class="op">+</span> offset, value, width, label<span class="op">=</span>label, color<span class="op">=</span>colors[label])</span>
-<span id="cb13-22"><a href="#cb13-22"></a>        ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span>colors[label])</span>
+<span id="cb13-21"><a href="#cb13-21"></a>        rects <span class="op">=</span> ax.barh(x <span class="op">+</span> offset, value, width, label<span class="op">=</span>label, color<span class="op">=</span>colors[label], alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb13-22"><a href="#cb13-22"></a>        ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span>colors[label], family<span class="op">=</span><span class="st">'monospace'</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
 <span id="cb13-23"><a href="#cb13-23"></a>        multiplier <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb13-24"><a href="#cb13-24"></a>    ax.set_ylabel(</span>
 <span id="cb13-25"><a href="#cb13-25"></a>        <span class="st">'GPUs'</span>,</span>
@@ -415,31 +434,24 @@ PRE-RELEASE
 <span id="cb13-29"><a href="#cb13-29"></a>    )</span>
 <span id="cb13-30"><a href="#cb13-30"></a>    ax.set_yticks(x <span class="op">+</span> width, gpus)</span>
 <span id="cb13-31"><a href="#cb13-31"></a>    plt.figtext(</span>
-<span id="cb13-32"><a href="#cb13-32"></a>        <span class="fl">0.00</span>,</span>
-<span id="cb13-33"><a href="#cb13-33"></a>        <span class="fl">0.94</span>,</span>
-<span id="cb13-34"><a href="#cb13-34"></a>        <span class="ss">f"</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">"</span>,</span>
-<span id="cb13-35"><a href="#cb13-35"></a>        fontsize<span class="op">=</span><span class="dv">24</span>,</span>
-<span id="cb13-36"><a href="#cb13-36"></a>        fontweight<span class="op">=</span><span class="st">'bold'</span>,</span>
-<span id="cb13-37"><a href="#cb13-37"></a>        ha<span class="op">=</span><span class="st">'left'</span></span>
-<span id="cb13-38"><a href="#cb13-38"></a>    )</span>
-<span id="cb13-39"><a href="#cb13-39"></a>    ax.set_xlabel(</span>
-<span id="cb13-40"><a href="#cb13-40"></a>        <span class="st">'Sequence Length (k)'</span>,</span>
-<span id="cb13-41"><a href="#cb13-41"></a>        fontsize<span class="op">=</span><span class="dv">18</span>,</span>
-<span id="cb13-42"><a href="#cb13-42"></a>        loc<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb13-43"><a href="#cb13-43"></a>        family<span class="op">=</span><span class="st">'sans-serif'</span></span>
-<span id="cb13-44"><a href="#cb13-44"></a>    )</span>
-<span id="cb13-45"><a href="#cb13-45"></a>    ax.legend(</span>
-<span id="cb13-46"><a href="#cb13-46"></a>        bbox_to_anchor<span class="op">=</span>(<span class="fl">0.005</span>, <span class="fl">1.05</span>, <span class="fl">0.99</span>, <span class="fl">.098</span>),</span>
-<span id="cb13-47"><a href="#cb13-47"></a>        alignment<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb13-48"><a href="#cb13-48"></a>        edgecolor<span class="op">=</span><span class="st">"#83838320"</span>,</span>
-<span id="cb13-49"><a href="#cb13-49"></a>        frameon<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb13-50"><a href="#cb13-50"></a>        ncols<span class="op">=</span><span class="dv">3</span>,</span>
-<span id="cb13-51"><a href="#cb13-51"></a>        fontsize<span class="op">=</span><span class="dv">14</span>,</span>
-<span id="cb13-52"><a href="#cb13-52"></a>        mode<span class="op">=</span><span class="st">"expand"</span>,</span>
-<span id="cb13-53"><a href="#cb13-53"></a>        borderaxespad<span class="op">=</span><span class="fl">0.01</span></span>
-<span id="cb13-54"><a href="#cb13-54"></a>    )</span>
-<span id="cb13-55"><a href="#cb13-55"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
-<span id="cb13-56"><a href="#cb13-56"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-32"><a href="#cb13-32"></a>        <span class="fl">0.00</span>, <span class="fl">0.94</span>, <span class="ss">f"</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">24</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, ha<span class="op">=</span><span class="st">'left'</span></span>
+<span id="cb13-33"><a href="#cb13-33"></a>    )</span>
+<span id="cb13-34"><a href="#cb13-34"></a>    ax.set_xlabel(</span>
+<span id="cb13-35"><a href="#cb13-35"></a>        <span class="st">'Sequence Length (k)'</span>, fontsize<span class="op">=</span><span class="dv">18</span>, loc<span class="op">=</span><span class="st">'center'</span></span>
+<span id="cb13-36"><a href="#cb13-36"></a>    )</span>
+<span id="cb13-37"><a href="#cb13-37"></a>    ax.legend(</span>
+<span id="cb13-38"><a href="#cb13-38"></a>        bbox_to_anchor<span class="op">=</span>(<span class="fl">0.005</span>, <span class="fl">1.05</span>, <span class="fl">0.99</span>, <span class="fl">.098</span>),</span>
+<span id="cb13-39"><a href="#cb13-39"></a>        alignment<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb13-40"><a href="#cb13-40"></a>        edgecolor<span class="op">=</span><span class="st">"#83838320"</span>,</span>
+<span id="cb13-41"><a href="#cb13-41"></a>        frameon<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb13-42"><a href="#cb13-42"></a>        ncols<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb13-43"><a href="#cb13-43"></a>        fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb13-44"><a href="#cb13-44"></a>        mode<span class="op">=</span><span class="st">"expand"</span>,</span>
+<span id="cb13-45"><a href="#cb13-45"></a>        borderaxespad<span class="op">=</span><span class="fl">0.01</span></span>
+<span id="cb13-46"><a href="#cb13-46"></a>    )</span>
+<span id="cb13-47"><a href="#cb13-47"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
+<span id="cb13-48"><a href="#cb13-48"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell quarto-layout-panel" data-execution_count="3">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -482,43 +494,43 @@ PRE-RELEASE
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">2k</td>
-<td style="text-align: center;"><span style="text-weight:600;">25 (TP=32)</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">68 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">25</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">68</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">4k</td>
-<td style="text-align: center;"><span style="text-weight:600;">28 (TP=32)</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">80 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">28</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">80</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">8k</td>
 <td style="text-align: center;"><span class="red-text">OOM</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">86 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">86</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">16k</td>
 <td style="text-align: center;"><span class="red-text">OOM</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">92 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">92</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">32k</td>
 <td style="text-align: center;"><span class="red-text">OOM</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">100 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">100</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">64k</td>
 <td style="text-align: center;"><span class="red-text">OOM</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">106 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">106</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">128k</td>
 <td style="text-align: center;"><span class="red-text">OOM</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">119 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">119</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">256k</td>
 <td style="text-align: center;"><span class="red-text">OOM</span></td>
-<td style="text-align: center;"><span style="text-weight:600;">94 (TP size=32)</span></td>
+<td style="text-align: center;"><span style="text-weight:600;">94</span></td>
 </tr>
 </tbody>
 </table>
@@ -542,8 +554,13 @@ PRE-RELEASE
 </section>
 <section id="new-results" class="level2">
 <h2 class="anchored" data-anchor-id="new-results">New Results</h2>
+<div id="fig-wandb" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <iframe src="https://wandb.ai/l2hmc-qcd/Megatron-DS-Benchmarking/reports/Looooooong-Sequences--Vmlldzo1MzI2NjA1" style="border:none;height:1024px;width:100%">
 </iframe>
+<figcaption class="figure-caption">Figure&nbsp;3: Weights &amp; Biases Report</figcaption>
+</figure>
+</div>
 
 
 </section>
