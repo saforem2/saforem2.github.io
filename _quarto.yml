@@ -108,7 +108,7 @@ format:
     highlight-style: atom-one
     code-overflow: scroll
     code-fold: false
-    code-copy: hover
+    code-copy: true
     code-summary: " "
     code-tools:
       source: repo

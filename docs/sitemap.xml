@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://saforem2.github.io/qmd/slides.html</loc>
-    <lastmod>2023-09-08T13:28:02.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saforem2.github.io/index.html</loc>
-    <lastmod>2023-09-08T13:28:09.655Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saforem2.github.io/qmd/blog/2023-08-19.html</loc>
-    <lastmod>2023-08-22T02:46:48.875Z</lastmod>
-  </url>
-  <url>
     <loc>https://saforem2.github.io/qmd/blog/quarto-reveal.html</loc>
-    <lastmod>2023-09-07T13:52:07.422Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saforem2.github.io/qmd/posts.html</loc>
-    <lastmod>2023-09-08T13:27:58.665Z</lastmod>
-  </url>
-  <url>
-    <loc>https://saforem2.github.io/qmd/dsblog.html</loc>
-    <lastmod>2023-09-08T13:21:23.718Z</lastmod>
+    <lastmod>2023-09-12T01:26:00.252Z</lastmod>
   </url>
   <url>
     <loc>https://saforem2.github.io/qmd/projects.html</loc>
-    <lastmod>2023-09-08T13:28:04.596Z</lastmod>
+    <lastmod>2023-09-12T01:25:58.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/qmd/dsblog.html</loc>
+    <lastmod>2023-09-12T13:36:14.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/index.html</loc>
+    <lastmod>2023-09-12T03:17:54.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/qmd/posts.html</loc>
+    <lastmod>2023-09-12T01:25:58.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://saforem2.github.io/qmd/slides.html</loc>
+    <lastmod>2023-09-12T01:25:59.573Z</lastmod>
   </url>
 </urlset>

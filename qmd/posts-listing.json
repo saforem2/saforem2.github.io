@@ -1,7 +1,9 @@
 {
   "listing": "/qmd/posts.html",
   "items": [
+    "/qmd/dsblog.html",
+    "/qmd/projects.html",
     "/qmd/blog/quarto-reveal.html",
-    "/qmd/blog/2023-08-19.html"
+    "/qmd/slides.html"
   ]
 }
