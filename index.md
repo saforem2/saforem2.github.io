@@ -15,7 +15,7 @@ about:
   template: trestles
   image-width: 9em
   image-shape: round
-  image: 'https://github.com/saforem2/saforem2.github.io/blob/master/docs/assets/avatar.png?raw=true'
+  image: ./assets/avatar.png
   links:
     - href: 'https://saforem2.github.io'
       text: '{{< fa solid home >}}'
@@ -304,7 +304,7 @@ print(f"Last updated: {date.today().strftime('%d %B %y')}")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-Last updated: 08 September 23
+Last updated: 12 September 23
 ```
 :::
 :::

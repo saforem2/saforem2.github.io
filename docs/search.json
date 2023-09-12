@@ -25,7 +25,7 @@
     "href": "qmd/dsblog.html",
     "title": "Loooooooong Sequence Lengths",
     "section": "",
-    "text": "The new Megatron-DeepSpeed release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.\nAdditional details can be found in the examples_deepspeed/deepspeed4science folder.\n\n\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA.\n\n\n\n\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
+    "text": "The new Megatron-DeepSpeed release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.\nAdditional details can be found in the 📁 DeepSpeed4Science folder.\n\n\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA.\n\n\n\n\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
   },
   {
     "objectID": "qmd/dsblog.html#initial-results",
@@ -81,7 +81,7 @@
     "href": "index.html#fa-solid-hourglass-end-appendix",
     "title": "Sam Foreman ",
     "section": " Appendix",
-    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 08 September 23"
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 12 September 23"
   },
   {
     "objectID": "qmd/posts.html",
@@ -109,7 +109,7 @@
     "href": "qmd/dsblog.html#updates",
     "title": "Loooooooong Sequence Lengths",
     "section": "",
-    "text": "The new Megatron-DeepSpeed release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.\nAdditional details can be found in the examples_deepspeed/deepspeed4science folder.\n\n\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA.\n\n\n\n\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
+    "text": "The new Megatron-DeepSpeed release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.\nAdditional details can be found in the 📁 DeepSpeed4Science folder.\n\n\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA.\n\n\n\n\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
   },
   {
     "objectID": "qmd/dsblog.html#setup",
