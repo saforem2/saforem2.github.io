@@ -10,7 +10,7 @@ number-sections: false
 bibliography: references.bib
 # appendix-cite-as: display
 favicon: "favicon.svg"
-twitter-card: true
+# twitter-card: true
 site-url: https://saforem2.github.io
 google-scholar: true
 citeproc: true
@@ -41,7 +41,9 @@ execute:
   keep-md: true
   freeze: auto
 website:
+  description: "My ramblings about science and computers"
   twitter-card:
+    image: "./assets/thumbnail.png"
     site: "@saforem2"
     creator: "@saforem2"
   page-navigation: true
@@ -97,7 +99,8 @@ website:
         text: "{{< fa brands linkedin >}}"
 format:
   html:
-    code-line-numbers: true
+    code-link: true
+    code-line-numbers: false
     toc: true
     self-contained: false
     toc-location: right
@@ -118,6 +121,7 @@ format:
     css:
       - css/default.css
       - css/callouts.css
+      - css/profile.css
     theme: 
       dark:
         - css/common.scss

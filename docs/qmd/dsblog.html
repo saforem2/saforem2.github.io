@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sam Foreman ">
-<meta name="dcterms.date" content="2023-09-12">
+<meta name="dcterms.date" content="2023-09-13">
 
 <title>Sam Foreman - Loooooooong Sequence Lengths</title>
 <style>
@@ -118,20 +118,23 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="../css/callouts.css">
+<link rel="stylesheet" href="../css/profile.css">
 <meta property="og:title" content="Sam Foreman - Loooooooong Sequence Lengths">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://saforem2.github.io/assets/deepspeed4science1.svg">
+<meta property="og:image" content="https://saforem2.github.io/assets/ds4sci1.svg">
 <meta property="og:site-name" content="Sam Foreman">
 <meta name="twitter:title" content="Sam Foreman - Loooooooong Sequence Lengths">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://saforem2.github.io/assets/deepspeed4science1.svg">
+<meta name="twitter:image" content="https://saforem2.github.io/qmd/assets/thumbnail.png">
+<meta name="twitter:creator" content="@saforem2">
+<meta name="twitter:site" content="@saforem2">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Personal Website">
 <meta name="citation_author" content="Sam Foreman">
-<meta name="citation_publication_date" content="2023-09-12">
-<meta name="citation_cover_date" content="2023-09-12">
+<meta name="citation_publication_date" content="2023-09-13">
+<meta name="citation_cover_date" content="2023-09-13">
 <meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-09-12">
+<meta name="citation_online_date" content="2023-09-13">
 <meta name="citation_fulltext_html_url" content="https://saforem2.github.io">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=The climate risk &amp;amp;amp; resilience portal (ClimRR) metadata and data dictionary;,citation_author=C. Burdi;,citation_author=Wall. T Branham;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://dub.sh/ClimRR-Metadata;">
@@ -201,24 +204,28 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#new-features" id="toc-new-features" class="nav-link active" data-scroll-target="#new-features">New Features</a></li>
-  <li><a href="#new-optimizations" id="toc-new-optimizations" class="nav-link" data-scroll-target="#new-optimizations">New optimizations</a></li>
-  <li><a href="#setup-environment" id="toc-setup-environment" class="nav-link" data-scroll-target="#setup-environment">Setup Environment</a>
+  <li><a href="#deepspeed4science-092023" id="toc-deepspeed4science-092023" class="nav-link active" data-scroll-target="#deepspeed4science-092023">DeepSpeed4Science (09/2023)</a>
   <ul class="collapse">
-  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">Dependencies</a></li>
+  <li><a href="#new-features" id="toc-new-features" class="nav-link" data-scroll-target="#new-features">New Features</a></li>
+  <li><a href="#new-optimizations" id="toc-new-optimizations" class="nav-link" data-scroll-target="#new-optimizations">New optimizations</a></li>
+  </ul></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a>
+  <ul class="collapse">
+  <li><a href="#using-install.sh" id="toc-using-install.sh" class="nav-link" data-scroll-target="#using-install.sh">Using <code>install.sh</code></a></li>
+  <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step">Step-by-Step</a></li>
   <li><a href="#running" id="toc-running" class="nav-link" data-scroll-target="#running">Running</a></li>
   </ul></li>
   <li><a href="#initial-results" id="toc-initial-results" class="nav-link" data-scroll-target="#initial-results">Initial Results</a></li>
   <li><a href="#zero-offloading" id="toc-zero-offloading" class="nav-link" data-scroll-target="#zero-offloading">ZeRO Offloading</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/dsblog.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/dsblog.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="README.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Loooooooong Sequence Lengths</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Loooooooong Sequence Lengths</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i></button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button" data-quarto-source-url="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/dsblog.qmd">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -235,7 +242,7 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading"></div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 12, 2023</p>
+      <p class="date">September 13, 2023</p>
     </div>
   </div>
   
@@ -245,31 +252,36 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 
 </header>
 
-<div id="fig-ds4sci" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-ds4sci" class="quarto-figure quarto-figure-center anchored" style="text-align:center;">
 <figure class="figure">
-<p><img src="../assets/deepspeed4science1.svg" class="img-fluid figure-img"></p>
+<!-- ![](https://raw.githubusercontent.com/ramanathanlab/genslm/foremans/ds4sci/examples/long-sequences/assets/deepspeed4science1.svg) -->
+<p><span class="stretch"><img src="../assets/ds4sci1.svg" class="img-fluid figure-img"></span></p>
 <figcaption class="figure-caption">Figure&nbsp;1: This work was done as part of the DeepSpeed4Science project, in collaboration with Microsoft.</figcaption>
 </figure>
 </div>
 <p>The new <a href="https://github.com/microsoft/Megatron-DeepSpeed">Megatron-DeepSpeed</a> release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.</p>
+<!-- > **Note**<br> -->
+<!-- > Additional details can be found in the -->
+<!-- > [📁 `DeepSpeed4Science`](https://github.com/microsoft/Megatron-DeepSpeed/examples_deepspeed/deepspeed4science/megatron_long_seq_support/README.md) -->
+<!-- > folder. -->
+<div class="callout callout-style-simple callout-note callout-titled" title="Additional Details" style="width:100%;">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Additional Details
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <p>Additional details can be found in the <a href="https://github.com/microsoft/Megatron-DeepSpeed/examples_deepspeed/deepspeed4science/megatron_long_seq_support/README.md">📁 <code>DeepSpeed4Science</code></a> folder.</p>
-<!-- ::: {layout-ncol=2 style="text-align:left;"} -->
-<!---->
-<!-- ::: {#first-column} -->
-<!---->
-<!-- ![](https://saforem2.github.io/qmd/dsblog_files/figure-html/cell-4-output-1.svg) -->
-<!---->
-<!-- `GPT-25B` Model -->
-<!-- ::: -->
-<!---->
-<!-- ::: {#second-column} -->
-<!---->
-<!-- ![](https://saforem2.github.io/qmd/dsblog_files/figure-html/cell-4-output-2.svg) -->
-<!---->
-<!-- `GPT-33B` Model -->
-<!-- ::: -->
-<!---->
-<!-- ::: -->
+</div>
+</div>
+</div>
+<section id="deepspeed4science-092023" class="level2">
+<h2 class="anchored" data-anchor-id="deepspeed4science-092023"><a href="https://github.com/microsoft/Megatron-DeepSpeed/examples_deepspeed/deepspeed4science/megatron_long_seq_support/README.md">DeepSpeed4Science</a> (09/2023)</h2>
 <section id="new-features" class="level3">
 <h3 class="anchored" data-anchor-id="new-features">New Features</h3>
 <ul>
@@ -285,49 +297,71 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <li><p>Enabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.</p></li>
 <li><p>Position embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint.</p></li>
 </ul>
-<!-- <details closed><summary><b>Results</b></summary> -->
 </section>
-<section id="setup-environment" class="level2">
-<h2 class="anchored" data-anchor-id="setup-environment">Setup Environment</h2>
-<p>We include below the details for getting started.</p>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<section id="using-install.sh" class="level3">
+<h3 class="anchored" data-anchor-id="using-install.sh">Using <a href="https://github.com/ramanathanlab/genslm/blob/foremans/ds4sci/examples/long-sequences/install.sh"><code>install.sh</code></a></h3>
+<blockquote class="blockquote">
+<p><strong>Important</strong><br> To install, simply:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/ramanthanlab/GenSLM/</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> GenSLM/examples/long-sequences/</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./install.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Explicitly, <a href="https://github.com/ramanathanlab/genslm/blob/foremans/ds4sci/examples/long-sequences/install.sh"><code>./install.sh</code></a> will:</p>
+<ol type="1">
+<li><strong>Automatically</strong> create a virtual environment <em>on top of</em> the latest <code>conda</code> module</li>
+<li>Install (+ update<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) / build all the required <a href="#dependencies">dependencies</a> into this virtual environment</li>
+</ol>
+</blockquote>
+</section>
+<section id="step-by-step" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step">Step-by-Step</h3>
+<p>For completeness, we describe below the steps for installing and building each of the dependencies:</p>
 <ol type="1">
 <li><p>Clone GitHub repo:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/ramanthanlab/GenSLM</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/ramanthanlab/GenSLM</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Load <code>conda</code> module:</p>
 <ul>
 <li><p>ThetaGPU:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># ThetaGPU:</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">module</span> load conda/2023-01-11</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">conda</span> activate base</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ThetaGPU:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MACHINE</span><span class="op">=</span><span class="st">"ThetaGPU"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CONDA_DATE</span><span class="op">=</span><span class="st">"2023-01-10"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load conda/2023-01-11</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate base</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Polaris:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># ThetaGPU:</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">module</span> load conda/2023-01-11</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="ex">conda</span> activate base</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Polaris:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MACHINE</span><span class="op">=</span><span class="st">"Polaris"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CONDA_DATE</span><span class="op">=</span><span class="st">"2023-01-10"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load conda/2023-01-10-unstable</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate base</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 <li><p>Setup Virtual Environment:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># create a new virtual environment</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">cd</span> Megatron-DeepSpeed</span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="ex">python3</span> <span class="at">-m</span> venv venv <span class="at">--system-site-packages</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="bu">source</span> ./venv/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new virtual environment</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Megatron-DeepSpeed</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv <span class="st">"venvs/</span><span class="va">${MACHINE}</span><span class="st">/</span><span class="va">${CONDA_DATE}</span><span class="st">"</span> <span class="at">--system-site-packages</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="st">"venvs/</span><span class="va">${MACHINE}</span><span class="st">/</span><span class="va">${CONDA_DATE}</span><span class="st">/bin/activate"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
-<section id="dependencies" class="level3">
-<h3 class="anchored" data-anchor-id="dependencies">Dependencies</h3>
+<section id="dependencies" class="level4">
+<h4 class="anchored" data-anchor-id="dependencies">Dependencies</h4>
 <ol type="1">
-<li><p><a href="https://github.com/microsoft/DeepSpeed"><code>Microsoft/DeepSpeed</code></a></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">git</span> clone https://github.com/microsoft/DeepSpeed.git</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">cd</span> DeepSpeed</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">-e</span> .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><a href="https://github.com/microsoft/Megatron-DeepSpeed"><code>Microsoft/Megatron-DeepSpeed</code></a>:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">git</span> clone https://github.com/microsoft/Megatron-DeepSpeed.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><a href="https://github.com/NVIDIA/apex"><code>NVIDIA/apex</code></a></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">git</span> clone https://github.com/NVIDIA/apex</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">cd</span> ../apex/</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="ex">pip</span> install <span class="at">-v</span> <span class="at">--disable-pip-version-check</span> <span class="at">--no-cache-dir</span> <span class="at">--no-build-isolation</span> <span class="at">--global-option</span><span class="op">=</span><span class="st">"--cpp_ext"</span> <span class="at">--global-option</span><span class="op">=</span><span class="st">"--cuda_ext"</span> <span class="at">-e</span> ./</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><a href="https://github.com/pybind/pybind11"><code>pybind/PyBind11</code></a></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">pip</span> install pybind11</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><a href="https://github.com/Dao-AILab/flash-attention"><code>Dao-AILab/flash-attention</code></a>:</p>
+<li><p><a href="https://github.com/saforem2/ezpz"><i class="fa-brands fa-github" aria-label="github"></i> <code>saforem2/ezpz</code></a></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> <span class="st">"git+https://github.com/saforem2/ezpz.git#egg=ezpz"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><a href="https://github.com/microsoft/DeepSpeed"><i class="fa-brands fa-github" aria-label="github"></i> <code>Microsoft/DeepSpeed</code></a></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/microsoft/DeepSpeed.git</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> DeepSpeed</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">-e</span> .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><a href="https://github.com/microsoft/Megatron-DeepSpeed"><i class="fa-brands fa-github" aria-label="github"></i> <code>Microsoft/Megatron-DeepSpeed</code></a>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/microsoft/Megatron-DeepSpeed.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><a href="https://github.com/NVIDIA/apex"><i class="fa-brands fa-github" aria-label="github"></i> <code>NVIDIA/apex</code></a></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/NVIDIA/apex</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../apex/</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-v</span> <span class="at">--disable-pip-version-check</span> <span class="at">--no-cache-dir</span> <span class="at">--no-build-isolation</span> <span class="at">--global-option</span><span class="op">=</span><span class="st">"--cpp_ext"</span> <span class="at">--global-option</span><span class="op">=</span><span class="st">"--cuda_ext"</span> <span class="at">-e</span> ./</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><a href="https://github.com/pybind/pybind11"><i class="fa-brands fa-github" aria-label="github"></i> <code>pybind/PyBind11</code></a></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pybind11</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><a href="https://github.com/Dao-AILab/flash-attention"><i class="fa-brands fa-github" aria-label="github"></i> <code>Dao-AILab/flash-attention</code></a>:</p>
 <div class="callout callout-style-simple callout-caution callout-titled" title="Flash Attention" style="font-size:0.8em; width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -336,7 +370,7 @@ Flash Attention
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>The new release supports three different implementations of FlashAttention: (<code>v1.0.4</code>, <code>v2.x</code>, <code>triton</code>)</li>
@@ -347,44 +381,46 @@ Flash Attention
 </div>
 <ul>
 <li><p><code>v1.0.4</code>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install flash-attn==1.0.4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install flash-attn==1.0.4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p><code>v2.x</code>:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">git</span> clone https://github.com/Dao-AILab/flash-attention</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="bu">cd</span> flash-attention</span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="ex">python3</span> setup.py install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/Dao-AILab/flash-attention</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> flash-attention</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> setup.py install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p><code>openai/triton</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">git</span> clone <span class="at">-b</span> legacy-backend https://github.com/openai/triton</span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="bu">cd</span> triton/python</span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="ex">python3</span> <span class="at">-m</span> pip install cmake</span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="ex">python3</span> <span class="at">-m</span> pip install .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">-b</span> legacy-backend https://github.com/openai/triton</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> triton/python</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install cmake</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 </ol>
+</section>
 </section>
 <section id="running" class="level3">
 <h3 class="anchored" data-anchor-id="running">Running</h3>
 <p>The <a href="./ALCF/"><code>ALCF/</code></a> directory contains shell scripts for setting up the environment and specifying the options to be used when launching.</p>
 <p>Various options can be specified dynamically at runtime by setting them in your environment, e.g.:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="va">MODEL_SIZE_KEY</span><span class="op">=</span><span class="st">"GPT33B"</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="va">SEQ_LEN</span><span class="op">=</span>8192</span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="va">USE_FLASH_ATTN</span><span class="op">=</span>1</span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="va">MICRO_BATCH</span><span class="op">=</span>1</span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="va">GAS</span><span class="op">=</span>1</span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="va">SP_TYPE</span><span class="op">=</span><span class="st">"megatron"</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="va">ZERO_STAGE</span><span class="op">=</span>1</span>
-<span id="cb12-8"><a href="#cb12-8"></a><span class="ex">./ALCF/train-gpt3.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="va">MODEL_SIZE_KEY</span><span class="op">=</span><span class="st">"GPT25B"</span> <span class="va">SEQ_LEN</span><span class="op">=</span>128000 <span class="va">USE_FLASH_ATTN</span><span class="op">=</span>1 <span class="va">MICRO_BATCH</span><span class="op">=</span>1 <span class="va">GAS</span><span class="op">=</span>1 <span class="va">SP_TYPE</span><span class="op">=</span><span class="st">"megatron"</span> <span class="va">ZERO_STAGE</span><span class="op">=</span>1 <span class="ex">./ALCF/train-gpt3.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Explicitly:</p>
 <ul>
-<li><a href="./ALCF/models.sh"><code>ALCF/models.sh</code></a>: Model architectures are defined in</li>
-<li><a href="./ALCF/args.sh"><code>ALCF/args.sh</code></a>: Runtime arguments</li>
-<li><code>ALCF/{</code><a href="./ALCF/setup.sh"><code>setup.sh</code></a><a href="./ALCF/launch.sh"><code>launch.sh</code></a><code>}</code> Options for environment setup / launching the executable are in</li>
+<li><a href="./ALCF/train-gpt3.sh"><code>ALCF/train-gpt3.sh</code></a>: <strong>Main entry point for training</strong>
+<ul>
+<li>This script will <strong>automatically</strong> source the rest of the required <a href="./ALCF/"><code>ALCF/*.sh</code></a> scripts below</li>
+</ul></li>
+<li><a href="./ALCF/models.sh"><code>ALCF/models.sh</code></a>: Contains some example model architectures for GPT3-style models</li>
+<li><a href="./ALCF/args.sh"><code>ALCF/args.sh</code></a>: Logic for parsing / setting up runtime options for Megatron and DeepSpeed</li>
+<li><a href="./ALCF/args.sh"><code>ALCF/setup.sh</code></a>: Locate and activate virtual environment to be used, ensure MPI variables are set properly</li>
+<li><a href="./ALCF/launch.sh"><code>ALCF/launch.sh</code></a>: Identify available resources and build the command to be executed
+<ul>
+<li>i.e.&nbsp;figure out how many: <code>{nodes, GPUs per node, GPUs total}</code>, to pass to <code>mpi{run,exec}</code></li>
+<li>then, use this to build <code>mpiexec &lt;mpiexec-args&gt; python3 pretrain_gpt.py</code></li>
+</ul></li>
 </ul>
-<p>Options for specifying</p>
 </section>
 </section>
 <section id="initial-results" class="level2">
 <h2 class="anchored" data-anchor-id="initial-results">Initial Results</h2>
-<div class="callout callout-style-simple callout-important callout-titled" title="PRE-RELEASE" style="width: 100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout callout-style-simple callout-warning callout-titled" title="PRE-RELEASE" style="width: 100%;">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -393,82 +429,143 @@ PRE-RELEASE
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>I’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in <a href="#fig-seq-len">Figure&nbsp;2</a>) but these can be ommitted in the actual README</p>
 </div>
 </div>
 </div>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Imports + Setup</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib_inline</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Tuple</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">:</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># - [Toolbox](https://github.com/saforem2/toolbox)</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> toolbox <span class="im">import</span> set_plot_style</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> opinionated <span class="im">import</span> STYLES</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>sns.set_context(<span class="st">'talk'</span>)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>set_plot_style()</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>matplotlib_inline.backend_inline.set_matplotlib_formats(<span class="st">'svg'</span>)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'default'</span>)</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>set_plot_style()</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>plt.style.use(STYLES[<span class="st">'opinionated_min'</span>])</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="fl">14.0</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="fl">14.0</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'grid.alpha'</span>] <span class="op">=</span> <span class="fl">0.4</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>grid_color <span class="op">=</span> plt.rcParams[<span class="st">'grid.color'</span>]</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> save_figure(</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>        fname: <span class="bu">str</span>,</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>        outdir: os.PathLike,</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    pngdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'pngs'</span>)</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    svgdir <span class="op">=</span> Path(outdir).joinpath(<span class="st">'svgs'</span>)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    pngdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>    svgdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    pngfile <span class="op">=</span> pngdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.png'</span>)</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    svgfile <span class="op">=</span> svgdir.joinpath(<span class="ss">f'</span><span class="sc">{</span>fname<span class="sc">}</span><span class="ss">.svg'</span>)</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    _ <span class="op">=</span> plt.savefig(pngfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>    _ <span class="op">=</span> plt.savefig(svgfile, dpi<span class="op">=</span><span class="dv">400</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>gpus <span class="op">=</span> (<span class="st">'32'</span>, <span class="st">'64'</span>, <span class="st">'128'</span>)</span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a>colors <span class="op">=</span> {</span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="st">'Old'</span>: <span class="st">'#007DFF'</span>,</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    <span class="st">'Megatron-LM'</span>: <span class="st">'#76b900'</span>,</span>
-<span id="cb13-6"><a href="#cb13-6"></a>    <span class="st">'Megatron-DS'</span>:  <span class="st">'#FF5252'</span>,</span>
-<span id="cb13-7"><a href="#cb13-7"></a>}</span>
-<span id="cb13-8"><a href="#cb13-8"></a></span>
-<span id="cb13-9"><a href="#cb13-9"></a>data <span class="op">=</span> {</span>
-<span id="cb13-10"><a href="#cb13-10"></a>    <span class="st">'25B'</span>: {</span>
-<span id="cb13-11"><a href="#cb13-11"></a>        <span class="st">'Old'</span>: np.array([<span class="dv">28</span>, <span class="dv">32</span>, <span class="dv">32</span>]),</span>
-<span id="cb13-12"><a href="#cb13-12"></a>        <span class="st">'Megatron-LM'</span>: np.array([<span class="dv">14</span>, <span class="dv">46</span>, <span class="dv">52</span>]),</span>
-<span id="cb13-13"><a href="#cb13-13"></a>        <span class="st">'Megatron-DS'</span>: np.array([<span class="dv">128</span>, <span class="dv">384</span>, <span class="dv">448</span>]),</span>
-<span id="cb13-14"><a href="#cb13-14"></a>    },</span>
-<span id="cb13-15"><a href="#cb13-15"></a>    <span class="st">'33B'</span>: {</span>
-<span id="cb13-16"><a href="#cb13-16"></a>        <span class="st">'Old'</span>: np.array([<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">42</span>]),</span>
-<span id="cb13-17"><a href="#cb13-17"></a>        <span class="st">'Megatron-LM'</span>: np.array([<span class="dv">26</span>, <span class="dv">48</span>, <span class="dv">52</span>]),</span>
-<span id="cb13-18"><a href="#cb13-18"></a>        <span class="st">'Megatron-DS'</span>: np.array([<span class="dv">192</span>, <span class="dv">448</span>, <span class="dv">512</span>]),</span>
-<span id="cb13-19"><a href="#cb13-19"></a>    }</span>
-<span id="cb13-20"><a href="#cb13-20"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Data</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gpus <span class="op">=</span> (<span class="st">'32'</span>, <span class="st">'64'</span>, <span class="st">'128'</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> {</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Old'</span>: <span class="st">'#007DFF'</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Megatron-LM'</span>: <span class="st">'#76b900'</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Megatron-DS'</span>:  <span class="st">'#FF5252'</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'25B'</span>: {</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Old'</span>: np.array([<span class="dv">28</span>, <span class="dv">32</span>, <span class="dv">32</span>]),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Megatron-LM'</span>: np.array([<span class="dv">14</span>, <span class="dv">46</span>, <span class="dv">52</span>]),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Megatron-DS'</span>: np.array([<span class="dv">128</span>, <span class="dv">384</span>, <span class="dv">448</span>]),</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'33B'</span>: {</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Old'</span>: np.array([<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">42</span>]),</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Megatron-LM'</span>: np.array([<span class="dv">26</span>, <span class="dv">48</span>, <span class="dv">52</span>]),</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Megatron-DS'</span>: np.array([<span class="dv">192</span>, <span class="dv">448</span>, <span class="dv">512</span>]),</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div id="fig-seq-len" class="quarto-figure quarto-figure-center anchored" style="background-color:none;">
 <figure class="figure">
 <div>
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(gpus))</span>
-<span id="cb14-2"><a href="#cb14-2"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a></span>
-<span id="cb14-5"><a href="#cb14-5"></a>outdir <span class="op">=</span> Path(os.getcwd()).joinpath(<span class="st">'assets'</span>)</span>
-<span id="cb14-6"><a href="#cb14-6"></a>outdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb14-7"><a href="#cb14-7"></a></span>
-<span id="cb14-8"><a href="#cb14-8"></a>improvement <span class="op">=</span> {}</span>
-<span id="cb14-9"><a href="#cb14-9"></a><span class="cf">for</span> idx, (model_size, d) <span class="kw">in</span> <span class="bu">enumerate</span>(data.items()):</span>
-<span id="cb14-10"><a href="#cb14-10"></a>    multiplier <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-11"><a href="#cb14-11"></a>    figure, axes <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">6.4</span>, <span class="fl">4.8</span>))</span>
-<span id="cb14-12"><a href="#cb14-12"></a>    fig <span class="op">=</span> plt.gcf()</span>
-<span id="cb14-13"><a href="#cb14-13"></a>    ax <span class="op">=</span> plt.gca()</span>
-<span id="cb14-14"><a href="#cb14-14"></a>    <span class="cf">for</span> label, value <span class="kw">in</span> d.items():</span>
-<span id="cb14-15"><a href="#cb14-15"></a>        offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
-<span id="cb14-16"><a href="#cb14-16"></a>        rects <span class="op">=</span> ax.barh(x <span class="op">+</span> offset, value, width, label<span class="op">=</span>label, color<span class="op">=</span>colors[label], alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb14-17"><a href="#cb14-17"></a>        ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span>colors[label], family<span class="op">=</span><span class="st">'monospace'</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb14-18"><a href="#cb14-18"></a>        multiplier <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb14-19"><a href="#cb14-19"></a>    ax.set_ylabel(</span>
-<span id="cb14-20"><a href="#cb14-20"></a>        <span class="st">'GPUs'</span>,</span>
-<span id="cb14-21"><a href="#cb14-21"></a>        fontsize<span class="op">=</span><span class="dv">18</span>,</span>
-<span id="cb14-22"><a href="#cb14-22"></a>        family<span class="op">=</span><span class="st">'sans-serif'</span>,</span>
-<span id="cb14-23"><a href="#cb14-23"></a>        loc<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb14-24"><a href="#cb14-24"></a>    )</span>
-<span id="cb14-25"><a href="#cb14-25"></a>    ax.set_yticks(x <span class="op">+</span> width, gpus)</span>
-<span id="cb14-26"><a href="#cb14-26"></a>    plt.figtext(</span>
-<span id="cb14-27"><a href="#cb14-27"></a>        <span class="fl">0.00</span>, <span class="fl">0.94</span>, <span class="ss">f"</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">24</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, ha<span class="op">=</span><span class="st">'left'</span></span>
-<span id="cb14-28"><a href="#cb14-28"></a>    )</span>
-<span id="cb14-29"><a href="#cb14-29"></a>    ax.set_xlabel(</span>
-<span id="cb14-30"><a href="#cb14-30"></a>        <span class="st">'Sequence Length (k)'</span>, fontsize<span class="op">=</span><span class="dv">18</span>, loc<span class="op">=</span><span class="st">'center'</span></span>
-<span id="cb14-31"><a href="#cb14-31"></a>    )</span>
-<span id="cb14-32"><a href="#cb14-32"></a>    ax.legend(</span>
-<span id="cb14-33"><a href="#cb14-33"></a>        bbox_to_anchor<span class="op">=</span>(<span class="fl">0.005</span>, <span class="fl">1.05</span>, <span class="fl">0.99</span>, <span class="fl">.098</span>),</span>
-<span id="cb14-34"><a href="#cb14-34"></a>        alignment<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb14-35"><a href="#cb14-35"></a>        edgecolor<span class="op">=</span><span class="st">"#83838320"</span>,</span>
-<span id="cb14-36"><a href="#cb14-36"></a>        frameon<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb14-37"><a href="#cb14-37"></a>        ncols<span class="op">=</span><span class="dv">3</span>,</span>
-<span id="cb14-38"><a href="#cb14-38"></a>        fontsize<span class="op">=</span><span class="dv">14</span>,</span>
-<span id="cb14-39"><a href="#cb14-39"></a>        mode<span class="op">=</span><span class="st">"expand"</span>,</span>
-<span id="cb14-40"><a href="#cb14-40"></a>        borderaxespad<span class="op">=</span><span class="fl">0.01</span></span>
-<span id="cb14-41"><a href="#cb14-41"></a>    )</span>
-<span id="cb14-42"><a href="#cb14-42"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
-<span id="cb14-43"><a href="#cb14-43"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Make the plots</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(gpus))</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">0.25</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>outdir <span class="op">=</span> Path(os.getcwd()).joinpath(<span class="st">'assets'</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>outdir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>, parents<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>improvement <span class="op">=</span> {}</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, (model_size, d) <span class="kw">in</span> <span class="bu">enumerate</span>(data.items()):</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    figure, axes <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">6.4</span>, <span class="fl">4.8</span>))</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.gcf()</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> plt.gca()</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> label, value <span class="kw">in</span> d.items():</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>        offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>        rects <span class="op">=</span> ax.barh(</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>          x <span class="op">+</span> offset,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>          value,</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>          width,</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>          label<span class="op">=</span>label,</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span>colors[label],</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>          alpha<span class="op">=</span><span class="fl">0.8</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>        ax.bar_label(</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>          rects,</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>          padding<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span>colors[label],</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>          family<span class="op">=</span><span class="st">'monospace'</span>,</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>          weight<span class="op">=</span><span class="st">'bold'</span></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>        multiplier <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">'GPUs'</span>,</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">18</span>,</span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>        family<span class="op">=</span><span class="st">'sans-serif'</span>,</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>        loc<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks(x <span class="op">+</span> width, gpus)</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>    plt.figtext(</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.00</span>, <span class="fl">0.94</span>, <span class="ss">f"</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">24</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, ha<span class="op">=</span><span class="st">'left'</span></span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Sequence Length (k)'</span>, fontsize<span class="op">=</span><span class="dv">18</span>, loc<span class="op">=</span><span class="st">'center'</span></span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>    ax.legend(</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>        bbox_to_anchor<span class="op">=</span>(<span class="fl">0.005</span>, <span class="fl">1.05</span>, <span class="fl">0.99</span>, <span class="fl">.098</span>),</span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>        alignment<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a>        edgecolor<span class="op">=</span><span class="st">"#83838320"</span>,</span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>        frameon<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>        ncols<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a>        mode<span class="op">=</span><span class="st">"expand"</span>,</span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>        borderaxespad<span class="op">=</span><span class="fl">0.01</span></span>
+<span id="cb17-54"><a href="#cb17-54" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-55"><a href="#cb17-55" aria-hidden="true" tabindex="-1"></a>    save_figure(fname<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>model_size<span class="sc">}</span><span class="ss">'</span>, outdir<span class="op">=</span>outdir)</span>
+<span id="cb17-56"><a href="#cb17-56" aria-hidden="true" tabindex="-1"></a>    _ <span class="op">=</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell quarto-layout-panel" data-execution_count="3">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -491,7 +588,7 @@ PRE-RELEASE
 </div>
 </div>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2: Pretraining with long sequence support across different model sizes and numbers of GPUs. In each case, the <code>new</code> (current) implementation <strong>significantly</strong> outperforms both NVIDIA/Megatron-LM as well as our previous implementation.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;2: Pre-training with long sequence support across different model sizes and numbers of GPUs. In each case, the <code>new</code> (current) implementation <strong>significantly</strong> outperforms both NVIDIA/Megatron-LM as well as our previous implementation.</figcaption>
 </figure>
 </div>
 <div id="fig-table" class="quarto-figure quarto-figure-center anchored">
@@ -552,23 +649,9 @@ PRE-RELEASE
 </tr>
 </tbody>
 </table>
-<!-- </details> -->
-<figcaption class="figure-caption">Figure&nbsp;3: The following experiments are performed on 4 NVIDIA DGX A100-40GB nodes, connected through 8 HDR InfiniBand (200Gb/s per HDR). TP stands for tensor parallelism.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3: The following experiments are performed on 4 NVIDIA DGX A100-40GB nodes, all using <code>TPSIZE=32</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, connected through 8 HDR InfiniBand (200Gb/s per HDR).</figcaption>
 </figure>
 </div>
-
-<!-- ::: {#fig-table} -->
-<!---->
-<!-- ```{python} -->
-<!-- import pandas as pd -->
-<!-- from toolbox import get_console -->
-<!-- console = get_console() -->
-<!-- df = pd.read_csv('./data.csv') -->
-<!-- df -->
-<!-- ``` -->
-<!---->
-<!-- Maximum Sequence Length Results -->
-<!-- ::: -->
 </section>
 <section id="zero-offloading" class="level2">
 <h2 class="anchored" data-anchor-id="zero-offloading">ZeRO Offloading</h2>
@@ -588,15 +671,26 @@ PRE-RELEASE
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman2023,
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><ol start="2" type="1">
+<li><code>deepspeed-0.10.3</code></li>
+<li><code>pytorch==2.0.0+cu118</code></li>
+</ol>
+<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn2"><p>TP stands for <code>tensor-model-parallel-size</code> parallelism.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman2023,
   author = {Foreman, Sam},
   title = {Personal {Website}},
-  date = {2023-09-12},
+  date = {2023-09-13},
   url = {https://saforem2.github.io},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-foreman2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Foreman, Sam. 2023. <span>“Personal Website.”</span> September 12, 2023.
+Foreman, Sam. 2023. <span>“Personal Website.”</span> September 13, 2023.
 <a href="https://saforem2.github.io">https://saforem2.github.io</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

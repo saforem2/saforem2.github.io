@@ -102,6 +102,11 @@ div.callout-warning {
   border: 1.75px solid #FD971F !important;
   background-color: RGBA(253, 151, 31, 0.075);
 }
+div.callout-warning .quarto-dark {
+  border: 1.75px solid #FFFF00!important;
+  background-color: RGBA(255, 255, 255, 0.075)!important;
+}
+
 div.callout-tip {
   border: 1.75px solid #02b875 !important;
   background-color: RGBA(2, 184, 117, 0.075);
@@ -127,6 +132,11 @@ div.callout-warning.callout-style-default .callout-title {
   background: none!important;
   color: #FD971F !important;
 }
+div.callout-warning.callout-style-default .callout-title .quarto-dark {
+  background: none!important;
+  color: #FFFF00 !important;
+}
+
 div.callout-caution.callout-style-default .callout-title {
   background: none!important;
   color: #E599F7!important;
@@ -150,7 +160,8 @@ div.callout-caution .callout-icon::before {
 
 div.callout-note .callout-icon::before {
   color: #4582ec !important;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="rgb(69,130,236)" d="M366.4 213.5L412.2 221.1C414.7 232.4 416 244 416 256C416 344.4 344.4 416 256 416C167.6 416 96 344.4 96 256C96 167.6 167.6 96 256 96C267.1 96 279.6 97.32 290.9 99.81L298.5 145.6L293.6 150.5C281.9 146.3 269.2 143.1 256 143.1C194.1 143.1 144 194.1 144 255.1C144 317.9 194.1 368 256 368C317.9 368 368 317.9 368 255.1C368 242.8 365.7 230.1 361.5 218.4L366.4 213.5zM497.7 171.5C506.1 197.1 512 226.4 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C285.6 0 314 5.024 340.5 14.27L301.7 53.04C286.1 49.74 271.7 48 256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 240.3 462.3 225 458.1 210.3L497.7 171.5zM272.1 272.1C263.6 282.3 248.4 282.3 239 272.1C229.7 263.6 229.7 248.4 239 239L331.2 146.9L322.7 96.24C321 86.05 324.3 75.66 331.6 68.36L382.8 17.16C390.1 9.035 404.7 11.86 409 22.53L432 79.1L489.5 102.1C500.1 107.3 502.1 121 494.8 129.2L443.6 180.4C436.3 187.7 425.9 190.1 415.8 189.3L365.1 180.8L272.1 272.1z"/></svg>')!important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="rgb(69, 130, 236)" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>')!important;
+  /* background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="rgb(69,130,236)" d="M366.4 213.5L412.2 221.1C414.7 232.4 416 244 416 256C416 344.4 344.4 416 256 416C167.6 416 96 344.4 96 256C96 167.6 167.6 96 256 96C267.1 96 279.6 97.32 290.9 99.81L298.5 145.6L293.6 150.5C281.9 146.3 269.2 143.1 256 143.1C194.1 143.1 144 194.1 144 255.1C144 317.9 194.1 368 256 368C317.9 368 368 317.9 368 255.1C368 242.8 365.7 230.1 361.5 218.4L366.4 213.5zM497.7 171.5C506.1 197.1 512 226.4 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C285.6 0 314 5.024 340.5 14.27L301.7 53.04C286.1 49.74 271.7 48 256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 240.3 462.3 225 458.1 210.3L497.7 171.5zM272.1 272.1C263.6 282.3 248.4 282.3 239 272.1C229.7 263.6 229.7 248.4 239 239L331.2 146.9L322.7 96.24C321 86.05 324.3 75.66 331.6 68.36L382.8 17.16C390.1 9.035 404.7 11.86 409 22.53L432 79.1L489.5 102.1C500.1 107.3 502.1 121 494.8 129.2L443.6 180.4C436.3 187.7 425.9 190.1 415.8 189.3L365.1 180.8L272.1 272.1z"/></svg>')!important; */
 }
 
 div.callout-important .callout-icon::before {
@@ -159,6 +170,10 @@ div.callout-important .callout-icon::before {
   }
 div.callout-warning .callout-icon::before {
   color: #FD971F !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="rgb(253,151,31)" d="M200.7 128C270.7 128 337.9 100.2 387.4 50.68L425.4 12.69C445.5-7.472 480 6.805 480 35.31V179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V444.7C480 473.2 445.5 487.5 425.4 467.3L387.4 429.3C339.6 381.5 275.4 353.1 208 352.1V456C208 486.9 182.9 512 152 512H120C89.07 512 64 486.9 64 456V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128L200.7 128zM432 73.94L421.3 84.62C364.5 141.4 288.1 174 208 175.9V304.1C288.1 305.1 364.5 338.6 421.3 395.4L432 406.1V73.94zM112 456C112 460.4 115.6 464 120 464H152C156.4 464 160 460.4 160 456V352H112V456zM48 192V288C48 296.8 55.16 303.1 64 303.1H160V176H64C55.16 176 48 183.2 48 192V192z"/></svg>')!important;
+}
+div.callout-warning .callout-icon::before .quarto-dark {
+  color: #FFFF00 !important;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="rgb(253,151,31)" d="M200.7 128C270.7 128 337.9 100.2 387.4 50.68L425.4 12.69C445.5-7.472 480 6.805 480 35.31V179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V444.7C480 473.2 445.5 487.5 425.4 467.3L387.4 429.3C339.6 381.5 275.4 353.1 208 352.1V456C208 486.9 182.9 512 152 512H120C89.07 512 64 486.9 64 456V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128L200.7 128zM432 73.94L421.3 84.62C364.5 141.4 288.1 174 208 175.9V304.1C288.1 305.1 364.5 338.6 421.3 395.4L432 406.1V73.94zM112 456C112 460.4 115.6 464 120 464H152C156.4 464 160 460.4 160 456V352H112V456zM48 192V288C48 296.8 55.16 303.1 64 303.1H160V176H64C55.16 176 48 183.2 48 192V192z"/></svg>')!important;
 }
 

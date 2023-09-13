@@ -1,11 +1,18 @@
 ---
 author: ""
 date: ""
+site-url: https://saforem2.github.io
 # author:
 #   # name: "[Sam Foreman]{style='font-size:1.0rem;'}"
 #   url: https://samforeman.me
 #   # orcid: 0000-0002-9981-0876
 #   email: foremans@anl.gov
+listing:
+  - id: sample-listings
+    contents:
+      - "../qmd/**/*.qmd"
+    type: table
+    sort: "date desc"
 format:
   html:
     callout-appearance: simple
@@ -60,77 +67,24 @@ about:
 <!---->
 <!-- ::: {.column width="55%"} -->
 
-::: {style="font-size: 0.8em; width:98%"}
 
-### [{{< fa solid graduation-cap >}}]{.blue-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
+:::: {.columns  style="margin-bottom:-1.75rem;"}
 
-|                                       |                                                                                              |                                   |      |
-|:------------------------------------- |:--------------------------------------------------------------------------------------------:|:---------------------------------:|:----:|
-| [PhD](https://bit.ly/sam-foreman-phd) |                  [Physics](https://physics.uiowa.edu/graduate/phd-physics)                   |                University of Iowa | 2019 |
-| B.Sc                                  |  [Physics](https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/physics)  | [UIUC](https://illinois.edu/)| 2015 |
-| B.Sc                                  | [Math](http://catalog.illinois.edu/undergraduate/las/mathematics-bslas/applied-mathematics/) |                              UIUC | 2015 |
+::: {.column width="55%" style="margin-top: -0.0em;"}
 
-:::
-
-### [{{< fa solid building >}}]{.red-text} [Experience](https://samforeman.me/files/resume.pdf)
+# [{{< fa regular id-badge >}}]{.green-text} About Me
 
 
-::: {style="font-size: 0.8em; width:98%"}
-
-|                                                                                    |                              |      |      |     |
-|:---------------------------------------------------------------------------------- |:----------------------------:|:----:|:----:|:---:|
-| [Assistant Computational Scientist](https://alcf.anl.gov/about/people/sam-foreman) | [ALCF](https://alcf.anl.gov) | 2022 | *    |     |
-| Postdoc                                                                            |             ALCF             | 2019 | 2022 |     | 
-| Graduate Researcher                                                                |  [ANL](https://anl.gov)  | 2018 | 2019 |     |
+[I use machine learning to accelerate scientific discovery[^1].]{style="font-size:1.33em; margin-bottom: 0rem;"}
 
 :::
 
-<!-- ::: {style="text-align:center;"} -->
-<!---->
-<!-- [[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-right: 0.20rem;"} -->
-<!-- [[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< fa brands twitter >}}](https://www.twitter.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< fa regular paper-plane >}}](mailto:///foremans@anl.gov)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< ai google-scholar >}}](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< ai orcid >}}](https://orcid.org/0000-0002-9981-0876)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< fa brands linkedin >}}](https://linkedin.com/in/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< fa brands spotify >}}](https://open.spotify.com/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< fa brands instagram >}}](https://www.instagram.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"} -->
-<!-- [[{{< fa brands lastfm >}}](https://www.last.fm/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}   -->
-<!-- [[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{style="text-align:right!important;"}   -->
-<!---->
-<!-- ::: -->
-
-:::
-
-:::: {.columns  style="margin-bottom:-1.5rem;"}
-
-::: {.column width="50%" style="margin-top: -0.0em;"}
-
-# [{{< fa solid person-drowning >}}]{.green-text} About Me
+[^1]: [Mostly getting supercomputers to talk to each other {{< fa solid network-wired >}}]{.dim-text style="font-size: 1.25em; margin-bottom: -1rem;margin-top:-1rem!important;"}
 
 
-[I use machine learning to accelerate scientific discovery.]{style="font-size:1.25em;margin-bottom: 0.5rem;"}
-
-[(Which is mostly getting supercomputers to talk to each other {{< fa solid network-wired >}})]{.dim-text style="font-size: 1.1em; margin-bottom: -1rem;"}
-
-:::
-
-::: {.column width="50%" style="margin-top: 1.5em;"}
+::: {.column width="45%" style="margin-top: 1.5em;"}
 
 ::: {style="text-align: center;"}
-
-<!-- [[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa brands twitter >}}](https://www.twitter.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa regular paper-plane >}}](mailto:///foremans@anl.gov)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< ai google-scholar >}}](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< ai orcid >}}](https://orcid.org/0000-0002-9981-0876)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa brands lastfm >}}](https://www.last.fm/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa brands spotify >}}](https://open.spotify.com/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa brands instagram >}}](https://www.instagram.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [[{{< fa brands linkedin >}}](https://linkedin.com/in/saforem2)]{style="font-size:1.25rem; padding-left: 0.25rem; padding-right: 0.25rem"} -->
-<!-- [![github](https://img.shields.io/badge/-saforem2-252525?style=flat&logo=github&labelColor=gray)](https://github.com/saforem2/) [![HitCount](http://hits.dwyl.com/saforem2/l2hmc-qcd.svg)](http://hits.dwyl.com/saforem2/l2hmc-qcd) [![arXiv1](http://img.shields.io/badge/arXiv-2112.01582-B31B1B.svg)](https://arxiv.org/abs/2112.01582) [![arXiv2](http://img.shields.io/badge/arXiv-2105.03418-B31B1B.svg)](https://arxiv.org/abs/2105.03418) -->
 
 [[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-right: 0.20rem;"}
 [[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
@@ -142,7 +96,7 @@ about:
 [[{{< fa brands spotify >}}](https://open.spotify.com/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
 [[{{< fa brands instagram >}}](https://www.instagram.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
 [[{{< fa brands lastfm >}}](https://www.last.fm/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
-[[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{style="text-align:right!important;"}  
+[[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{style="text-align:right!important;"}
 
 :::
 
@@ -150,9 +104,14 @@ about:
 
 ::::
 
-I'm generally interested in the application of machine learning to
+[I'm generally interested in the application of machine learning to
 computational problems in science, particularly within the context of high
-performance computing.
+performance computing.]{style="font-size:1.1rem;"}
+
+:::
+
+<!-- ::: {style="font-size: 0.8em; width:98%"} -->
+<!---->
 
 As a member of the [Data Science
 Group](https://www.alcf.anl.gov/about/people/group/506) at
@@ -206,11 +165,16 @@ Resonators](https://aip.scitation.org/doi/10.1063/1.5009698) and was supervised
 by Professor [Alfred Hübler](https://en.wikipedia.org/wiki/Alfred_H%C3%BCbler)
 within the Center for Complex Systems Research at UIUC.
 
-::: {.callout-important title="Recent Talks" collapse="false" style="width: 95%;"}
+::: {.callout-important title="Recent Talks" collapse="false" style="width: 100%;"}
 
 You can get a live view of some of my recent talks [{{< fa solid chart-line >}} ]{.pink-text}  [here](./qmd/slides.qmd)
 
 :::
+
+
+::: {#sample-listings}
+:::
+
 
 ## [{{< fa solid newspaper >}}]{.red-text} Recent Work
 
@@ -298,7 +262,25 @@ You can get a live view of some of my recent talks [{{< fa solid chart-line >}} 
 
 :::
 
-## [{{< fa solid bullhorn >}}]{.green-text} Wait, there's more!
+
+## [{{< fa solid graduation-cap >}}]{.green-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
+
+|                                       |                                                                                              |                                   |      |
+|:------------------------------------- |:--------------------------------------------------------------------------------------------:|:---------------------------------:|:----:|
+| [PhD](https://bit.ly/sam-foreman-phd) |                  [Physics](https://physics.uiowa.edu/graduate/phd-physics)                   |                University of Iowa | 2019 |
+| B.Sc                                  |  [Physics](https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/physics)  | [UIUC](https://illinois.edu/)| 2015 |
+| B.Sc                                  | [Math](http://catalog.illinois.edu/undergraduate/las/mathematics-bslas/applied-mathematics/) |                              UIUC | 2015 |
+
+## [{{< fa solid building >}}]{.blue-text} [Experience](https://samforeman.me/files/resume.pdf)
+
+
+|                                                                                    |                              |      |      |     |
+|:---------------------------------------------------------------------------------- |:----------------------------:|:----:|:----:|:---:|
+| [Assistant Computational Scientist](https://alcf.anl.gov/about/people/sam-foreman) | [ALCF](https://alcf.anl.gov) | 2022 | *    |     |
+| Postdoc                                                                            |             ALCF             | 2019 | 2022 |     | 
+| Graduate Researcher                                                                |  [ANL](https://anl.gov)  | 2018 | 2019 |     |
+
+## [{{< fa solid bullhorn >}}]{.purple-text} Wait, there's more!
 
 - Organizer for [Machine Learning and Quantum Computing for Earth
 Sciences](https://17.usnccm.org/702) at 17th U. S. National Congress on
@@ -308,7 +290,7 @@ Computational Mechanics, July 2023
 (HPPSS)](https://hppss.github.io/SC23/), November 2023
 
 
-## [{{< fa solid hourglass-end >}}]{.blue-text} Appendix
+## [{{< fa solid hourglass-end >}}]{.pink-text} Appendix
 
 ```{python}
 from datetime import date

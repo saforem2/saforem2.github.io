@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sam Foreman ">
-<meta name="dcterms.date" content="2023-08-19">
+<meta name="author" content="">
 
-<title>Sam Foreman - Recent Talks</title>
+<title>Sam Foreman -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,39 +114,24 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 <link href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="../css/callouts.css">
 <link rel="stylesheet" href="../css/profile.css">
-<meta property="og:title" content="Sam Foreman - Recent Talks">
+<meta property="og:title" content="Sam Foreman -">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://saforem2.github.io/assets/avatar.png">
 <meta property="og:site-name" content="Sam Foreman">
-<meta name="twitter:title" content="Sam Foreman - Recent Talks">
-<meta name="twitter:image" content="https://saforem2.github.io/qmd/assets/thumbnail.png">
-<meta name="twitter:creator" content="@saforem2">
-<meta name="twitter:site" content="@saforem2">
+<meta property="og:image:height" content="400">
+<meta property="og:image:width" content="400">
+<meta name="twitter:title" content="Sam Foreman -">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://saforem2.github.io/assets/avatar.png">
+<meta name="twitter:image-height" content="400">
+<meta name="twitter:image-width" content="400">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Personal Website">
 <meta name="citation_author" content="Sam Foreman">
-<meta name="citation_publication_date" content="2023-08-19">
-<meta name="citation_cover_date" content="2023-08-19">
-<meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-08-19">
 <meta name="citation_fulltext_html_url" content="https://saforem2.github.io">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=The climate risk &amp;amp;amp; resilience portal (ClimRR) metadata and data dictionary;,citation_author=C. Burdi;,citation_author=Wall. T Branham;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://dub.sh/ClimRR-Metadata;">
@@ -154,7 +172,7 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
  <span class="menu-text"><span class="red-text"><i class="bi-newspaper " style="" role="img" aria-hidden="true"></i></span> Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../qmd/slides.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../qmd/slides.html" rel="" target="">
  <span class="menu-text"><span class="green-text"><i class="bi-easel " style="" role="img" aria-hidden="true"></i></span> Talks</span></a>
   </li>  
   <li class="nav-item">
@@ -183,35 +201,27 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#fa-solid-newspaper-recent-work" id="toc-fa-solid-newspaper-recent-work" class="nav-link active" data-scroll-target="#fa-solid-newspaper-recent-work"><span class="red-text"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i></span> Recent Work</a></li>
+  <li><a href="#fa-solid-person-chalkboard-recent-talks" id="toc-fa-solid-person-chalkboard-recent-talks" class="nav-link" data-scroll-target="#fa-solid-person-chalkboard-recent-talks"><span class="orange-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i></span> Recent Talks</a></li>
+  <li><a href="#fa-brands-github-alt-active-projects" id="toc-fa-brands-github-alt-active-projects" class="nav-link" data-scroll-target="#fa-brands-github-alt-active-projects"><span class="yellow-text"><i class="fa-brands fa-github-alt" aria-label="github-alt"></i></span> Active Projects</a></li>
+  <li><a href="#fa-solid-bullhorn-wait-theres-more" id="toc-fa-solid-bullhorn-wait-theres-more" class="nav-link" data-scroll-target="#fa-solid-bullhorn-wait-theres-more"><span class="green-text"><i class="fa-solid fa-bullhorn" aria-label="bullhorn"></i></span> Wait, there’s more!</a></li>
+  <li><a href="#fa-solid-hourglass-end-appendix" id="toc-fa-solid-hourglass-end-appendix" class="nav-link" data-scroll-target="#fa-solid-hourglass-end-appendix"><span class="blue-text"><i class="fa-solid fa-hourglass-end" aria-label="hourglass-end"></i></span> Appendix</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/slides.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/slides.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/personal.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/edit/main/qmd/personal.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/saforem2/saforem2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Recent Talks</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/slides.qmd"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/saforem2/saforem2.github.io/blob/main/qmd/personal.qmd"><i class="bi"></i></button></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading"></div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://samforeman.me">Sam Foreman </a><a href="https://orcid.org/0000-0002-9981-0876"><span class="orcid-green"><i class="ai  ai-orcid"></i></span></a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading"></div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 19, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -219,335 +229,170 @@ gtag('config', 'G-XVM2Y822Y1', { 'anonymize_ip': true});
 
 </header>
 
-<section id="section" class="level1">
-<h1></h1>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**MLMC: Machine Learning Monte Carlo**](https://saforem2.github.io/lattice23) @ [Lattice 2023](https://indico.fnal.gov/event/57249/contributions/271305/) (07/2023)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="profile-header">
+<div class="columns">
+<div class="column" style="text-align: right;">
+<div class="profile-avatar" style="text-align: center;">
+<p><span class="profile-avatar"><img src="../assets/avatar.png" class="img-fluid"></span></p>
+</div>
+<p><span style="font-size:1.25rem; padding-right: 0.1rem;"><a href="https://samforeman.me"><i class="fa-solid fa-home" aria-label="home"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://github.com/saforem2"><i class="fa-brands fa-github" aria-label="github"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://www.twitter.com/saforem2"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="mailto:///foremans@anl.gov"><i class="fa-regular fa-paper-plane" aria-label="paper-plane"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://scholar.google.com/citations?user=vV_1zDwAAAAJ&amp;hl=en"><i class="ai  ai-google-scholar"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://orcid.org/0000-0002-9981-0876"><i class="ai  ai-orcid"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://linkedin.com/in/saforem2"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://open.spotify.com/user/saforem2"><i class="fa-brands fa-spotify" aria-label="spotify"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem"><a href="https://www.instagram.com/saforem2"><i class="fa-brands fa-instagram" aria-label="instagram"></i></a></span> <span style="font-size:1.25rem; padding-left: 0.1rem; padding-right: 0.1rem; margin-bottom:-0.5rem;"><a href="https://www.last.fm/user/saforem2"><i class="fa-brands fa-lastfm" aria-label="lastfm"></i></a></span> <span style="height:100%; min-height:4rem;width:100%!important;"><a href="https://spotify-github-profile.vercel.app/api/view?uid=saforem2&amp;redirect=true"><img src="https://spotify-github-profile.vercel.app/api/view?uid=saforem2&amp;cover_image=true&amp;theme=novatorem&amp;bar_color=53b14f&amp;bar_color_cover=true.png" class="img-fluid"></a></span></p>
+</div><div class="column" style="text-align:left!important;">
+<!-- <img src="../assets/avatar.png" style="display: block-inline; height:250px;"> [I use machine learning to accelerate scientific discovery.]{style="font-size:1.25em;margin-bottom: 0.5rem;color: var(--bright-text);"} -->
+<p><span style="font-size:2.0rem; font-weight: 700; text-align:center!important;margin-bottom:0rem;"><span class="green-text"><i class="fa-solid fa-person-drowning" aria-label="person-drowning"></i></span> Sam Foreman <a href="https://orcid.org/0000-0002-9981-0876"><span class="orcid-green"><i class="ai  ai-orcid"></i></span></a></span></p>
+<p><span style="font-size:1.25em;margin-bottom: 0.5rem;color: var(--bright-text);">I use machine learning to accelerate scientific discovery.</span></p>
+<p><span class="dim-text" style="font-size: 1.1em;">(Mostly getting supercomputers to talk to each other <i class="fa-solid fa-network-wired" aria-label="network-wired"></i>)</span></p>
+<p><span style="font-size:1.05rem;">I’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.</span></p>
+</div>
+</div>
+</div>
+<p>My <a href="https://saforem2.github.io/l2hmc-qcd">current research</a> focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.</p>
+<p>I received my PhD in Physics from the University of Iowa in 2019 and my thesis was on <a href="https://iro.uiowa.edu/esploro/outputs/doctoral/Learning-better-physics-a-machine-learning/9983776792002771">Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory</a>. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled <a href="https://aip.scitation.org/doi/10.1063/1.5009698">Energy Storage in Quantum Resonators</a> and was supervised by Professor <a href="https://en.wikipedia.org/wiki/Alfred_H%C3%BCbler">Alfred Hübler</a> within the Center for Complex Systems Research at UIUC.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="Recent Talks" style="width: 95%;">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/lattice23"><strong>MLMC: Machine Learning Monte Carlo</strong></a> @ <a href="https://indico.fnal.gov/event/57249/contributions/271305/">Lattice 2023</a> (07/2023)
+Recent Talks
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<!-- - [**MLMC: Machine Learning Monte Carlo**](https://saforem2.github.io/lattice23), at [Lattice 2023](https://mlmc2022.github.io/), July 2023 -->
-<iframe src="https://saforem2.github.io/lattice23/" title="MLMC: Machine Learning Monte Carlo" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
+<p>You can get a live view of some of my recent talks <span class="pink-text"><i class="fa-solid fa-chart-line" aria-label="chart-line"></i></span> <a href="./qmd/slides.qmd">here</a></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/) @ [PASC23](https://pasc23.pasc-conference.org/) (07/2023)" style="width:100%;">
+<p>As a member of the <a href="https://www.alcf.anl.gov/about/people/group/506">Data Science Group</a> at <a href="https://alcf.anl.gov">ALCF</a>, I work on:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><a href="https://github.com/saforem2/"><strong>AI + Science</strong></a></li>
+<li><a href="https://github.com/saforem2/l2hmc-qcd"><strong>Building better sampling methods for Lattice QCD</strong></a></li>
+<li><a href="https://www.biorxiv.org/content/10.1101/2022.10.10.511571v2"><strong>GenSLMs: Genome-scale Language Models</strong></a></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><a href="https://github.com/saforem2/Megatron-DS-Benchmarking"><strong>Scaling Large Language Models</strong></a></li>
+<li><a href="https://saforem2.github.io/climate-analysis"><strong>Foundation Models for Climate Forecasting</strong></a></li>
+<li><a href="https://github.com/argonne-lcf/mlprof"><strong>Optimizing distibuted training across thousands of GPUs</strong></a> <!-- - Building new parallelism techniques for efficient scaling --></li>
+</ul>
+</div>
+</div>
+<section id="fa-solid-newspaper-recent-work" class="level3">
+<h3 class="anchored" data-anchor-id="fa-solid-newspaper-recent-work"><span class="red-text"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i></span> Recent Work</h3>
+<ul>
+<li><strong>S. Foreman</strong> <a href="https://saforem2.github.io/climate-analysis"><strong>Exploratory Analysis of Climate Data with <code>ClimRR</code></strong></a>, Intro to HPC Bootcamp @ NERSC, <em>August 7, 2023</em><br>
+</li>
+<li>M. Zvyagin et. al., <a href="https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract"><strong>GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics</strong></a>, <em>Oct 2022</em>
+<ul>
+<li><span class="yellow-text"><i class="fa-solid fa-trophy" aria-label="trophy"></i></span> <a href="https://www.acm.org/media-center/2022/november/gordon-bell-special-prize-covid-research-2022">ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research</a><br>
+</li>
+</ul></li>
+<li>A.S. Kronfeld et al.&nbsp;<a href="https://arxiv.org/abs/2207.07641"><strong>Lattice QCD and Particle Physics</strong></a>, <em>July 15, 2022</em><br>
+</li>
+<li>D. Boyda, S. Calí, <strong>S. Foreman</strong>, et al., <a href="https://arxiv.org/abs/2202.05838"><strong>Applications of ML to Lattice QFT</strong></a> <a href="https://arxiv.org/abs/2202.05838"><em>arXiv:2202.05838</em></a>, <em>Feb 2022</em><br>
+</li>
+<li><strong>S. Foreman</strong>, X.Y. Jin, J.C. Osborn, <a href="https://arxiv.org/abs/2112.01582"><strong>LeapFrogLayers: Trainable Framework for Effective Sampling</strong></a>, <a href="https://indico.cern.ch/event/1006302"><em>Lattice, 2021</em></a><br>
+</li>
+<li><strong>S. Foreman</strong> et al.<a href="https://arxiv.org/abs/2112.01586"><strong>HMC with Normalizing Flows</strong></a>, <a href="https://indico.cern.ch/event/1006302/contributions/4380743/">slides</a>, <a href="https://indico.cern.ch/event/1006302/"><em>Lattice, 2021</em></a><br>
+</li>
+<li><strong>S. Foreman</strong>, X.Y. Jin, &amp; J.C. Osborn, <a href="https://arxiv.org/abs/2105.03418"><strong>Deep Learning Hamiltonian Monte Carlo</strong></a> <a href="https://simdl.github.io/posters/57-supp_DLHMC_Foreman_SimDL-ICLR2021_poster1.pdf">(+ poster)</a> at <a href="https://simdl.github.io/"><em>SimDL Workshop @ ICLR</em></a>, 2021<br>
+</li>
+<li><strong>S. Foreman</strong>, X.Y. Jin, &amp; J.C. Osborn, <a href="https://bit.ly/snowmass_ml2020"><strong>Machine Learning and Neural Networks for Field Theory</strong></a> <a href="https://snowmass21.org/"><em>SnowMass</em></a>, 2020<br>
+</li>
+<li><strong>S. Foreman</strong> et al.&nbsp;<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.052129"><strong>Examples of renormalization group transformations for image sets</strong></a> <em>Physical Review E.</em>, 2018<br>
+</li>
+<li><strong>S. Foreman</strong> et al.&nbsp;<a href="https://arxiv.org/abs/1710.02079"><strong>RG inspired Machine Learning for lattice field theory</strong></a> <a href="https://www.arxiv.or/abs/1710.02079"><em>arXiv:1710.02079</em></a>, 2017<br>
+</li>
+<li><strong>S. Foreman</strong> et al.&nbsp;<a href="https://doi.org/10.1063/1.5009698"><strong>Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade</strong></a> <em>J. Appl. Phys</em>, 2018</li>
+</ul>
+</section>
+<section id="fa-solid-person-chalkboard-recent-talks" class="level3">
+<h3 class="anchored" data-anchor-id="fa-solid-person-chalkboard-recent-talks"><span class="orange-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i></span> Recent Talks</h3>
+<!-- ::: {.card} -->
+<!---->
+<!-- Magic card -->
+<!---->
+<!-- ::: -->
+<ul>
+<li><a href="https://saforem2.github.io/lattice23"><strong>MLMC: Machine Learning for Monte Carlo</strong></a>, at <a href="https://mlmc2022.github.io/">Lattice 2023</a>, July 2023</li>
+<li><a href="https://saforem2.github.io/lqcd-pasc23/"><strong>Generative Modeling and Efficient Sampling</strong></a>, at <a href="https://pasc23.pasc-conference.org/">PASC23</a>, July 2023</li>
+<li><a href="https://saforem2.github.io/deep-fridays"><strong>Efficient Sampling for Lattice Gauge Theory</strong></a>, at <a href="https://www.cs.unibo.it/~asperti/deep_fridays.html">Deep Fridays @ U. Bologna</a>, April 2023</li>
+<li><a href="https://saforem2.github.io/ai4sci-large-scale-training"><strong>Large Scale Training</strong></a>, at <a href="https://github.com/argonne-lcf/ai-science-training-series">Introduction to AI-driven Science on Supercomputers: A Student Training Series</a>, November 2022</li>
+<li><a href="https://saforem2.github.io/hparam-management-sdl2022"><strong>Hyperparameter Management</strong></a>, at <a href="https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop">2022 ALCF Simulation, Data, and Learning Workshop</a>, October 2022</li>
+<li><a href="https://saforem2.github.io/ATPESC-StatisticalLearning"><strong>Statistical Learning</strong></a>, at <a href="https://extremecomputingtraining.anl.gov/">ATPESC 2022</a>, August 2022 <a href="https://github.com/argonne-lcf/ATPESC_MachineLearning/blob/master/00_statisticalLearning/src/atpesc/notebooks/statistical_learning.ipynb">📕 accompanying notebook</a></li>
+<li><a href="https://saforem2.github.io/anl-job-talk/"><strong>Scientific Data Science: An Emerging Symbiosis</strong></a>, at Argonne National Laboratory, May 2022</li>
+<li><a href="https://saforem2.github.io/physicsSeminar"><strong>Machine Learning in HEP</strong></a>, at UNC Greensboro, March 2022</li>
+<li><a href="https://saforem2.github.io/l2hmc-dwq25/"><strong>Accelerated Sampling Methods for Lattice Gauge Theory</strong></a>, at <a href="https://indico.bnl.gov/event/13576/"><em>BNL-HET&amp; RBRC Joint Workshop “DWQ @ 25”</em></a>, Dec 2021</li>
+<li><a href="https://saforem2.github.io/l2hmc_talk_ect2021/"><strong>Training Topological Samplers for Lattice Gauge Theory</strong></a>, <a href="https://indico.ectstar.eu/event/77/contributions/2349/"><em>ML4HEP, on and off the Lattice</em></a> @ ECT* Trento, Sep 2021</li>
+<li><a href="https://github.com/saforem2/l2hmc-qcd"><strong>l2hmc-qcd</strong></a> at the <em>MIT Lattice Group Seminar</em>, 2021</li>
+<li><a href="https://bit.ly/mainz21"><strong>Deep Learning HMC for Improved Gauge Generation</strong></a> to the <a href="https://bit.ly/mainz21_overview"><em>Machine Learning Techniques in Lattice QCD Workshop</em></a>, 2021</li>
+<li><a href="https://slides.com/samforeman/l2hmc-qcd-93bc0c"><strong>Machine Learning for Lattice QCD</strong></a> at the University of Iowa, 2020</li>
+<li><a href="https://bit.ly/latt2018"><strong>Machine learning inspired analysis of the Ising model transition</strong></a> to <a href="https://indico.fnal.gov/event/15949/overview"><em>Lattice, 2018</em></a></li>
+<li><strong>Machine Learning Analysis of Ising Worms</strong> at <em>Brookhaven National Laboratory</em>, 2017</li>
+</ul>
+</section>
+<section id="fa-brands-github-alt-active-projects" class="level2">
+<h2 class="anchored" data-anchor-id="fa-brands-github-alt-active-projects"><span class="yellow-text"><i class="fa-brands fa-github-alt" aria-label="github-alt"></i></span> Active Projects</h2>
+<div class="img-container" style="text-align:left; display: flex;">
+<p><a href="https://github.com/saforem2/l2hmc-qcd"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&amp;repo=l2hmc-qcd&amp;theme=transparent&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/saforem2/lattice23"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&amp;repo=lattice23&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/saforem2/lqcd-pasc23"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&amp;repo=lqcd-pasc23&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/nftqcd/fthmc"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&amp;repo=fthmc&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/argonne-lcf/CompPerfWorkshop"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&amp;repo=CompPerfWorkshop&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/argonne-lcf/ai-science-training-series"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&amp;repo=ai-science-training-series&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/argonne-lcf/mlprof"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&amp;repo=mlprof&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/argonne-lcf/user-guides"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&amp;repo=user-guides&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <a href="https://github.com/saforem2/personal_site"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&amp;repo=personal_site&amp;theme=transparent&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;icon_color=#00CCFF&amp;title_color=#00CCFF&amp;bg_color=#1c1c1c.png" class="img-fluid"></a> <!-- [![github](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/l2hmc-qcd) --> <!-- <a href="https://github.com/saforem2/lattice23"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --> <!-- <a href="https://github.com/nftqcd/fthmc"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --> <!-- <a href="https://github.com/saforem2/climate-analysis"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=climate-analysis&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --> <!-- <a href="https://github.com/argonne-lcf/ai-science-training-series"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=ai-science-training-series&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --> <!-- <a href="https://github.com/argonne-lcf/mlprof"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=mlprof&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --> <!-- <a href="https://github.com/argonne-lcf/user-guides"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=user-guides&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --> <!-- <a href="https://github.com/saforem2/personal_site"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> --></p>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled" title="[`l2hmc-qcd`](https://saforem2.github.io/l2hmc-qcd)" style="width: 100%;">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/lqcd-pasc23/"><strong>Generative Modeling and Efficient Sampling</strong></a> @ <a href="https://pasc23.pasc-conference.org/">PASC23</a> (07/2023)
+<a href="https://saforem2.github.io/l2hmc-qcd"><code>l2hmc-qcd</code></a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<!-- ::: {.callout-important title="Recent Talks" collapse="true" style="width: 100%;"} -->
-<!-- - [**Generative Modeling and Efficient Sampling**](https://saforem2.github.io/lqcd-pasc23/), at [PASC23](https://pasc23.pasc-conference.org/), July 2023  -->
-<iframe src="https://saforem2.github.io/lqcd-pasc23/" title="Generative Modeling and Efficient Sampling" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
+<div style="text-align:center;">
+<p><a href="https://saforem2.github.io/l2hmc-qcd"><img src="https://raw.githubusercontent.com/saforem2/l2hmc-qcd/main/assets/logo-small.svg" class="img-fluid"></a><br>
+<a href="https://github.com/saforem2/l2hmc-qcd"><i class="fa-brands fa-github" aria-label="github"></i> GitHub repo</a></p>
+<!-- <a href="https://github.com/saforem2/l2hmc-qcd"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
+<!-- ![l2hmc-qcd](https://github.com/saforem2/saforem2/blob/main/assets/l2hmc-qcd-small.svg) -->
+<p><a href="https://hits.seeyoufarm.com"><img alt="hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsaforem2%2Fl2hmc-qcd&amp;count_bg=%2300CCFF&amp;title_bg=%23555555&amp;icon=&amp;icon_color=%23111111&amp;title=👋&amp;edge_flat=false"></a><br>
+<a href="https://github.com/saforem2/l2hmc-qcd/"><img alt="l2hmc-qcd" src="https://img.shields.io/badge/-l2hmc--qcd-252525?style=flat&amp;logo=github&amp;labelColor=gray"></a> <a href="https://www.codefactor.io/repository/github/saforem2/l2hmc-qcd"><img alt="codefactor" src="https://www.codefactor.io/repository/github/saforem2/l2hmc-qcd/badge"></a> <br> <a href="https://arxiv.org/abs/2112.01582"><img alt="arxiv" src="http://img.shields.io/badge/arXiv-2112.01582-B31B1B.svg"></a> <a href="https://arxiv.org/abs/2105.03418"><img alt="arxiv" src="http://img.shields.io/badge/arXiv-2105.03418-B31B1B.svg"></a> <br> <a href="https://hydra.cc"><img alt="hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a> <a href="https://pytorch.org/get-started/locally/"><img alt="pyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&amp;logoColor=white"></a> <a href="https://www.tensorflow.org"><img alt="tensorflow" src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?&amp;logo=TensorFlow&amp;logoColor=white"></a> <br> <a href="https://wandb.ai/l2hmc-qcd/l2hmc-qcd"><img src="https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-28.svg" alt="Weights &amp; Biases monitoring" height="20"></a></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Efficient Sampling for Lattice Gauge Theory**](https://saforem2.github.io/deep-fridays) @ [Deep Fridays @ U. Bologna](https://www.cs.unibo.it/~asperti/deep_fridays.html) (04/2023)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/deep-fridays"><strong>Efficient Sampling for Lattice Gauge Theory</strong></a> @ <a href="https://www.cs.unibo.it/~asperti/deep_fridays.html">Deep Fridays @ U. Bologna</a> (04/2023)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<!-- - [**Efficient Sampling for Lattice Gauge Theory**](https://saforem2.github.io/deep-fridays), at [Deep Fridays @ U. Bologna](https://www.cs.unibo.it/~asperti/deep_fridays.html), April 2023 -->
-<iframe src="https://saforem2.github.io/deep-fridays/" title="Efficient Sampling for Lattice Gauge Theory" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Large Scale Training**](https://saforem2.github.io/ai4sci-large-scale-training) @ [Introduction to AI4Science on Supercomputers (ALCF)](https://github.com/argonne-lcf/ai-science-training-series) (11/2022)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/ai4sci-large-scale-training"><strong>Large Scale Training</strong></a> @ <a href="https://github.com/argonne-lcf/ai-science-training-series">Introduction to AI4Science on Supercomputers (ALCF)</a> (11/2022)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<!-- - [**Large Scale Training**](https://saforem2.github.io/ai4sci-large-scale-training), at [Introduction to AI-driven Science on Supercomputers: A Student Training Series](https://github.com/argonne-lcf/ai-science-training-series), November 2022  -->
-<iframe src="https://saforem2.github.io/ai4sci-large-scale-training/#" title="Large Scale Training" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Hyperparameter Management**](https://saforem2.github.io/hparam-management-sdl2022/) @ [ALCF Simulation, Data, and Learning Workshop](https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop) (10/2022)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/hparam-management-sdl2022/"><strong>Hyperparameter Management</strong></a> @ <a href="https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop">ALCF Simulation, Data, and Learning Workshop</a> (10/2022)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<!-- - [**Hyperparameter Management**](https://saforem2.github.io/hparam-management-sdl2022/), at [2022 ALCF Simulation, Data, and Learning Workshop](https://www.alcf.anl.gov/events/2022-alcf-simulation-data-and-learning-workshop), October 2022  -->
-<iframe src="https://saforem2.github.io/hparam-management-sdl2022" title="Hyperparameter Management" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Statistical Learning**](https://saforem2.github.io/ATPESC-StatisticalLearning) @ [ATPESC 2022](https://extremecomputingtraining.anl.gov/) (08/2022)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/ATPESC-StatisticalLearning"><strong>Statistical Learning</strong></a> @ <a href="https://extremecomputingtraining.anl.gov/">ATPESC 2022</a> (08/2022)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+</section>
+<section id="fa-solid-bullhorn-wait-theres-more" class="level2">
+<h2 class="anchored" data-anchor-id="fa-solid-bullhorn-wait-theres-more"><span class="green-text"><i class="fa-solid fa-bullhorn" aria-label="bullhorn"></i></span> Wait, there’s more!</h2>
 <ul>
-<li><a href="https://github.com/argonne-lcf/ATPESC_MachineLearning/blob/master/00_statisticalLearning/src/atpesc/notebooks/statistical_learning.ipynb">📕 accompanying notebook</a></li>
+<li><p>Organizer for <a href="https://17.usnccm.org/702">Machine Learning and Quantum Computing for Earth Sciences</a> at 17th U. S. National Congress on Computational Mechanics, July 2023</p></li>
+<li><p>Organizer for <a href="https://hppss.github.io/SC23/">SC23 Workshop: High Performance Python for Science at Scale (HPPSS)</a>, November 2023</p></li>
 </ul>
-<iframe src="https://saforem2.github.io/ATPESC-StatisticalLearning/#/" title="Statistical Learning" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
+</section>
+<section id="fa-solid-hourglass-end-appendix" class="level2">
+<h2 class="anchored" data-anchor-id="fa-solid-hourglass-end-appendix"><span class="blue-text"><i class="fa-solid fa-hourglass-end" aria-label="hourglass-end"></i></span> Appendix</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> datetime <span class="im">import</span> date</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(<span class="ss">f"Last updated: </span><span class="sc">{</span>date<span class="sc">.</span>today()<span class="sc">.</span>strftime(<span class="st">'</span><span class="sc">%d</span><span class="st"> %B %y'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Last updated: 12 September 23</code></pre>
+</div>
+</div>
+<p align="center">
+<a href="https://hits.seeyoufarm.com"><img align="center" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwww.samforeman.me&amp;count_bg=%2300CCFF&amp;title_bg=%23303030&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=hits&amp;edge_flat=false"></a>
 </p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Scientific Data Science: An Emerging Symbiosis**](https://saforem2.github.io/anl-job-talk/) @ ANL (05/2022)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/anl-job-talk/"><strong>Scientific Data Science: An Emerging Symbiosis</strong></a> @ ANL (05/2022)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<!-- - [**Scientific Data Science: An Emerging Symbiosis**](https://saforem2.github.io/anl-job-talk/), at Argonne National Laboratory, May 2022 -->
-<iframe src="https://saforem2.github.io/anl-job-talk" title="Scientific Data Science" width="100%" align="center" height="512" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border-radius:0.25rem;border:none;align:center;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Machine Learning in HEP**](https://saforem2.github.io/physicsSeminar) @ UNC Greensboro (03/2022)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/physicsSeminar"><strong>Machine Learning in HEP</strong></a> @ UNC Greensboro (03/2022)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://saforem2.github.io/physicsSeminar"><strong>Machine Learning in HEP</strong></a>, at UNC Greensboro, March 2022</li>
-</ul>
-<iframe src="https://saforem2.github.io/physicsSeminar" title="Machine Learning in HEP" width="100%" align="center" height="300" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="border:none;border-radius:0.25rem;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Accelerated Sampling Methods for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc-dwq25/), @ [BNL / DWQ @ 25](https://indico.bnl.gov/event/13576/) (12/2021)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/l2hmc-dwq25/"><strong>Accelerated Sampling Methods for Lattice Gauge Theory</strong></a>, @ <a href="https://indico.bnl.gov/event/13576/">BNL / DWQ @ 25</a> (12/2021)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><iframe src="https://saforem2.github.io/l2hmc-dwq25" title="Accelerated Sampling Methods for Lattice Gauge Theory" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="100%" align="center" height="512" style="border:none;border-radius:0.25rem;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [Training Topological Samplers for Lattice Gauge Theory](https://saforem2.github.io/l2hmc_talk_ect2021) @ [ML4HEP, ECT* Trento](https://indico.ectstar.eu/event/77/contributions/2349/) (09/2021)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://saforem2.github.io/l2hmc_talk_ect2021">Training Topological Samplers for Lattice Gauge Theory</a> @ <a href="https://indico.ectstar.eu/event/77/contributions/2349/">ML4HEP, ECT* Trento</a> (09/2021)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<!-- - [**Training Topological Samplers for Lattice Gauge Theory**](https://saforem2.github.io/l2hmc_talk_ect2021/), [_ML4HEP, on and off the Lattice_](https://indico.ectstar.eu/event/77/contributions/2349/) @ ECT\* Trento, Sep 2021 -->
-<iframe src="https://saforem2.github.io/l2hmc_talk_ect2021" title="Training Topological Samplers for Lattice Gauge Theory" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="100%" align="center" height="512" style="border:none;border-radius:0.25rem;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**l2hmc-qcd**](https://github.com/saforem2/l2hmc-qcd) @ MIT Lattice Group Seminar (2021)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://github.com/saforem2/l2hmc-qcd"><strong>l2hmc-qcd</strong></a> @ MIT Lattice Group Seminar (2021)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://github.com/saforem2/l2hmc-qcd"><strong>l2hmc-qcd</strong></a> at the <em>MIT Lattice Group Seminar</em>, 2021</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [**Deep Learning HMC for Improved Gauge Generation**](https://bit.ly/mainz21) @ [ML in LQCD Workshop](https://bit.ly/mainz21_overview) (2021)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://bit.ly/mainz21"><strong>Deep Learning HMC for Improved Gauge Generation</strong></a> @ <a href="https://bit.ly/mainz21_overview">ML in LQCD Workshop</a> (2021)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://bit.ly/mainz21"><strong>Deep Learning HMC for Improved Gauge Generation</strong></a> to the <a href="https://bit.ly/mainz21_overview"><em>Machine Learning Techniques in Lattice QCD Workshop</em></a>, 2021</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ Machine Learning for Lattice QCD (2020)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> Machine Learning for Lattice QCD (2020)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://slides.com/samforeman/l2hmc-qcd-93bc0c"><strong>Machine Learning for Lattice QCD</strong></a> at the University of Iowa, 2020</li>
-</ul>
-<iframe src="https://slides.com/samforeman/l2hmc-qcd/embed" title="Machine Learning for Lattice QCD" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="100%" align="center" height="512" style="border:none;border-radius:0.25rem;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [Machine Learning Inspired Analysis of Ising Model](https://bit.ly/latt2018) @ [Lattice](https://indico.fnal.gov/event/15949/overview) (2018)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> <a href="https://bit.ly/latt2018">Machine Learning Inspired Analysis of Ising Model</a> @ <a href="https://indico.fnal.gov/event/15949/overview">Lattice</a> (2018)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<iframe src="https://bit.ly/latt2018" title="Machine Learning Inspired Analysis of Ising Model" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="100%" align="center" height="512" style="border:none;border-radius:0.25rem;">
-<p>
-Your browser does not support iframes.
-</p>
-</iframe>
-<!-- - [**Machine learning inspired analysis of the Ising model transition**](https://bit.ly/latt2018) to [_Lattice, 2018_](https://indico.fnal.gov/event/15949/overview) -->
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ Machine Learning Analysis of Ising Worms (2017)" style="width:100%;">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span style="color:#A9A9B3;"><i class="fa-solid fa-person-chalkboard fa-fa-lg" aria-label="person-chalkboard"></i></span> <span class="math inline">\hspace{2pt}</span> Machine Learning Analysis of Ising Worms (2017)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Machine Learning Analysis of Ising Worms</strong> at <em>Brookhaven National Laboratory</em>, 2017</li>
-</ul>
-</div>
-</div>
-</div>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman2023,
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{foreman,
   author = {Foreman, Sam},
   title = {Personal {Website}},
-  date = {2023-08-19},
   url = {https://saforem2.github.io},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-foreman2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Foreman, Sam. 2023. <span>“Personal Website.”</span> August 19, 2023. <a href="https://saforem2.github.io">https://saforem2.github.io</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-foreman" class="csl-entry quarto-appendix-citeas" role="listitem">
+Foreman, Sam. n.d. <span>“Personal Website.”</span> <a href="https://saforem2.github.io">https://saforem2.github.io</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

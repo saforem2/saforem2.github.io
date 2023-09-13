@@ -3,7 +3,9 @@ title: "Listing Example"
 listing:
   # sort: "date desc"
   - id: sample-listings
-    contents: "../qmd/**/*.qmd"
+    contents:
+      - "../qmd/**/*.qmd"
+      # - "qmd/dsblog.qmd"
     type: table
     sort: "date desc"
   # - id: lab-reports

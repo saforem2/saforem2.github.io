@@ -25,14 +25,14 @@
     "href": "qmd/dsblog.html",
     "title": "Loooooooong Sequence Lengths",
     "section": "",
-    "text": "Figure 1: This work was done as part of the DeepSpeed4Science project, in collaboration with Microsoft.\nThe new Megatron-DeepSpeed release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible.\nAdditional details can be found in the 📁 DeepSpeed4Science folder."
+    "text": "Figure 1: This work was done as part of the DeepSpeed4Science project, in collaboration with Microsoft.\nThe new Megatron-DeepSpeed release contains a variety of improvements / optimizations to enable pre-training Transformer based architectures with significantly longer sequences than was previously possible."
   },
   {
     "objectID": "qmd/dsblog.html#initial-results",
     "href": "qmd/dsblog.html#initial-results",
     "title": "Loooooooong Sequence Lengths",
     "section": "Initial Results",
-    "text": "Initial Results\n\n\n\n\n\n\nPRE-RELEASE\n\n\n\n\n\nI’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in Figure 2) but these can be ommitted in the actual README\n\n\n\n\ngpus = ('32', '64', '128')\n\ncolors = {\n    'Old': '#007DFF',\n    'Megatron-LM': '#76b900',\n    'Megatron-DS':  '#FF5252',\n}\n\ndata = {\n    '25B': {\n        'Old': np.array([28, 32, 32]),\n        'Megatron-LM': np.array([14, 46, 52]),\n        'Megatron-DS': np.array([128, 384, 448]),\n    },\n    '33B': {\n        'Old': np.array([36, 42, 42]),\n        'Megatron-LM': np.array([26, 48, 52]),\n        'Megatron-DS': np.array([192, 448, 512]),\n    }\n}\n\n\n\n\n\nCode\nx = np.arange(len(gpus))\nwidth = 0.25\nmultiplier = 0\n\noutdir = Path(os.getcwd()).joinpath('assets')\noutdir.mkdir(exist_ok=True, parents=True)\n\nimprovement = {}\nfor idx, (model_size, d) in enumerate(data.items()):\n    multiplier = 0\n    figure, axes = plt.subplots(figsize=(6.4, 4.8))\n    fig = plt.gcf()\n    ax = plt.gca()\n    for label, value in d.items():\n        offset = width * multiplier\n        rects = ax.barh(x + offset, value, width, label=label, color=colors[label], alpha=0.8)\n        ax.bar_label(rects, padding=3, color=colors[label], family='monospace', weight='bold')\n        multiplier += 1\n    ax.set_ylabel(\n        'GPUs',\n        fontsize=18,\n        family='sans-serif',\n        loc='center',\n    )\n    ax.set_yticks(x + width, gpus)\n    plt.figtext(\n        0.00, 0.94, f\"{model_size}\", fontsize=24, fontweight='bold', ha='left'\n    )\n    ax.set_xlabel(\n        'Sequence Length (k)', fontsize=18, loc='center'\n    )\n    ax.legend(\n        bbox_to_anchor=(0.005, 1.05, 0.99, .098),\n        alignment='center',\n        edgecolor=\"#83838320\",\n        frameon=True,\n        ncols=3,\n        fontsize=14,\n        mode=\"expand\",\n        borderaxespad=0.01\n    )\n    save_figure(fname=f'{model_size}', outdir=outdir)\n    _ = plt.show()\n\n\n\n\n\n\n\nGPT-25B Model\n\n\n\n\n\n\n\nGPT-33B Model\n\n\n\n\n\n\nFigure 2: Pretraining with long sequence support across different model sizes and numbers of GPUs. In each case, the new (current) implementation significantly outperforms both NVIDIA/Megatron-LM as well as our previous implementation.\n\n\n\n\n\n\n\n\n\n\n\n\nSequence Length\nOld Megatron-DeepSpeed (TFLOPS)\nNew Megatron-DeepSpeed (TFLOPS)\n\n\n\n\n2k\n25\n68\n\n\n4k\n28\n80\n\n\n8k\nOOM\n86\n\n\n16k\nOOM\n92\n\n\n32k\nOOM\n100\n\n\n64k\nOOM\n106\n\n\n128k\nOOM\n119\n\n\n256k\nOOM\n94\n\n\n\n\nFigure 3: The following experiments are performed on 4 NVIDIA DGX A100-40GB nodes, connected through 8 HDR InfiniBand (200Gb/s per HDR). TP stands for tensor parallelism."
+    "text": "Initial Results\n\n\n\n\n\n\nPRE-RELEASE\n\n\n\n\n\nI’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in Figure 2) but these can be ommitted in the actual README\n\n\n\n\n\nImports + Setup\n%matplotlib inline\nimport matplotlib_inline\nimport os\nimport numpy as np\nimport datetime\nfrom typing import Tuple\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n# NOTE:\n# - [Toolbox](https://github.com/saforem2/toolbox)\nfrom toolbox import set_plot_style\nimport seaborn as sns\nfrom opinionated import STYLES\nimport seaborn as sns\n\nsns.set_context('talk')\nset_plot_style()\nmatplotlib_inline.backend_inline.set_matplotlib_formats('svg')\n\nplt.style.use('default')\nset_plot_style()\nplt.style.use(STYLES['opinionated_min'])\nplt.rcParams['ytick.labelsize'] = 14.0\nplt.rcParams['xtick.labelsize'] = 14.0\nplt.rcParams['grid.alpha'] = 0.4\n\ngrid_color = plt.rcParams['grid.color']\n\ndef save_figure(\n        fname: str,\n        outdir: os.PathLike,\n):\n    pngdir = Path(outdir).joinpath('pngs')\n    svgdir = Path(outdir).joinpath('svgs')\n    pngdir.mkdir(exist_ok=True, parents=True)\n    svgdir.mkdir(exist_ok=True, parents=True)\n    pngfile = pngdir.joinpath(f'{fname}.png')\n    svgfile = svgdir.joinpath(f'{fname}.svg')\n    _ = plt.savefig(pngfile, dpi=400, bbox_inches='tight')\n    _ = plt.savefig(svgfile, dpi=400, bbox_inches='tight')\n\n\n\n\nData\ngpus = ('32', '64', '128')\n\ncolors = {\n    'Old': '#007DFF',\n    'Megatron-LM': '#76b900',\n    'Megatron-DS':  '#FF5252',\n}\n\ndata = {\n    '25B': {\n        'Old': np.array([28, 32, 32]),\n        'Megatron-LM': np.array([14, 46, 52]),\n        'Megatron-DS': np.array([128, 384, 448]),\n    },\n    '33B': {\n        'Old': np.array([36, 42, 42]),\n        'Megatron-LM': np.array([26, 48, 52]),\n        'Megatron-DS': np.array([192, 448, 512]),\n    }\n}\n\n\n\n\n\n\nMake the plots\nx = np.arange(len(gpus))\nwidth = 0.25\nmultiplier = 0\n\noutdir = Path(os.getcwd()).joinpath('assets')\noutdir.mkdir(exist_ok=True, parents=True)\n\nimprovement = {}\nfor idx, (model_size, d) in enumerate(data.items()):\n    multiplier = 0\n    figure, axes = plt.subplots(figsize=(6.4, 4.8))\n    fig = plt.gcf()\n    ax = plt.gca()\n    for label, value in d.items():\n        offset = width * multiplier\n        rects = ax.barh(\n          x + offset,\n          value,\n          width,\n          label=label,\n          color=colors[label],\n          alpha=0.8\n        )\n        ax.bar_label(\n          rects,\n          padding=3,\n          color=colors[label],\n          family='monospace',\n          weight='bold'\n        )\n        multiplier += 1\n    ax.set_ylabel(\n        'GPUs',\n        fontsize=18,\n        family='sans-serif',\n        loc='center',\n    )\n    ax.set_yticks(x + width, gpus)\n    plt.figtext(\n        0.00, 0.94, f\"{model_size}\", fontsize=24, fontweight='bold', ha='left'\n    )\n    ax.set_xlabel(\n        'Sequence Length (k)', fontsize=18, loc='center'\n    )\n    ax.legend(\n        bbox_to_anchor=(0.005, 1.05, 0.99, .098),\n        alignment='center',\n        edgecolor=\"#83838320\",\n        frameon=True,\n        ncols=3,\n        fontsize=14,\n        mode=\"expand\",\n        borderaxespad=0.01\n    )\n    save_figure(fname=f'{model_size}', outdir=outdir)\n    _ = plt.show()\n\n\n\n\n\n\n\nGPT-25B Model\n\n\n\n\n\n\n\nGPT-33B Model\n\n\n\n\n\n\nFigure 2: Pre-training with long sequence support across different model sizes and numbers of GPUs. In each case, the new (current) implementation significantly outperforms both NVIDIA/Megatron-LM as well as our previous implementation.\n\n\n\n\n\n\n\n\n\n\n\n\nSequence Length\nOld Megatron-DeepSpeed (TFLOPS)\nNew Megatron-DeepSpeed (TFLOPS)\n\n\n\n\n2k\n25\n68\n\n\n4k\n28\n80\n\n\n8k\nOOM\n86\n\n\n16k\nOOM\n92\n\n\n32k\nOOM\n100\n\n\n64k\nOOM\n106\n\n\n128k\nOOM\n119\n\n\n256k\nOOM\n94\n\n\n\nFigure 3: The following experiments are performed on 4 NVIDIA DGX A100-40GB nodes, all using TPSIZE=322, connected through 8 HDR InfiniBand (200Gb/s per HDR)."
   },
   {
     "objectID": "qmd/dsblog.html#new-results",
@@ -46,7 +46,7 @@
     "href": "index.html",
     "title": "Sam Foreman ",
     "section": "",
-    "text": "PhD\nPhysics\nUniversity of Iowa\n2019\n\n\nB.Sc\nPhysics\nUIUC\n2015\n\n\nB.Sc\nMath\nUIUC\n2015\n\n\n\n\n\n\n\n\n\n\nAssistant Computational Scientist\nALCF\n2022\n*\n\n\n\nPostdoc\nALCF\n2019\n2022\n\n\n\nGraduate Researcher\nANL\n2018\n2019\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nAs a member of the Data Science Group at ALCF, I work on:\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC."
+    "text": "I use machine learning to accelerate scientific discovery1.\n\n\n\n          \n\n\n\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nAs a member of the Data Science Group at ALCF, I work on:\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC."
   },
   {
     "objectID": "index.html#fa-solid-newspaper-recent-work",
@@ -81,21 +81,21 @@
     "href": "index.html#fa-solid-hourglass-end-appendix",
     "title": "Sam Foreman ",
     "section": " Appendix",
-    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 12 September 23"
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 13 September 23"
   },
   {
     "objectID": "qmd/posts.html",
     "href": "qmd/posts.html",
     "title": "Listing Example",
     "section": "",
-    "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 11, 2023\n\n\nLoooooooong Sequence Lengths\n\n\nSam Foreman \n\n\n\n\nSep 8, 2023\n\n\nProjects\n\n\nSam Foreman \n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman \n\n\n\n\nAug 19, 2023\n\n\nRecent Talks\n\n\nSam Foreman \n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
+    "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nundefined\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nLoooooooong Sequence Lengths\n\n\nSam Foreman \n\n\n\n\nSep 8, 2023\n\n\nProjects\n\n\nSam Foreman \n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman \n\n\n\n\nAug 19, 2023\n\n\nRecent Talks\n\n\nSam Foreman \n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
   },
   {
     "objectID": "qmd/posts.html#external-links",
     "href": "qmd/posts.html#external-links",
     "title": "Listing Example",
     "section": "",
-    "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 11, 2023\n\n\nLoooooooong Sequence Lengths\n\n\nSam Foreman \n\n\n\n\nSep 8, 2023\n\n\nProjects\n\n\nSam Foreman \n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman \n\n\n\n\nAug 19, 2023\n\n\nRecent Talks\n\n\nSam Foreman \n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
+    "text": "Intro to HPC Bootcamp @ Nersc: Climate Analysis with ClimRR (Foreman 2023)\nl2hmc-qcd \n\nYou can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nundefined\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nLoooooooong Sequence Lengths\n\n\nSam Foreman \n\n\n\n\nSep 8, 2023\n\n\nProjects\n\n\nSam Foreman \n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman \n\n\n\n\nAug 19, 2023\n\n\nRecent Talks\n\n\nSam Foreman \n\n\n\n\n\n\nNo matching items\n\n\nLearn more about Quarto here."
   },
   {
     "objectID": "qmd/slides.html",
@@ -123,7 +123,7 @@
     "href": "qmd/dsblog.html#setup-environment",
     "title": "Loooooooong Sequence Lengths",
     "section": "Setup Environment",
-    "text": "Setup Environment\nWe include below the details for getting started.\n\nClone GitHub repo:\ngit clone https://github.com/ramanthanlab/GenSLM\nLoad conda module:\n\nThetaGPU:\n# ThetaGPU:\nmodule load conda/2023-01-11\nconda activate base\nPolaris:\n# ThetaGPU:\nmodule load conda/2023-01-11\nconda activate base\n\nSetup Virtual Environment:\n# create a new virtual environment\ncd Megatron-DeepSpeed\npython3 -m venv venv --system-site-packages\nsource ./venv/bin/activate\n\n\nDependencies\n\nMicrosoft/DeepSpeed\ngit clone https://github.com/microsoft/DeepSpeed.git\ncd DeepSpeed\npython3 -m pip install -e .\nMicrosoft/Megatron-DeepSpeed:\ngit clone https://github.com/microsoft/Megatron-DeepSpeed.git\nNVIDIA/apex\ngit clone https://github.com/NVIDIA/apex\ncd ../apex/\npip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" -e ./\npybind/PyBind11\npip install pybind11\nDao-AILab/flash-attention:\n\n\n\n\n\n\nFlash Attention\n\n\n\n\n\n\nThe new release supports three different implementations of FlashAttention: (v1.0.4, v2.x, triton)\nFlashAttention v2.x may have numerical instability issues. For the best performance, we recommend using FlashAttention + Triton\n\n\n\n\n\nv1.0.4:\npython3 -m pip install flash-attn==1.0.4\nv2.x:\ngit clone https://github.com/Dao-AILab/flash-attention\ncd flash-attention\npython3 setup.py install\nopenai/triton:\ngit clone -b legacy-backend https://github.com/openai/triton\ncd triton/python\npython3 -m pip install cmake\npython3 -m pip install .\n\n\n\n\nRunning\nThe ALCF/ directory contains shell scripts for setting up the environment and specifying the options to be used when launching.\nVarious options can be specified dynamically at runtime by setting them in your environment, e.g.:\nMODEL_SIZE_KEY=\"GPT33B\"\nSEQ_LEN=8192\nUSE_FLASH_ATTN=1\nMICRO_BATCH=1\nGAS=1\nSP_TYPE=\"megatron\"\nZERO_STAGE=1\n./ALCF/train-gpt3.sh\nExplicitly:\n\nALCF/models.sh: Model architectures are defined in\nALCF/args.sh: Runtime arguments\nALCF/{setup.shlaunch.sh} Options for environment setup / launching the executable are in\n\nOptions for specifying"
+    "text": "Setup Environment\n\nStep-by-Step\nFor completeness, we describe below the steps for installing and building each of the dependencies:\n\nClone GitHub repo:\ngit clone https://github.com/ramanthanlab/GenSLM\nLoad conda module:\n\nThetaGPU:\n# ThetaGPU:\nmodule load conda/2023-01-11\nconda activate base\nPolaris:\n# ThetaGPU:\nmodule load conda/2023-01-11\nconda activate base\n\nSetup Virtual Environment:\n# create a new virtual environment\ncd Megatron-DeepSpeed\npython3 -m venv venv --system-site-packages\nsource ./venv/bin/activate\n\n\nDependencies\n\n saforem2/ezpz\npip install -e \"git+https://github.com/saforem2/ezpz.git#egg=ezpz\"\n Microsoft/DeepSpeed\ngit clone https://github.com/microsoft/DeepSpeed.git\ncd DeepSpeed\npython3 -m pip install -e .\n Microsoft/Megatron-DeepSpeed:\ngit clone https://github.com/microsoft/Megatron-DeepSpeed.git\n NVIDIA/apex\ngit clone https://github.com/NVIDIA/apex\ncd ../apex/\npip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" -e ./\n pybind/PyBind11\npip install pybind11\n Dao-AILab/flash-attention:\n\n\n\n\n\n\nFlash Attention\n\n\n\n\n\n\nThe new release supports three different implementations of FlashAttention: (v1.0.4, v2.x, triton)\nFlashAttention v2.x may have numerical instability issues. For the best performance, we recommend using FlashAttention + Triton\n\n\n\n\n\nv1.0.4:\npython3 -m pip install flash-attn==1.0.4\nv2.x:\ngit clone https://github.com/Dao-AILab/flash-attention\ncd flash-attention\npython3 setup.py install\nopenai/triton:\ngit clone -b legacy-backend https://github.com/openai/triton\ncd triton/python\npython3 -m pip install cmake\npython3 -m pip install .\n\n\n\n\n\nRunning\nThe ALCF/ directory contains shell scripts for setting up the environment and specifying the options to be used when launching.\nVarious options can be specified dynamically at runtime by setting them in your environment, e.g.:\nMODEL_SIZE_KEY=\"GPT33B\"\nSEQ_LEN=8192\nUSE_FLASH_ATTN=1\nMICRO_BATCH=1\nGAS=1\nSP_TYPE=\"megatron\"\nZERO_STAGE=1\n./ALCF/train-gpt3.sh\nExplicitly:\n\nALCF/models.sh: Model architectures are defined in\nALCF/args.sh: Runtime arguments\nALCF/{setup.shlaunch.sh} Options for environment setup / launching the executable are in\n\nOptions for specifying"
   },
   {
     "objectID": "qmd/dsblog.html#zero-offloading",
@@ -131,5 +131,166 @@
     "title": "Loooooooong Sequence Lengths",
     "section": "ZeRO Offloading",
     "text": "ZeRO Offloading\nThese newly introduced optimizations, in combination with ZeRO-Offload allows us to go even further.\nBy employing ZeRO-Offloading, we are able to free up additional memory which can be used for even longer sequences.\nThough work is still ongoing, this is a promising direction that will allow us to consider significantly larger genomes than previously possible.\n\n\n\n\n\n\nFigure 4: Weights & Biases Report"
+  },
+  {
+    "objectID": "qmd/personal.html",
+    "href": "qmd/personal.html",
+    "title": "",
+    "section": "",
+    "text": "Sam Foreman \nI use machine learning to accelerate scientific discovery.\n(Mostly getting supercomputers to talk to each other )\nI’m generally interested in the application of machine learning to computational problems in science, particularly within the context of high performance computing.\nMy current research focuses on using deep generative modeling to help build better sampling algorithms in lattice gauge theory. In particular, I’m interested in building gauge equivariant neural network architectures and using inductive priors to incorporate physical symmetries into machine learning models.\nI received my PhD in Physics from the University of Iowa in 2019 and my thesis was on Learning Better Physics: A Machine Learning Approach to Lattice Gauge Theory. Prior to this, I completed two bachelors degrees (Engineering Physics and Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign. My undergraduate dissertation was titled Energy Storage in Quantum Resonators and was supervised by Professor Alfred Hübler within the Center for Complex Systems Research at UIUC.\nAs a member of the Data Science Group at ALCF, I work on:"
+  },
+  {
+    "objectID": "qmd/personal.html#get-in-touch",
+    "href": "qmd/personal.html#get-in-touch",
+    "title": "Sam Foreman",
+    "section": "💼 Get In Touch",
+    "text": "💼 Get In Touch\nDo you need help operationalizing ML or large language models?\nI’m open to consulting work and other forms of advisory. Email me at hamel.husain@gmail.com if you’d like to chat!"
+  },
+  {
+    "objectID": "qmd/personal.html#fa-solid-newspaper-recent-work",
+    "href": "qmd/personal.html#fa-solid-newspaper-recent-work",
+    "title": " About Me",
+    "section": " Recent Work",
+    "text": "Recent Work\n\nS. Foreman Exploratory Analysis of Climate Data with ClimRR, Intro to HPC Bootcamp @ NERSC, August 7, 2023\n\nM. Zvyagin et. al., GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics, Oct 2022\n\n ACM Gordon Bell Special Prize for HPC-Based COVID-19 Research\n\n\nA.S. Kronfeld et al. Lattice QCD and Particle Physics, July 15, 2022\n\nD. Boyda, S. Calí, S. Foreman, et al., Applications of ML to Lattice QFT arXiv:2202.05838, Feb 2022\n\nS. Foreman, X.Y. Jin, J.C. Osborn, LeapFrogLayers: Trainable Framework for Effective Sampling, Lattice, 2021\n\nS. Foreman et al.HMC with Normalizing Flows, slides, Lattice, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Deep Learning Hamiltonian Monte Carlo (+ poster) at SimDL Workshop @ ICLR, 2021\n\nS. Foreman, X.Y. Jin, & J.C. Osborn, Machine Learning and Neural Networks for Field Theory SnowMass, 2020\n\nS. Foreman et al. Examples of renormalization group transformations for image sets Physical Review E., 2018\n\nS. Foreman et al. RG inspired Machine Learning for lattice field theory arXiv:1710.02079, 2017\n\nS. Foreman et al. Large Energy Density in Three-Plate Nanocapacitors due to Coulomb Blockade J. Appl. Phys, 2018"
+  },
+  {
+    "objectID": "qmd/personal.html#fa-solid-person-chalkboard-recent-talks",
+    "href": "qmd/personal.html#fa-solid-person-chalkboard-recent-talks",
+    "title": " About Me",
+    "section": " Recent Talks",
+    "text": "Recent Talks\n\n\n\n\n\n\nMLMC: Machine Learning for Monte Carlo, at Lattice 2023, July 2023\nGenerative Modeling and Efficient Sampling, at PASC23, July 2023\nEfficient Sampling for Lattice Gauge Theory, at Deep Fridays @ U. Bologna, April 2023\nLarge Scale Training, at Introduction to AI-driven Science on Supercomputers: A Student Training Series, November 2022\nHyperparameter Management, at 2022 ALCF Simulation, Data, and Learning Workshop, October 2022\nStatistical Learning, at ATPESC 2022, August 2022 📕 accompanying notebook\nScientific Data Science: An Emerging Symbiosis, at Argonne National Laboratory, May 2022\nMachine Learning in HEP, at UNC Greensboro, March 2022\nAccelerated Sampling Methods for Lattice Gauge Theory, at BNL-HET& RBRC Joint Workshop “DWQ @ 25”, Dec 2021\nTraining Topological Samplers for Lattice Gauge Theory, ML4HEP, on and off the Lattice @ ECT* Trento, Sep 2021\nl2hmc-qcd at the MIT Lattice Group Seminar, 2021\nDeep Learning HMC for Improved Gauge Generation to the Machine Learning Techniques in Lattice QCD Workshop, 2021\nMachine Learning for Lattice QCD at the University of Iowa, 2020\nMachine learning inspired analysis of the Ising model transition to Lattice, 2018\nMachine Learning Analysis of Ising Worms at Brookhaven National Laboratory, 2017"
+  },
+  {
+    "objectID": "qmd/personal.html#fa-brands-github-alt-active-projects",
+    "href": "qmd/personal.html#fa-brands-github-alt-active-projects",
+    "title": "",
+    "section": " Active Projects",
+    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+  },
+  {
+    "objectID": "qmd/personal.html#fa-solid-bullhorn-wait-theres-more",
+    "href": "qmd/personal.html#fa-solid-bullhorn-wait-theres-more",
+    "title": "",
+    "section": " Wait, there’s more!",
+    "text": "Wait, there’s more!\n\nOrganizer for Machine Learning and Quantum Computing for Earth Sciences at 17th U. S. National Congress on Computational Mechanics, July 2023\nOrganizer for SC23 Workshop: High Performance Python for Science at Scale (HPPSS), November 2023"
+  },
+  {
+    "objectID": "qmd/personal.html#fa-solid-hourglass-end-appendix",
+    "href": "qmd/personal.html#fa-solid-hourglass-end-appendix",
+    "title": "",
+    "section": " Appendix",
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 12 September 23"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Sam Foreman ",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nMostly getting supercomputers to talk to each other ↩︎"
+  },
+  {
+    "objectID": "index.html#fa-solid-graduation-cap-education",
+    "href": "index.html#fa-solid-graduation-cap-education",
+    "title": "Sam Foreman ",
+    "section": " Education",
+    "text": "Education\n\n\n\nPhD\nPhysics\nUniversity of Iowa\n2019\n\n\nB.Sc\nPhysics\nUIUC\n2015\n\n\nB.Sc\nMath\nUIUC\n2015"
+  },
+  {
+    "objectID": "index.html#fa-solid-building-experience",
+    "href": "index.html#fa-solid-building-experience",
+    "title": "Sam Foreman ",
+    "section": " Experience",
+    "text": "Experience\n\n\n\nAssistant Computational Scientist\nALCF\n2022\n*\n\n\n\nPostdoc\nALCF\n2019\n2022\n\n\n\nGraduate Researcher\nANL\n2018\n2019"
+  },
+  {
+    "objectID": "qmd/dsblog.html#footnotes",
+    "href": "qmd/dsblog.html#footnotes",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n\ndeepspeed-0.10.3\npytorch==2.0.0+cu118\n\n↩︎\nTP stands for tensor-model-parallel-size parallelism.↩︎"
+  },
+  {
+    "objectID": "qmd/dsblog.html#installation",
+    "href": "qmd/dsblog.html#installation",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "Installation",
+    "text": "Installation\n\nUsing install.sh\n\nImportant To install, simply:\ngit clone https://github.com/ramanthanlab/GenSLM/\ncd GenSLM/examples/long-sequences/\n./install.sh\nExplicitly, ./install.sh will:\n\nAutomatically create a virtual environment on top of the latest conda module\nInstall (+ update1) / build all the required dependencies into this virtual environment\n\n\n\n\nStep-by-Step\nFor completeness, we describe below the steps for installing and building each of the dependencies:\n\nClone GitHub repo:\ngit clone https://github.com/ramanthanlab/GenSLM\nLoad conda module:\n\nThetaGPU:\n# ThetaGPU:\nexport MACHINE=\"ThetaGPU\"\nexport CONDA_DATE=\"2023-01-10\"\nmodule load conda/2023-01-11\nconda activate base\nPolaris:\n# Polaris:\nexport MACHINE=\"Polaris\"\nexport CONDA_DATE=\"2023-01-10\"\nmodule load conda/2023-01-10-unstable\nconda activate base\n\nSetup Virtual Environment:\n# create a new virtual environment\ncd Megatron-DeepSpeed\npython3 -m venv \"venvs/${MACHINE}/${CONDA_DATE}\" --system-site-packages\nsource \"venvs/${MACHINE}/${CONDA_DATE}/bin/activate\"\n\n\nDependencies\n\n saforem2/ezpz\npip install -e \"git+https://github.com/saforem2/ezpz.git#egg=ezpz\"\n Microsoft/DeepSpeed\ngit clone https://github.com/microsoft/DeepSpeed.git\ncd DeepSpeed\npython3 -m pip install -e .\n Microsoft/Megatron-DeepSpeed:\ngit clone https://github.com/microsoft/Megatron-DeepSpeed.git\n NVIDIA/apex\ngit clone https://github.com/NVIDIA/apex\ncd ../apex/\npip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" -e ./\n pybind/PyBind11\npip install pybind11\n Dao-AILab/flash-attention:\n\n\n\n\n\n\nFlash Attention\n\n\n\n\n\n\nThe new release supports three different implementations of FlashAttention: (v1.0.4, v2.x, triton)\nFlashAttention v2.x may have numerical instability issues. For the best performance, we recommend using FlashAttention + Triton\n\n\n\n\n\nv1.0.4:\npython3 -m pip install flash-attn==1.0.4\nv2.x:\ngit clone https://github.com/Dao-AILab/flash-attention\ncd flash-attention\npython3 setup.py install\nopenai/triton:\ngit clone -b legacy-backend https://github.com/openai/triton\ncd triton/python\npython3 -m pip install cmake\npython3 -m pip install .\n\n\n\n\n\nRunning\nThe ALCF/ directory contains shell scripts for setting up the environment and specifying the options to be used when launching.\nVarious options can be specified dynamically at runtime by setting them in your environment, e.g.:\nMODEL_SIZE_KEY=\"GPT25B\" SEQ_LEN=128000 USE_FLASH_ATTN=1 MICRO_BATCH=1 GAS=1 SP_TYPE=\"megatron\" ZERO_STAGE=1 ./ALCF/train-gpt3.sh\nExplicitly:\n\nALCF/train-gpt3.sh: Main entry point for training\n\nThis script will automatically source the rest of the required ALCF/*.sh scripts below\n\nALCF/models.sh: Contains some example model architectures for GPT3-style models\nALCF/args.sh: Logic for parsing / setting up runtime options for Megatron and DeepSpeed\nALCF/setup.sh: Locate and activate virtual environment to be used, ensure MPI variables are set properly\nALCF/launch.sh: Identify available resources and build the command to be executed\n\ni.e. figure out how many: {nodes, GPUs per node, GPUs total}, to pass to mpi{run,exec}\nthen, use this to build mpiexec &lt;mpiexec-args&gt; python3 pretrain_gpt.py"
+  },
+  {
+    "objectID": "qmd/dsblog.html#new-features",
+    "href": "qmd/dsblog.html#new-features",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "New Features",
+    "text": "New Features\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA."
+  },
+  {
+    "objectID": "qmd/dsblog.html#new-optimizations",
+    "href": "qmd/dsblog.html#new-optimizations",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "New optimizations",
+    "text": "New optimizations\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
+  },
+  {
+    "objectID": "qmd/dsblog.html#deepspeed4science-release-092023",
+    "href": "qmd/dsblog.html#deepspeed4science-release-092023",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "DeepSpeed4Science Release (09/2023)",
+    "text": "DeepSpeed4Science Release (09/2023)"
+  },
+  {
+    "objectID": "qmd/dsblog.html#deepspeed4science-092023",
+    "href": "qmd/dsblog.html#deepspeed4science-092023",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "DeepSpeed4Science (09/2023)",
+    "text": "DeepSpeed4Science (09/2023)\n\nNew Features\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA.\n\n\n\nNew optimizations\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
+  },
+  {
+    "objectID": "qmd/dsblog.html#step-by-step",
+    "href": "qmd/dsblog.html#step-by-step",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "Step-by-Step",
+    "text": "Step-by-Step\nFor completeness, we describe below the steps for installing and building each of the dependencies:\n\nClone GitHub repo:\ngit clone https://github.com/ramanthanlab/GenSLM\nLoad conda module:\n\nThetaGPU:\n# ThetaGPU:\nmodule load conda/2023-01-11\nconda activate base\nPolaris:\n# ThetaGPU:\nmodule load conda/2023-01-11\nconda activate base\n\nSetup Virtual Environment:\n# create a new virtual environment\ncd Megatron-DeepSpeed\npython3 -m venv venv --system-site-packages\nsource ./venv/bin/activate\n\n\nDependencies\n\n saforem2/ezpz\npip install -e \"git+https://github.com/saforem2/ezpz.git#egg=ezpz\"\n Microsoft/DeepSpeed\ngit clone https://github.com/microsoft/DeepSpeed.git\ncd DeepSpeed\npython3 -m pip install -e .\n Microsoft/Megatron-DeepSpeed:\ngit clone https://github.com/microsoft/Megatron-DeepSpeed.git\n NVIDIA/apex\ngit clone https://github.com/NVIDIA/apex\ncd ../apex/\npip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" -e ./\n pybind/PyBind11\npip install pybind11\n Dao-AILab/flash-attention:\n\n\n\n\n\n\nFlash Attention\n\n\n\n\n\n\nThe new release supports three different implementations of FlashAttention: (v1.0.4, v2.x, triton)\nFlashAttention v2.x may have numerical instability issues. For the best performance, we recommend using FlashAttention + Triton\n\n\n\n\n\nv1.0.4:\npython3 -m pip install flash-attn==1.0.4\nv2.x:\ngit clone https://github.com/Dao-AILab/flash-attention\ncd flash-attention\npython3 setup.py install\nopenai/triton:\ngit clone -b legacy-backend https://github.com/openai/triton\ncd triton/python\npython3 -m pip install cmake\npython3 -m pip install .\n\n\n\n\nRunning\nThe ALCF/ directory contains shell scripts for setting up the environment and specifying the options to be used when launching.\nVarious options can be specified dynamically at runtime by setting them in your environment, e.g.:\nMODEL_SIZE_KEY=\"GPT33B\"\nSEQ_LEN=8192\nUSE_FLASH_ATTN=1\nMICRO_BATCH=1\nGAS=1\nSP_TYPE=\"megatron\"\nZERO_STAGE=1\n./ALCF/train-gpt3.sh\nExplicitly:\n\nALCF/models.sh: Model architectures are defined in\nALCF/args.sh: Runtime arguments\nALCF/{setup.shlaunch.sh} Options for environment setup / launching the executable are in\n\nOptions for specifying"
+  },
+  {
+    "objectID": "qmd/dsblog-md.html",
+    "href": "qmd/dsblog-md.html",
+    "title": "Sam Foreman",
+    "section": "",
+    "text": "Back to topCitationBibTeX citation:@online{foreman2023,\n  author = {Foreman, Sam},\n  title = {Personal {Website}},\n  date = {2023-09-12},\n  url = {https://saforem2.github.io},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nForeman, Sam. 2023. “Personal Website.” September 12, 2023.\nhttps://saforem2.github.io."
+  },
+  {
+    "objectID": "qmd/dsblog-md.html#deepspeed4science-092023",
+    "href": "qmd/dsblog-md.html#deepspeed4science-092023",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "DeepSpeed4Science (09/2023)",
+    "text": "DeepSpeed4Science (09/2023)\n\nNew Features\n\nEnabled Megatron-LM’s sequence parallel.\nEnabled rotary positional embedding.\nEnabled FlashAttention v1 and v2.\nEnabled new fused kernels from NVIDIA.\n\n\n\nNew optimizations\n\nEnabled attention map memory optimization, where we first generated attention mask on CPU memory and then moved it into GPU memory to avoid out-of-memory errors when training with very large sequence lengths.\nPosition embedding partitioning, where we split weights of position encoding across all GPUs when enabling sequence parallel to further reduce the memory footprint."
+  },
+  {
+    "objectID": "qmd/dsblog-md.html#installation",
+    "href": "qmd/dsblog-md.html#installation",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "Installation",
+    "text": "Installation\n\nUsing install.sh\n\nImportant To install, simply:\ngit clone https://github.com/ramanthanlab/GenSLM/\ncd GenSLM/examples/long-sequences/\n./install.sh\nExplicitly, ./install.sh will:\n\nAutomatically create a virtual environment on top of the latest conda module\nInstall (+ update1) / build all the required dependencies into this virtual environment\n\n\n\n\nStep-by-Step\nFor completeness, we describe below the steps for installing and building each of the dependencies:\n\nClone GitHub repo:\ngit clone https://github.com/ramanthanlab/GenSLM\nLoad conda module:\n\nThetaGPU:\n# ThetaGPU:\nexport MACHINE=\"ThetaGPU\"\nexport CONDA_DATE=\"2023-01-10\"\nmodule load conda/2023-01-11\nconda activate base\nPolaris:\n# Polaris:\nexport MACHINE=\"Polaris\"\nexport CONDA_DATE=\"2023-01-10\"\nmodule load conda/2023-01-10-unstable\nconda activate base\n\nSetup Virtual Environment:\n# create a new virtual environment\ncd Megatron-DeepSpeed\npython3 -m venv \"venvs/${MACHINE}/${CONDA_DATE}\" --system-site-packages\nsource \"venvs/${MACHINE}/${CONDA_DATE}/bin/activate\"\n\n\nDependencies\n\n saforem2/ezpz\npip install -e \"git+https://github.com/saforem2/ezpz.git#egg=ezpz\"\n Microsoft/DeepSpeed\ngit clone https://github.com/microsoft/DeepSpeed.git\ncd DeepSpeed\npython3 -m pip install -e .\n Microsoft/Megatron-DeepSpeed:\ngit clone https://github.com/microsoft/Megatron-DeepSpeed.git\n NVIDIA/apex\ngit clone https://github.com/NVIDIA/apex\ncd ../apex/\npip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" -e ./\n pybind/PyBind11\npip install pybind11\n Dao-AILab/flash-attention:\n\n\n\n\n\n\nFlash Attention\n\n\n\n\n\n\nThe new release supports three different implementations of FlashAttention: (v1.0.4, v2.x, triton)\nFlashAttention v2.x may have numerical instability issues. For the best performance, we recommend using FlashAttention + Triton\n\n\n\n\n\nv1.0.4:\npython3 -m pip install flash-attn==1.0.4\nv2.x:\ngit clone https://github.com/Dao-AILab/flash-attention\ncd flash-attention\npython3 setup.py install\nopenai/triton:\ngit clone -b legacy-backend https://github.com/openai/triton\ncd triton/python\npython3 -m pip install cmake\npython3 -m pip install .\n\n\n\n\n\nRunning\nThe ALCF/ directory contains shell scripts for setting up the environment and specifying the options to be used when launching.\nVarious options can be specified dynamically at runtime by setting them in your environment, e.g.:\nMODEL_SIZE_KEY=\"GPT25B\" SEQ_LEN=128000 USE_FLASH_ATTN=1 MICRO_BATCH=1 GAS=1 SP_TYPE=\"megatron\" ZERO_STAGE=1 ./ALCF/train-gpt3.sh\nExplicitly:\n\nALCF/train-gpt3.sh: Main entry point for training\n\nThis script will automatically source the rest of the required ALCF/*.sh scripts below\n\nALCF/models.sh: Contains some example model architectures for GPT3-style models\nALCF/args.sh: Logic for parsing / setting up runtime options for Megatron and DeepSpeed\nALCF/setup.sh: Locate and activate virtual environment to be used, ensure MPI variables are set properly\nALCF/launch.sh: Identify available resources and build the command to be executed\n\ni.e. figure out how many: {nodes, GPUs per node, GPUs total}, to pass to mpi{run,exec}\nthen, use this to build mpiexec &lt;mpiexec-args&gt; python3 pretrain_gpt.py"
+  },
+  {
+    "objectID": "qmd/dsblog-md.html#initial-results",
+    "href": "qmd/dsblog-md.html#initial-results",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "Initial Results",
+    "text": "Initial Results\n\n\n\n\n\n\nPRE-RELEASE\n\n\n\n\n\nI’ve kept in the (executable) code blocks for the time being (just to show how I’m generating the bar plots in Figure 2) but these can be ommitted in the actual README\n\n\n\n\n\nCode\n%matplotlib inline\nimport matplotlib_inline\nimport os\nimport numpy as np\nimport datetime\nfrom typing import Tuple\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n# NOTE:\n# - [Toolbox](https://github.com/saforem2/toolbox)\nfrom toolbox import set_plot_style\nimport seaborn as sns\nfrom opinionated import STYLES\nimport seaborn as sns\n\nsns.set_context('talk')\nset_plot_style()\nmatplotlib_inline.backend_inline.set_matplotlib_formats('svg')\n\nplt.style.use('default')\nset_plot_style()\nplt.style.use(STYLES['opinionated_min'])\nplt.rcParams['ytick.labelsize'] = 14.0\nplt.rcParams['xtick.labelsize'] = 14.0\nplt.rcParams['grid.alpha'] = 0.4\n\ngrid_color = plt.rcParams['grid.color']\n\ndef save_figure(\n        fname: str,\n        outdir: os.PathLike,\n):\n    pngdir = Path(outdir).joinpath('pngs')\n    svgdir = Path(outdir).joinpath('svgs')\n    pngdir.mkdir(exist_ok=True, parents=True)\n    svgdir.mkdir(exist_ok=True, parents=True)\n    pngfile = pngdir.joinpath(f'{fname}.png')\n    svgfile = svgdir.joinpath(f'{fname}.svg')\n    _ = plt.savefig(pngfile, dpi=400, bbox_inches='tight')\n    _ = plt.savefig(svgfile, dpi=400, bbox_inches='tight')\n\n\n\n\nData\ngpus = ('32', '64', '128')\n\ncolors = {\n    'Old': '#007DFF',\n    'Megatron-LM': '#76b900',\n    'Megatron-DS':  '#FF5252',\n}\n\ndata = {\n    '25B': {\n        'Old': np.array([28, 32, 32]),\n        'Megatron-LM': np.array([14, 46, 52]),\n        'Megatron-DS': np.array([128, 384, 448]),\n    },\n    '33B': {\n        'Old': np.array([36, 42, 42]),\n        'Megatron-LM': np.array([26, 48, 52]),\n        'Megatron-DS': np.array([192, 448, 512]),\n    }\n}\n\n\n\n\n\n\nMake the plots\nx = np.arange(len(gpus))\nwidth = 0.25\nmultiplier = 0\n\noutdir = Path(os.getcwd()).joinpath('assets')\noutdir.mkdir(exist_ok=True, parents=True)\n\nimprovement = {}\nfor idx, (model_size, d) in enumerate(data.items()):\n    multiplier = 0\n    figure, axes = plt.subplots(figsize=(6.4, 4.8))\n    fig = plt.gcf()\n    ax = plt.gca()\n    for label, value in d.items():\n        offset = width * multiplier\n        rects = ax.barh(\n          x + offset,\n          value,\n          width,\n          label=label,\n          color=colors[label],\n          alpha=0.8\n        )\n        ax.bar_label(\n          rects,\n          padding=3,\n          color=colors[label],\n          family='monospace',\n          weight='bold'\n        )\n        multiplier += 1\n    ax.set_ylabel(\n        'GPUs',\n        fontsize=18,\n        family='sans-serif',\n        loc='center',\n    )\n    ax.set_yticks(x + width, gpus)\n    plt.figtext(\n        0.00, 0.94, f\"{model_size}\", fontsize=24, fontweight='bold', ha='left'\n    )\n    ax.set_xlabel(\n        'Sequence Length (k)', fontsize=18, loc='center'\n    )\n    ax.legend(\n        bbox_to_anchor=(0.005, 1.05, 0.99, .098),\n        alignment='center',\n        edgecolor=\"#83838320\",\n        frameon=True,\n        ncols=3,\n        fontsize=14,\n        mode=\"expand\",\n        borderaxespad=0.01\n    )\n    save_figure(fname=f'{model_size}', outdir=outdir)\n    _ = plt.show()\n\n\n\n\n\n\n\nGPT-25B Model\n\n\n\n\n\n\n\nGPT-33B Model\n\n\n\n\n\n\nFigure 2: Pre-training with long sequence support across different model sizes and numbers of GPUs. In each case, the new (current) implementation significantly outperforms both NVIDIA/Megatron-LM as well as our previous implementation.\n\n\n\n\n\n\n\n\n\n\n\n\nSequence Length\nOld Megatron-DeepSpeed (TFLOPS)\nNew Megatron-DeepSpeed (TFLOPS)\n\n\n\n\n2k\n25\n68\n\n\n4k\n28\n80\n\n\n8k\nOOM\n86\n\n\n16k\nOOM\n92\n\n\n32k\nOOM\n100\n\n\n64k\nOOM\n106\n\n\n128k\nOOM\n119\n\n\n256k\nOOM\n94\n\n\n\nThe following experiments are performed on 4 NVIDIA DGX A100-40GB nodes, all using TPSIZE=32, connected through 8 HDR InfiniBand (200Gb/s per HDR).\nFigure 3: TP stands for tensor parallelism."
+  },
+  {
+    "objectID": "qmd/dsblog-md.html#zero-offloading",
+    "href": "qmd/dsblog-md.html#zero-offloading",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "ZeRO Offloading",
+    "text": "ZeRO Offloading\nThese newly introduced optimizations, in combination with ZeRO-Offload allows us to go even further.\nBy employing ZeRO-Offloading, we are able to free up additional memory which can be used for even longer sequences.\nThough work is still ongoing, this is a promising direction that will allow us to consider significantly larger genomes than previously possible.\n\n\n\n\n\n\nFigure 4: Weights & Biases Report"
+  },
+  {
+    "objectID": "qmd/dsblog-md.html#footnotes",
+    "href": "qmd/dsblog-md.html#footnotes",
+    "title": "Loooooooong Sequence Lengths",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n\ndeepspeed-0.10.3\npytorch==2.0.0+cu118\n\n↩︎"
   }
 ]
