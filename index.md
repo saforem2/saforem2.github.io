@@ -6,6 +6,7 @@ listing:
   - id: sample-listings
     contents:
       - ../qmd/**/*.qmd
+      - '!../qmd/dsblog.qmd'
     type: table
     sort: date desc
 format:
