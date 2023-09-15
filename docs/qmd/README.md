@@ -1,12 +1,12 @@
 # Loooooooong Sequence Lengths
 Sam Foreman
-2023-09-13
+2023-09-15
 
 <div id="fig-ds4sci" style="text-align:center;">
 
 <!-- ![](https://raw.githubusercontent.com/ramanathanlab/genslm/foremans/ds4sci/examples/long-sequences/assets/deepspeed4science1.svg) -->
 
-<span class="stretch">![](../assets/ds4sci1.svg)</span>
+<span class="stretch">![](../assets/deepspeed4science1.svg)</span>
 
 Figure 1: This work was done as part of the DeepSpeed4Science project,
 in collaboration with Microsoft.

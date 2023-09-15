@@ -1,23 +1,29 @@
 [
   {
-    "listing": "/qmd/posts.html",
+    "listing": "/qmd/about.html",
     "items": [
       "/qmd/personal.html",
-      "/qmd/dsblog.html",
+      "/qmd/posts.html",
       "/qmd/projects.html",
       "/qmd/blog/quarto-reveal.html",
       "/qmd/slides.html"
     ]
   },
   {
-    "listing": "/qmd/personal.html",
-    "items": []
-  },
-  {
     "listing": "/index.html",
     "items": [
+      "/qmd/about.html",
       "/qmd/personal.html",
       "/qmd/posts.html",
+      "/qmd/projects.html",
+      "/qmd/blog/quarto-reveal.html",
+      "/qmd/slides.html"
+    ]
+  },
+  {
+    "listing": "/qmd/posts.html",
+    "items": [
+      "/qmd/dsblog.html",
       "/qmd/projects.html",
       "/qmd/blog/quarto-reveal.html",
       "/qmd/slides.html"

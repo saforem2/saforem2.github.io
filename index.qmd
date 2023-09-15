@@ -1,6 +1,7 @@
 ---
 author: ""
 date: ""
+title: ""
 site-url: https://saforem2.github.io
 # author:
 #   # name: "[Sam Foreman]{style='font-size:1.0rem;'}"
@@ -23,69 +24,43 @@ editor:
    render-on-save: true
 execute:
    freeze: true
-about:
-   id: hero-heading
-   template: trestles
-   image-width: 9em
-   image-shape: round
-   image: ./assets/avatar.png
-   links:
-     - href: https://saforem2.github.io
-       text: "{{< fa solid home >}}"
-     - icon: github
-       href: https://github.com/saforem2
-     - icon: twitter
-       href: https://twitter.com/saforem2
-     - href: "mailto:///foremans@anl.gov"
-       text: "{{< fa regular paper-plane >}}"
-     # - href: https://www.twitter.com/saforem2
-     #   text: "{{< fa brands twitter >}}"
-     # - href: https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en
-     #   text: "{{< ai google-scholar >}}"
-     # # - href: https://orcid.org/0000-0002-9981-0876
-     # #   text: "{{< ai orcid >}}"
-     # - href: https://www.last.fm/user/saforem2
-     #   text: "{{< fa brands lastfm >}}"
-     # - href: https://open.spotify.com/user/saforem2
-     #   text: "{{< fa brands spotify >}}"
-     # # - href: https://www.instagram.com/saforem2
-     # #   text: "{{< fa brands instagram >}}"
-     # - href: https://linkedin.com/in/saforem2
-     #   text: "{{< fa brands linkedin >}}"
+# about:
+#    id: hero-heading
+#    # template: trestles
+#    image-width: 9em
+#    image-shape: round
+#    image: ./assets/avatar.png
+#    links:
+#      - href: https://saforem2.github.io
+#        text: "{{< fa solid home >}}"
+#      - icon: github
+#        href: https://github.com/saforem2
+#      - icon: twitter
+#        href: https://twitter.com/saforem2
+#      - href: "mailto:///foremans@anl.gov"
+#        text: "{{< fa regular paper-plane >}}"
+#      # - href: https://www.twitter.com/saforem2
+#      #   text: "{{< fa brands twitter >}}"
+#      # - href: https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en
+#      #   text: "{{< ai google-scholar >}}"
+#      # # - href: https://orcid.org/0000-0002-9981-0876
+#      # #   text: "{{< ai orcid >}}"
+#      # - href: https://www.last.fm/user/saforem2
+#      #   text: "{{< fa brands lastfm >}}"
+#      # - href: https://open.spotify.com/user/saforem2
+#      #   text: "{{< fa brands spotify >}}"
+#      # # - href: https://www.instagram.com/saforem2
+#      # #   text: "{{< fa brands instagram >}}"
+#      # - href: https://linkedin.com/in/saforem2
+#      #   text: "{{< fa brands linkedin >}}"
 ---
 
-::: {#hero-heading style="margin-top: 0em;"}
+# []{style="display: none; margin-top: 0rem!important;"}
 
-# Sam Foreman [[{{< ai orcid >}}]{.orcid-green}](https://orcid.org/0000-0002-9981-0876)
+::: {style="font-size:1.0em; text-align: center; margin-top: -5rem; "}
 
-<!-- :::: {.columns  style="margin-bottom:-0.5rem;"} -->
-<!---->
-<!-- ::: {.column width="45%"} -->
-<!---->
-<!-- I make science happen on supercomputers. -->
-<!---->
-<!-- ::: -->
-<!---->
-<!-- ::: {.column width="55%"} -->
-
-
-:::: {.columns  style="margin-bottom:-1.75rem;"}
-
-::: {.column width="55%" style="margin-top: -0.0em;"}
-
-# [{{< fa regular id-badge >}}]{.green-text} About Me
-
-
-[I use machine learning to accelerate scientific discovery[^1].]{style="font-size:1.33em; margin-bottom: 0rem;"}
-
-:::
-
-[^1]: [Mostly getting supercomputers to talk to each other {{< fa solid network-wired >}}]{.dim-text style="font-size: 1.25em; margin-bottom: -1rem;margin-top:-1rem!important;"}
-
-
-::: {.column width="45%" style="margin-top: 1.5em;"}
-
-::: {style="text-align: center;"}
+[![](./assets/avatar.png)]{.profile-avatar style="width: 100%;margi-top: -2rem;"}  
+[Sam Foreman [[{{< ai orcid >}}]{.orcid-green}](https://orcid.org/0000-0002-9981-0876)]{style="font-size: 1.75rem; color: var(--dim-text)!important; font-weight: bold; margin-bottom: -0.5rem;"}
 
 [[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-right: 0.20rem;"}
 [[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
@@ -97,22 +72,62 @@ about:
 [[{{< fa brands spotify >}}](https://open.spotify.com/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
 [[{{< fa brands instagram >}}](https://www.instagram.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
 [[{{< fa brands lastfm >}}](https://www.last.fm/user/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
-[[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{style="text-align:right!important;"}
 
 :::
 
-:::
+::: {layout="[60,-5,30]]" layout-valign="center" style="display: flex; flex-direction: row; margin-top: -0.0em; align-items: center;"}
 
-::::
+::: {style="margin-top: -0.0em;"}
 
-[I'm generally interested in the application of machine learning to
+# [{{< fa regular id-badge >}}]{.dim-text} About Me
+
+I use ML and HPC to accelerate scientific discovery[^1] @ [ALCF](https://alcf.anl.gov).
+
+I'm generally interested in the application of machine learning to
 computational problems in science, particularly within the context of high
-performance computing.]{style="font-size:1.1rem;"}
+performance computing.
+
+My [current research](https://saforem2.github.io/l2hmc-qcd) focuses on using
+deep generative modeling to help build better sampling algorithms in lattice
+gauge theory. In particular, I'm interested in building gauge equivariant
+neural network architectures and using inductive priors to incorporate physical
+symmetries into machine learning models.
+
+[^1]: [Mostly getting supercomputers to talk to each other {{< fa solid network-wired >}}]
 
 :::
 
-<!-- ::: {style="font-size: 0.8em; width:98%"} -->
-<!---->
+::: {style="margin-top:1rem;"}
+
+::: {.callout-tip icon=false title="[{{< fa solid music >}}]{.green-text} Now Playing:" collapse="true" style="width:100%;"}
+
+::: {style="width:100%;"}
+
+[[![](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&cover_image=true&theme=novatorem&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=saforem2&redirect=true)]{.stretch}
+
+:::
+
+:::
+
+::: {.callout-important title="Recent Talks" collapse="false" style="width:100%; text-align:left!important;"}
+
+You can get a live view of some of my recent talks [{{< fa solid chart-line >}} ]{.pink-text}  [here](./qmd/slides.qmd)
+
+:::
+
+:::
+
+:::
+
+I received my PhD in Physics from the University of Iowa in 2019 and my thesis
+was on [Learning Better Physics: A Machine Learning Approach to Lattice Gauge
+Theory](https://iro.uiowa.edu/esploro/outputs/doctoral/Learning-better-physics-a-machine-learning/9983776792002771).
+Prior to this, I completed two bachelors degrees (Engineering Physics and
+Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign.
+My undergraduate dissertation was titled [Energy Storage in Quantum
+Resonators](https://aip.scitation.org/doi/10.1063/1.5009698) and was supervised
+by Professor [Alfred Hübler](https://en.wikipedia.org/wiki/Alfred_H%C3%BCbler)
+within the Center for Complex Systems Research at UIUC.
 
 As a member of the [Data Science
 Group](https://www.alcf.anl.gov/about/people/group/506) at
@@ -149,32 +164,6 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 :::
 
 ::::
-
-My [current research](https://saforem2.github.io/l2hmc-qcd) focuses on using
-deep generative modeling to help build better sampling algorithms in lattice
-gauge theory. In particular, I'm interested in building gauge equivariant
-neural network architectures and using inductive priors to incorporate physical
-symmetries into machine learning models.
-
-I received my PhD in Physics from the University of Iowa in 2019 and my thesis
-was on [Learning Better Physics: A Machine Learning Approach to Lattice Gauge
-Theory](https://iro.uiowa.edu/esploro/outputs/doctoral/Learning-better-physics-a-machine-learning/9983776792002771).
-Prior to this, I completed two bachelors degrees (Engineering Physics and
-Applied Mathematics, 2015) from The University of Illinois at Urbana-Champaign.
-My undergraduate dissertation was titled [Energy Storage in Quantum
-Resonators](https://aip.scitation.org/doi/10.1063/1.5009698) and was supervised
-by Professor [Alfred Hübler](https://en.wikipedia.org/wiki/Alfred_H%C3%BCbler)
-within the Center for Complex Systems Research at UIUC.
-
-::: {.callout-important title="Recent Talks" collapse="false" style="width: 100%;"}
-
-You can get a live view of some of my recent talks [{{< fa solid chart-line >}} ]{.pink-text}  [here](./qmd/slides.qmd)
-
-:::
-
-
-::: {#sample-listings}
-:::
 
 
 ## [{{< fa solid newspaper >}}]{.red-text} Recent Work
@@ -298,6 +287,13 @@ from datetime import date
 print(f"Last updated: {date.today().strftime('%d %B %y')}")
 ```
 
+### Posts
+
+::: {#sample-listings}
+:::
+
+<!-- [[![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsaforem2.github.io&count_bg=%2300CCFF&title_bg=%23303030&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)]{style="text-align:center;"} -->
+
 <p align="center">
-<a href="https://hits.seeyoufarm.com"><img align="center" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwww.samforeman.me&count_bg=%2300CCFF&title_bg=%23303030&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+<a href="https://hits.seeyoufarm.com"><img align="center" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsaforem2.github.io&count_bg=%2300CCFF&title_bg=%23303030&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </p>

@@ -38,7 +38,7 @@ citation:
    url: https://saforem2.github.io
 execute:
   keep-ipynb: true
-  keep-md: true
+  # keep-md: true
   freeze: auto
 website:
   description: "My ramblings about science and computers"
@@ -73,6 +73,7 @@ website:
         href: https://github.com/saforem2/saforem2.github.io
         aria-label: GitHub
   page-footer:
+    left: "[saforem2.github.io](saforem2.github.io)"
     right: "Copyright 2023, Sam Foreman" 
     center:
       - href: https://samforeman.me
@@ -108,7 +109,7 @@ format:
       body-width: 1150px
     fig-responsive: true
     anchor-sections: true
-    highlight-style: atom-one
+    # highlight-style: atom-one
     code-overflow: scroll
     code-fold: false
     code-copy: true
@@ -122,10 +123,10 @@ format:
       - css/default.css
       - css/callouts.css
       - css/profile.css
-    theme: 
+    theme:
       dark:
         - css/common.scss
-        - css/dark.scss 
+        - css/dark.scss
         - css/syntax-dark.scss
       light:
         - css/common.scss
