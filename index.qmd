@@ -165,7 +165,7 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 ::::
 
 
-## [{{< fa solid newspaper >}}]{.red-text} Recent Work
+## [{{< fa regular newspaper >}}]{.red-text} Recent Work
 
 - **S. Foreman** [**Exploratory Analysis of Climate Data with `ClimRR`**](https://saforem2.github.io/climate-analysis), Intro to HPC Bootcamp @ NERSC, _August 7, 2023_  
 - M. Zvyagin et. al., [**GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics**](https://www.biorxiv.org/content/10.1101/2022.10.10.511571v1.abstract), _Oct 2022_  

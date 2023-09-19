@@ -12,20 +12,22 @@
   {
     "listing": "/index.html",
     "items": [
+      "/qmd/slides-older.html",
+      "/qmd/slides.html",
       "/qmd/dsblog.html",
       "/qmd/posts.html",
       "/qmd/projects.html",
-      "/qmd/blog/quarto-reveal.html",
-      "/qmd/slides.html"
+      "/qmd/blog/quarto-reveal.html"
     ]
   },
   {
     "listing": "/qmd/posts.html",
     "items": [
+      "/qmd/slides-older.html",
+      "/qmd/slides.html",
       "/qmd/dsblog.html",
       "/qmd/projects.html",
-      "/qmd/blog/quarto-reveal.html",
-      "/qmd/slides.html"
+      "/qmd/blog/quarto-reveal.html"
     ]
   }
 ]
