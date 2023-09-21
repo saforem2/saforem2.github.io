@@ -12,8 +12,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/qmd/slides-older.html",
       "/qmd/slides.html",
+      "/qmd/slides-older.html",
       "/qmd/dsblog.html",
       "/qmd/posts.html",
       "/qmd/projects.html",

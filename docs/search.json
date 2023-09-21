@@ -207,7 +207,7 @@
     "href": "index.html#fa-brands-github-alt-active-projects",
     "title": "",
     "section": " Active Projects",
-    "text": "Active Projects\n\n                \n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
+    "text": "Active Projects\n\n\n\n\n\n\n\nGitHub Stats\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nl2hmc-qcd\n\n\n\n\n\n\n\n GitHub repo"
   },
   {
     "objectID": "index.html#fa-solid-graduation-cap-education",
@@ -235,7 +235,7 @@
     "href": "index.html#fa-solid-hourglass-end-appendix",
     "title": "",
     "section": " Appendix",
-    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 19 September 23\n\n\n\nPosts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 19, 2023\n\n\n(Less) Recent Talks\n\n\nSam Foreman \n\n\n\n\nSep 19, 2023\n\n\nRecent Talks\n\n\nSam Foreman \n\n\n\n\nSep 18, 2023\n\n\nLoooooooong Sequence Lengths\n\n\nSam Foreman \n\n\n\n\nSep 15, 2023\n\n\nListing Example\n\n\nSam Foreman \n\n\n\n\nSep 8, 2023\n\n\nProjects\n\n\nSam Foreman \n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman \n\n\n\n\n\n\nNo matching items"
+    "text": "Appendix\n\nfrom datetime import date\nprint(f\"Last updated: {date.today().strftime('%d %B %y')}\")\n\nLast updated: 21 September 23\n\n\n\nPosts\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 19, 2023\n\n\nRecent Talks\n\n\nSam Foreman \n\n\n\n\nSep 19, 2023\n\n\n(Less) Recent Talks\n\n\nSam Foreman \n\n\n\n\nSep 18, 2023\n\n\nLoooooooong Sequence Lengths\n\n\nSam Foreman \n\n\n\n\nSep 15, 2023\n\n\nListing Example\n\n\nSam Foreman \n\n\n\n\nSep 8, 2023\n\n\nProjects\n\n\nSam Foreman \n\n\n\n\nAug 21, 2023\n\n\nHow to make dope slides\n\n\nSam Foreman \n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "qmd/dsblog.html#running",

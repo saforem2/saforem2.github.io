@@ -24,7 +24,7 @@ sequences than was previously possible.
 
 <div>
 
-> **Additional Details**
+> **<span class="green-text"></span> Additional Details**
 >
 > Additional details can be found in the [📁
 > `DeepSpeed4Science`](https://github.com/microsoft/Megatron-DeepSpeed/tree/main/examples_deepspeed/deepspeed4science/megatron_long_seq_support)
@@ -74,6 +74,9 @@ Table 1: Long sequence length support[^1] from
 [`microsoft/Megatron-DeepSpeed`](https://github.com/microsoft/Megatron-DeepSpeed)
 
 </div>
+
+    Failed to download font: Source Sans Pro, skipping!
+    Failed to download font: Titillium WebRoboto Condensed, skipping!
 
 <details>
 <summary>Data</summary>

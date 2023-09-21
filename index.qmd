@@ -206,17 +206,40 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 
 ## [{{< fa brands github-alt >}}]{.yellow-text} Active Projects
 
-::: {.img-container style="text-align:left; display: flex;"}
 
-[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/l2hmc-qcd)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/lattice23)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lqcd-pasc23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/lqcd-pasc23)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/nftqcd/fthmc)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=CompPerfWorkshop&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/CompPerfWorkshop)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=ai-science-training-series&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/ai-science-training-series)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=mlprof&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/mlprof)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=user-guides&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/argonne-lcf/user-guides)
-[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/personal_site)
+<!-- ::: {.callout-caution icon=false title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [[**Scaling LLMs for Science and Ongoing Collaborations**](https://saforem2.github.io/scaling4science) @ [Data-Intensive Computing and AI/ML at Scale](https://events.cels.anl.gov/event/426/overview) (08/2023)]{.dim-text}" collapse="true" style="width:100%; background-color: rgba(28, 28, 28, 0.75)!important; border-color: #2c2c2c!important;"} -->
+
+::: {.callout-tip collapse="false" style="width:100%; background-color: rgba(28, 28, 28, 0.75)!important; border-color: #2c2c2c!important;" title="GitHub Stats"}
+
+:::: {.columns style="display: flex; flex-direction: row; align-items: center; text-align:left;"}
+
+::: {.column width="50%" style="text-align: left;"}
+
+[![](https://github-readme-stats.vercel.app/api?username=saforem2&theme=transparent&text_color=838383&hide_border=true\&rank_icon=percentile)](https://github.com/saforem2)
+
+:::
+
+::: {.column width="50%" style="text-align:left;"}
+
+[![](https://github-readme-stats.vercel.app/api/wakatime?username=saforem2&hide_border=true&layout=compact&theme=transparent&text_color=838383)](https://github.com/saforem2/)
+
+:::
+
+::::
+
+
+::: {.img-container style="text-align:center; display: flex; margin-left: auto; margin-right: auto;"}
+
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/saforem2/l2hmc-qcd)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/saforem2/lattice23)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lqcd-pasc23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/saforem2/lqcd-pasc23)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/nftqcd/fthmc)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=CompPerfWorkshop&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383)](https://github.com/argonne-lcf/CompPerfWorkshop)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=ai-science-training-series&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/argonne-lcf/ai-science-training-series)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=mlprof&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/argonne-lcf/mlprof)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=argonne-lcf&repo=user-guides&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&text_color=838383&title_color=838383)](https://github.com/argonne-lcf/user-guides)
+[![](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=838383&title_color=838383)](https://github.com/saforem2/personal_site)
+
 <!-- [![github](https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=l2hmc-qcd&theme=transparent&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c)](https://github.com/saforem2/l2hmc-qcd) -->
 <!-- <a href="https://github.com/saforem2/lattice23"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=lattice23&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
 <!-- <a href="https://github.com/nftqcd/fthmc"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nftqcd&repo=fthmc&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
@@ -227,6 +250,8 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 <!-- <a href="https://github.com/saforem2/personal_site"><img src="https://github-readme-stats.vercel.app/api/pin/?username=saforem2&repo=personal_site&theme=transparent&show_icons=true&include_all_commits=true&hide_border=true&icon_color=#00CCFF&title_color=#00CCFF&bg_color=#1c1c1c" /></a> -->
 
 :::
+
+
 
 ::: {.callout-tip title="[`l2hmc-qcd`](https://saforem2.github.io/l2hmc-qcd)" collapse="true" style="width: 100%;"}
 
@@ -251,14 +276,7 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 
 :::
 
-
-## [{{< fa solid graduation-cap >}}]{.green-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
-
-|                                       |                                                                                              |                                   |      |
-|:------------------------------------- |:--------------------------------------------------------------------------------------------:|:---------------------------------:|:----:|
-| [PhD](https://bit.ly/sam-foreman-phd) |                  [Physics](https://physics.uiowa.edu/graduate/phd-physics)                   |                University of Iowa | 2019 |
-| B.Sc                                  |  [Physics](https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/physics)  | [UIUC](https://illinois.edu/)| 2015 |
-| B.Sc                                  | [Math](http://catalog.illinois.edu/undergraduate/las/mathematics-bslas/applied-mathematics/) |                              UIUC | 2015 |
+:::
 
 ## [{{< fa solid building >}}]{.blue-text} [Experience](https://samforeman.me/files/resume.pdf)
 
@@ -268,6 +286,15 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 | [Assistant Computational Scientist](https://alcf.anl.gov/about/people/sam-foreman) | [ALCF](https://alcf.anl.gov) | 2022 | *    |     |
 | Postdoc                                                                            |             ALCF             | 2019 | 2022 |     | 
 | Graduate Researcher                                                                |  [ANL](https://anl.gov)  | 2018 | 2019 |     |
+
+
+## [{{< fa solid graduation-cap >}}]{.green-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
+
+|                                       |                                                                                              |                                   |      |
+|:------------------------------------- |:--------------------------------------------------------------------------------------------:|:---------------------------------:|:----:|
+| [PhD](https://bit.ly/sam-foreman-phd) |                  [Physics](https://physics.uiowa.edu/graduate/phd-physics)                   |                University of Iowa | 2019 |
+| B.Sc                                  |  [Physics](https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/physics)  | [UIUC](https://illinois.edu/)| 2015 |
+| B.Sc                                  | [Math](http://catalog.illinois.edu/undergraduate/las/mathematics-bslas/applied-mathematics/) |                              UIUC | 2015 |
 
 ## [{{< fa solid bullhorn >}}]{.purple-text} Wait, there's more!
 
