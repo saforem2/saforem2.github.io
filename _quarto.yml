@@ -134,7 +134,7 @@ format:
         - css/light.scss
         - css/syntax-light.scss
         - css/callout-cards.scss
-    smooth-scroll: true
+    smooth-scroll: false
     citations-hover: true
     footnotes-hover: true
     header-includes: |
