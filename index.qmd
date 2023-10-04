@@ -1,8 +1,21 @@
 ---
+citation:
+   author: Sam Foreman
+   type: webpage
+   title: "Sam Foreman"
+   url: https://saforem2.github.io
 author: ""
 date: ""
-title: ""
+# title: "[Sam Foreman]{.invisible-text style='display: none;'}"
+author-title: ""
+affiliation-title: ""
+published-title: ""
+modified-title: ""
 site-url: https://saforem2.github.io
+website:
+  navbar:
+    title: false
+  title: Sam Foreman
 # author:
 #   # name: "[Sam Foreman]{style='font-size:1.0rem;'}"
 #   url: https://samforeman.me
