@@ -59,7 +59,7 @@ execute:
 ::: {style="font-size:1.0em; text-align: center; margin-top: -5rem; "}
 
 [![](./assets/avatar.png)]{.profile-avatar style="width: 100%;margi-top: -2rem;"}  
-[Sam Foreman [[{{< ai orcid >}}]{.orcid-green}](https://orcid.org/0000-0002-9981-0876)]{style="font-size: 1.75rem; color: var(--dim-text)!important; font-weight: bold; margin-bottom: -0.5rem;"}
+[Sam Foreman [[{{< ai orcid >}}]{.orcid-green}](https://orcid.org/0000-0002-9981-0876)]{style="font-size: 1.875rem; color: var(--dim-text)!important; font-weight: bold; margin-bottom: -0.5rem; letter-spacing:-1px;"}
 
 [[{{< fa solid home >}}](https://samforeman.me)]{style="font-size:1.25rem; padding-right: 0.20rem;"}
 [[{{< fa brands github >}}](https://github.com/saforem2)]{style="font-size:1.25rem; padding-left: 0.20rem; padding-right: 0.20rem"}
@@ -98,7 +98,13 @@ symmetries into machine learning models.
 
 ::: {style="margin-top:1rem;"}
 
-::: {.callout-tip icon=false title="[{{< fa solid music >}}]{.green-text} Now Playing:" collapse="true" style="width:100%;"}
+::: {.callout-tip icon=false title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:var(--dim-text);'} $\hspace{1pt}$ [Recent Talks]{.dim-text}" collapse="false" style="text-align: left!important; width:100%; border-color: var(--dim-color)!important; background-color: var(--bg-transparent);"}
+
+You can get a live view of some of my recent talks [here](./qmd/slides.qmd)
+
+:::
+
+::: {.callout-tip icon=false title="[{{< fa solid music >}} $\hspace{1pt}$ Now Playing:]{.green-text}" collapse="true" style="width:100%; border: 1px solid var(--mygreen)!important;"}
 
 ::: {style="width:100%;"}
 
@@ -108,11 +114,6 @@ symmetries into machine learning models.
 
 :::
 
-::: {.callout-important title="Recent Talks" collapse="false" style="width:100%; text-align:left!important;"}
-
-You can get a live view of some of my recent talks [{{< fa solid chart-line >}} ]{.pink-text}  [here](./qmd/slides.qmd)
-
-:::
 
 :::
 
@@ -209,7 +210,8 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 
 <!-- ::: {.callout-caution icon=false title="[{{< fa solid person-chalkboard size=fa-lg >}}]{style='color:#A9A9B3;'} $\hspace{2pt}$ [[**Scaling LLMs for Science and Ongoing Collaborations**](https://saforem2.github.io/scaling4science) @ [Data-Intensive Computing and AI/ML at Scale](https://events.cels.anl.gov/event/426/overview) (08/2023)]{.dim-text}" collapse="true" style="width:100%; background-color: rgba(28, 28, 28, 0.75)!important; border-color: #2c2c2c!important;"} -->
 
-::: {.callout-tip collapse="false" style="width:100%; background-color: rgba(28, 28, 28, 0.75)!important; border-color: #2c2c2c!important;" title="GitHub Stats"}
+::: {.callout-tip icon="false" collapse="false" style="width:100%; background-color: var(--bg-transparent)!important; border-color: var(--bg-border)!important;" title="[{{< fa brands github >}}]{.yellow-text} [GitHub Stats]{.dim-text} [([`saforem2`](https://github.com/saforem2)):]{.dim-text}"}
+
 
 :::: {.columns style="display: flex; flex-direction: row; align-items: center; text-align:left;"}
 
@@ -253,7 +255,7 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 
 
 
-::: {.callout-tip title="[`l2hmc-qcd`](https://saforem2.github.io/l2hmc-qcd)" collapse="true" style="width: 100%;"}
+::: {.callout-tip icon="false" collapse="false" style="width:100%; background-color: var(--bg-transparent); border-color: var(--bg-border)!important;" title="[`l2hmc-qcd`](https://saforem2.github.io/l2hmc-qcd)"}
 
 ::: {style="text-align:center;"}
 
@@ -278,7 +280,7 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 
 :::
 
-## [{{< fa solid building >}}]{.blue-text} [Experience](https://samforeman.me/files/resume.pdf)
+## [{{< fa solid building >}}]{.green-text} [Experience](https://samforeman.me/files/resume.pdf)
 
 
 |                                                                                    |                              |      |      |     |
@@ -288,7 +290,7 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 | Graduate Researcher                                                                |  [ANL](https://anl.gov)  | 2018 | 2019 |     |
 
 
-## [{{< fa solid graduation-cap >}}]{.green-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
+## [{{< fa solid graduation-cap >}}]{.blue-text} [Education](https://scholar.google.com/citations?user=vV_1zDwAAAAJ&hl=en)
 
 |                                       |                                                                                              |                                   |      |
 |:------------------------------------- |:--------------------------------------------------------------------------------------------:|:---------------------------------:|:----:|
@@ -296,7 +298,7 @@ Group](https://www.alcf.anl.gov/about/people/group/506) at
 | B.Sc                                  |  [Physics](https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/physics)  | [UIUC](https://illinois.edu/)| 2015 |
 | B.Sc                                  | [Math](http://catalog.illinois.edu/undergraduate/las/mathematics-bslas/applied-mathematics/) |                              UIUC | 2015 |
 
-## [{{< fa solid bullhorn >}}]{.purple-text} Wait, there's more!
+## [{{< fa solid bullhorn >}}]{.purple-text} Events
 
 - Organizer for [Machine Learning and Quantum Computing for Earth
 Sciences](https://17.usnccm.org/702) at 17th U. S. National Congress on
@@ -306,19 +308,23 @@ Computational Mechanics, July 2023
 (HPPSS)](https://hppss.github.io/SC23/), November 2023
 
 
-## [{{< fa solid hourglass-end >}}]{.pink-text} Appendix
+## [{{< fa regular newspaper >}}]{.pink-text} Posts
+
+::: {#sample-listings}
+:::
+
+
+
+## [{{< fa solid hourglass-end >}}]{.dim-text} Appendix
 
 ```{python}
 from datetime import date
 print(f"Last updated: {date.today().strftime('%d %B %y')}")
 ```
 
-### Posts
-
-::: {#sample-listings}
-:::
 
 <!-- [[![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsaforem2.github.io&count_bg=%2300CCFF&title_bg=%23303030&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)]{style="text-align:center;"} -->
+
 
 <p align="center">
 <a href="https://hits.seeyoufarm.com"><img align="center" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsaforem2.github.io&count_bg=%2300CCFF&title_bg=%23303030&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>

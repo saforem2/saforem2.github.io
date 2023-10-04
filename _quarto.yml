@@ -61,14 +61,19 @@ website:
     logo: "./favicon.svg"
     background: "#222222"
     foregound: "#777777"
-    right:
+    left:
     # left:
       - href: "./qmd/posts.qmd"
-        text: "[{{< bi newspaper >}}]{.red-text} Posts"
+        text: "[{{< bi signpost-split >}}]{.red-text} Posts"
+      # - href: ""
+      #   text: " "
+      # - href: "./qmd/posts.qmd"
+      #   text: "[{{< bi newspaper >}}]{.red-text} Posts"
       - href: "./qmd/slides.qmd"
         text: "[{{< bi easel >}}]{.green-text} Talks"
       - href: "./qmd/projects.qmd"
         text: "[{{< bi braces-asterisk >}}]{.blue-text} Projects"
+    right:
       - icon: github
         href: https://github.com/saforem2/saforem2.github.io
         aria-label: GitHub
