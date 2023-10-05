@@ -117,7 +117,7 @@ You can get a live view of some of my recent talks [here](./qmd/slides.qmd)
 
 :::
 
-::: {.callout-tip icon=false title="[{{< fa solid music >}} $\hspace{1pt}$ Now Playing:]{.green-text}" collapse="true" style="width:100%; border: 1px solid var(--mygreen)!important;"}
+::: {.callout-tip icon=false title="[{{< fa solid music >}} $\hspace{1pt}$ Now Playing:]{.green-text}" collapse="true" style="width:100%; border: 1px solid var(--green-text)!important;"}
 
 ::: {style="width:100%;"}
 
